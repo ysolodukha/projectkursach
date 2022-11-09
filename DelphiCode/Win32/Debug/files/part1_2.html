@@ -1,0 +1,2151 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:56.7pt 42.55pt 56.7pt 56.7pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+text-indent:35.45pt;line-height:115%;border:none'><b><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>ТЕОРЕТИЧЕСКИЙ МАТЕРИАЛ:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt;line-height:
+115%;background:white;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Cтроки</span></i></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>  -  простой тип данных наряду с целыми и вещественными числами.
+Cтрока – это последовательность символов, заключенных в одинарные или двойные
+кавычки.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>В Python нет
+символьного типа, т. е. типа данных, объектами которого являются одиночные
+символы. Однако язык позволяет рассматривать строки как <u>объекты, состоящие
+из подстрок</u> длинной в один и более символов. При этом, в отличие от
+списков, строки не принято относить к структурам данных. Видимо потому, что
+структуры данных состоят из более простых типов данных, а для строк в Python
+нет более простого (символьного) типа.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>С другой
+стороны, строка – это <u>упорядоченная последовательность элементов</u>.
+Следовательно, из нее можно извлекать отдельные символы и <b><i>срезы</i></b>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'> Длина
+строки ограничена лишь объемом ОП компьютера. Строки поддерживают обращение к
+элементу по индексу, получение среза, конкатенацию (оператор +), повторение
+(оператор *), поверку на вхождение (операторы in и not in).</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>Строки
+относятся к <b><i>неизменяемым типам данных</i></b>. Поэтому практически все
+строковые методы в качестве значения возвращают новую строку, т.е. можно
+получить символ по индексу, но изменить его будет нельзя.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>Python
+поддерживает следующие строковые типы:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>str</span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black;background:white'> – Unicode-строка. При выводе Unicode-строку
+необходимо преобразовать в последовательность байтов в какой-либо кодировке
+(UTF-8, UTF-16, UTF-32). Этот тип <u>следует использовать для всех текстовых
+данных</u>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>bytes</span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black;background:white'> – <b><i>неизменяемая</i></b> последовательность
+байтов. Каждый элемент последовательности может хранить <b><i>целое число от 0
+до 255</i></b>, которое обозначает код символа. Поддерживает большинство
+строковых методов и <u>выводится как последовательность символов</u>. </span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+background:white;border:none'><b><span lang=RU style='font-size:22.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:red;background:white'>!</span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black;background:white'> Доступ по индексу <u>возвращает целое число, а
+не символ</u>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>Объект
+типа bytes может содержать как однобайтовые, так и многобайтовые символы.
+Функции и методы строк некорректно работают с многобайтовыми кодировками.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>bytearray</span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black;background:white'> - <b><i>изменяемая</i></b> последовательность
+байтов. В отличие от типа bytes позволяет изменять элементы по индексу и
+содержит дополнительные методы, позволяющие удалять и добавлять элементы.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Типы <b><span
+style='background:white'>bytes </span></b><span style='background:white'>и<b>
+bytearray </b>следует задействовать для записи двоичных данных, например
+изображений, и промежуточного хранения строк.</span></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+background:white;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>Создать
+строку можно следующими способами</span></i></b><span lang=RU style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black;
+background:white'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>а)
+с помощью функции</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>str([&lt;объект&gt;[,
+&lt;кодировка&gt;[, &lt;обработка ошибок&gt;]]])</span></b><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black;background:white'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>Если
+параметры не указаны вообще, возвращается пустая строка.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>          </span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Например<b>, str(), str([1,2]), str((1, 2)), str((‘x’:1))</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>В параметре </span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black;background:white'>&lt;обработка ошибок&gt; могут быть указаны
+значения <b><i>‘strict’</i></b> (возбуждение исключения при ошибке), <b><i>‘replace’</i></b>
+(замена неизвестного символа кодом \uFFFD) или <b><i>‘ignore’</i></b>
+(игнорирование неизвестного символа).</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black;background:white'>б) указав строку
+между апострофами или двойными кавычками. Чтобы специальный символ выводился
+как есть, его необходимо экранировать с помощью слэша. Например, <b>print(‘строка1\\nСтрока2’)
+</b>получим<b>  ‘строка1\nСтрока2’</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black;background:white'>в) указав строку
+между утроенными апострофами или утроенными кавычками. Такие объекты можно
+разместить на нескольких строках. Выражения внутри таких строк не выполняются,
+поэтому их часто используют для комментирования больших фрагментов.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black;background:white'>Если перед
+строкой разместить модификатор </span><b><span lang=RU style='font-size:12.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>r</span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black;background:white'>, то специальные символы внутри строки выводятся
+как есть. Такие неформатированные строки удобно использовать при указании пути
+к файлу.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black;background:white'>Например, <b>print(r”C:\Python38\lib\site-packages”).</b>
+Если модификатор не указать, то все слэши необходимо экранировать <b>print(r”C:\\Python38\\lib\\site-packages”).</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+text-indent:35.45pt;line-height:115%;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Специальные символы:</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Это комбинации знаков,
+обозначающих служебные или непечатаемые символы, которые невозможно вставить
+обычным способом. Следующие символы допустимо вставлять в строки, перед
+которыми нет модификатора <b>r</b>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>\n – перевод строки</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>\r – возврат каретки</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>\t – знак табуляции</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>\v – вертикальная табуляция</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>\a – звонок</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>\b – забой</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>\f – перевод формата</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>\0 – нулевой символ (не является
+концом строки)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.4pt;
+line-height:115%;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Операции над
+строками</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Как и все последовательности
+строки поддерживают обращение к элементу по индексу, получение среза,
+конкатенацию, повторение и проверку на вхождение, если в качестве индекса
+указать отрицательное значение <b>s[-i]</b>, идет обращение к элементу, индекс
+которого равен длина строки <b>[len(s) – i].</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Строки – неизменяемый тип данных.
+Чтобы выполнить изменение, можно воспользоваться операцией извлечения <b>среза</b>,
+который возвращает указанный фрагмент строки. Формат операции получения среза:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'> [&lt;начало&gt; : &lt;конец&gt;
+: &lt;шаг&gt;]</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Все параметры необязательны. Нет<b>
+&lt;начало&gt; - </b>используется 0, нет <b>&lt;конец&gt; - </b>возвращается
+фрагмент до конца строки, нет<b> &lt;шаг&gt; -  используется </b>значение 1.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Например:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>s[:] – </span></b><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>возвращается фрагмент от позиции 0 до конца строки, т.е. получаем
+копию строки</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>s[::-1] – </span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>вывод символов в обратном порядке</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>“a” + s[1:] – </span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>заменим нулевой символ строки</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>s[:-1] – </span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>удалим последний символ</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>s[0:1] – </span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>получим 0-ой символ в строке. Элемент с индексом [1] не входит в
+диапазон</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>s[-1:] – </span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>получим диапазон от len(s)-1 до конца строки</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>s[2:5] –</span></b><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>выведем символы с индексами 2, 3, 4.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:28.35pt;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Смещения
+и срезы</span></i></b><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:black'>: положительные смещения отсчитываются от левого конца (первый
+элемент имеет смещение 0), а отрицательные отсчитываются от правого конца
+(последний элемент имеет смещение –1).</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:28.35pt;border:none'><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'><img width=436 height=171 id=image2.png
+src="part1_2_files/image001.jpg"></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none'><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Значение
+смещения слева от двоеточия обозначает левую границу (<i>включительно</i>), а
+справа – верхнюю границу (<i>она не входит в срез</i>).</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<table class=4 border=1 cellspacing=0 cellpadding=0 width=614 style='margin-left:
+ 35.65pt;border-collapse:collapse;border:none'>
+ <tr style='height:27.4pt'>
+  <td width=139 valign=top style='width:104.25pt;border:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:27.4pt'>
+  <p class=MsoNormal align=center style='margin-top:2.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:center;
+  border:none'><b><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:#231F20'>Функция</span></b></p>
+  <p class=MsoNormal align=center style='margin-top:.6pt;margin-right:0in;
+  margin-bottom:0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:center;
+  border:none'><b><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:#231F20'>или операция</span></b></p>
+  </td>
+  <td width=475 valign=top style='width:356.5pt;border:solid #231F20 1.0pt;
+  border-left:none;padding:0in 0in 0in 0in;height:27.4pt'>
+  <p class=MsoNormal align=center style='margin-top:8.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:center;
+  border:none'><b><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:#231F20'>Описание и результат</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:16.4pt'>
+  <td width=139 valign=top style='width:104.25pt;border:solid #231F20 1.0pt;
+  border-top:none;padding:0in 0in 0in 0in;height:16.4pt'>
+  <p class=MsoNormal style='margin-top:.15pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.85pt;margin-bottom:.0001pt;border:none'><b><i><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#231F20'>len(s)</span></i></b></p>
+  </td>
+  <td width=475 style='width:356.5pt;border-top:none;border-left:none;
+  border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:16.4pt'>
+  <p class=MsoNormal style='margin-top:2.8pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#231F20'>Вычисляется
+  длина строки s как число символов</span></p>
+  </td>
+ </tr>
+ <tr style='height:39.35pt'>
+  <td width=139 valign=top style='width:104.25pt;border:solid #231F20 1.0pt;
+  border-top:none;padding:0in 0in 0in 0in;height:39.35pt'>
+  <p class=MsoNormal style='margin-top:.2pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:6.2pt;border:none'><b><i><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#231F20'>s1 +
+  s2</span></i></b></p>
+  </td>
+  <td width=475 style='width:356.5pt;border-top:none;border-left:none;
+  border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:39.35pt'>
+  <p class=MsoNormal style='margin-top:2.9pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  68%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:
+  68%;font-family:"Verdana",sans-serif;color:#231F20'>Конкатенация.</span></i></b><span
+  lang=RU style='font-size:11.0pt;line-height:68%;font-family:"Verdana",sans-serif;
+  color:#231F20'> К концу строки s1 присоединяется строка s2, в результате
+  получается новая строка, например, ’вы’ + ’года’ </span><span lang=RU
+  style='font-size:11.0pt;line-height:68%;font-family:"Arial Unicode MS";
+  color:#231F20'>→</span><span lang=RU style='font-size:11.0pt;line-height:
+  68%;font-family:"Verdana",sans-serif;color:#231F20'> ’выгода’</span></p>
+  </td>
+ </tr>
+ <tr style='height:27.4pt'>
+  <td width=139 valign=top style='width:104.25pt;border:solid #231F20 1.0pt;
+  border-top:none;padding:0in 0in 0in 0in;height:27.4pt'>
+  <p class=MsoNormal style='margin-top:5.15pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.45pt;margin-bottom:.0001pt;border:none'><b><i><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#231F20'>s
+  </span></i></b><b><i><span lang=RU style='font-size:11.0pt;font-family:"Cambria Math",serif;
+  color:#231F20'>∗</span></i></b><b><i><span lang=RU style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:#231F20'> n (или n </span></i></b><b><i><span
+  lang=RU style='font-size:11.0pt;font-family:"Cambria Math",serif;color:#231F20'>∗</span></i></b><b><i><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#231F20'>
+  s)</span></i></b></p>
+  </td>
+  <td width=475 style='width:356.5pt;border-top:none;border-left:none;
+  border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:27.4pt'>
+  <p class=MsoNormal style='margin-left:6.1pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#231F20'>n-кратное
+  повторение строки s, в результате получается новая строка, например ’кан’</span><span
+  lang=RU style='font-size:11.0pt;font-family:"Cambria Math",serif;color:#231F20'>∗</span><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#231F20'>2
+  </span><span lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";
+  color:#231F20'>→</span><span lang=RU style='font-size:11.0pt;font-family:
+  "Verdana",sans-serif;color:#231F20'> ’канкан’</span></p>
+  </td>
+ </tr>
+ <tr style='height:111.05pt'>
+  <td width=139 valign=top style='width:104.25pt;border:solid #231F20 1.0pt;
+  border-top:none;padding:0in 0in 0in 0in;height:111.05pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:.45pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:6.45pt;border:none'><b><i><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#231F20'>s
+  [ i ]</span></i></b></p>
+  </td>
+  <td width=475 style='width:356.5pt;border-top:none;border-left:none;
+  border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:111.05pt'>
+  <p class=MsoNormal style='margin-top:1.45pt;margin-right:5.6pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  80%;border:none'><span lang=RU style='font-size:11.0pt;line-height:80%;
+  font-family:"Verdana",sans-serif;color:#231F20'>Выбор из s элемента с номером
+  <i>i</i>, нумерация начинается с 0 (первый элемент имеет номер 0).
+  Результатом является символ. Если <i>i &lt; </i></span><span lang=RU
+  style='font-size:11.0pt;line-height:80%;font-family:"Arial Unicode MS";
+  color:#231F20'>0, отсчёт идёт с конца (первый символ строки имеет номер 0,
+  последний имеет номер  −1).</span></p>
+  <p class=MsoNormal style='margin-top:.75pt;margin-right:193.65pt;margin-bottom:
+  0in;margin-left:6.45pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+  -.3pt;line-height:75%;border:none'><span lang=RU style='font-size:11.0pt;
+  line-height:75%;font-family:"Verdana",sans-serif;color:#231F20'>Пример:  s=
+  ’дерево’ </span></p>
+  <p class=MsoNormal style='margin-top:.75pt;margin-right:193.65pt;margin-bottom:
+  0in;margin-left:6.45pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+  -.3pt;line-height:75%;border:none'><span lang=RU style='font-size:11.0pt;
+  line-height:75%;font-family:"Verdana",sans-serif;color:#231F20'>s [2] </span><span
+  lang=RU style='font-size:11.0pt;line-height:75%;font-family:"Arial Unicode MS";
+  color:#231F20'>→</span><span lang=RU style='font-size:11.0pt;line-height:
+  75%;font-family:"Verdana",sans-serif;color:#231F20'> ’р’</span></p>
+  <p class=MsoNormal style='margin-left:6.45pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";color:#231F20'>s[−2]
+  →</span><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:#231F20'> ’в’</span></p>
+  </td>
+ </tr>
+ <tr style='height:123.0pt'>
+  <td width=139 valign=top style='width:104.25pt;border:solid #231F20 1.0pt;
+  border-top:none;padding:0in 0in 0in 0in;height:123.0pt'>
+  <p class=MsoNormal style='text-align:justify;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='text-align:justify;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='text-align:justify;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:7.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.45pt;margin-bottom:.0001pt;text-align:justify;border:none'><b><i><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s
+  [ i : j :k]</span></i></b></p>
+  </td>
+  <td width=475 valign=top style='width:356.5pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:123.0pt'>
+  <p class=MsoNormal style='margin-top:1.45pt;margin-right:5.6pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  80%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:
+  80%;font-family:"Verdana",sans-serif;color:black'>Срез</span></i></b><span
+  lang=RU style='font-size:11.0pt;line-height:80%;font-family:"Verdana",sans-serif;
+  color:black'>. Подстрока, содержащая символы строки s с номерами от <i>i </i>до
+  <i>j </i>с шагом <i>k </i>(элемент с номером <i>i </i>входит в итоговую
+  подстроку,  а элемент с номером  <i>j </i>уже не входит). Если <i>k </i>не
+  указан (использован вариант s [ i : j ]), то символы идут подряд (равносильно</span></p>
+  <p class=MsoNormal style='margin-left:6.45pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s
+  [ i : j :1] ).</span></p>
+  <p class=MsoNormal style='margin-left:6.1pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Примеры:</span></p>
+  <p class=MsoNormal style='margin-left:6.45pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s=’derevo’</span></p>
+  <p class=MsoNormal style='margin-left:6.45pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s
+  [3:5] </span><span lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";
+  color:black'>→</span><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:black'> ’ev’</span></p>
+  <p class=MsoNormal style='margin-left:6.45pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s
+  [1:5:2] </span><span lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";
+  color:black'>→</span><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:black'> ’ee’</span></p>
+  </td>
+ </tr>
+ <tr style='height:75.2pt'>
+  <td width=139 valign=top style='width:104.25pt;border:solid #231F20 1.0pt;
+  border-top:none;padding:0in 0in 0in 0in;height:75.2pt'>
+  <p class=MsoNormal style='text-align:justify;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='text-align:justify;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:6.05pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;border:none'><b><i><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>min(s)</span></i></b></p>
+  </td>
+  <td width=475 valign=top style='width:356.5pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:75.2pt'>
+  <p class=MsoNormal style='margin-top:1.85pt;margin-right:5.6pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  103%;border:none'><span lang=RU style='font-size:11.0pt;line-height:103%;
+  font-family:"Verdana",sans-serif;color:black'>Определяет и выводит
+  (возвращает) символ с наи- меньшим значением (кодом – номером в кодовой
+  таблице)</span></p>
+  <p class=MsoNormal style='margin-left:6.1pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Пример:</span></p>
+  <p class=MsoNormal style='margin-left:6.45pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s=’derevo’</span></p>
+  <p class=MsoNormal style='margin-left:6.1pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>min(s)
+  </span><span lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";
+  color:black'>→</span><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:black'> ’d’</span></p>
+  </td>
+ </tr>
+ <tr style='height:63.25pt'>
+  <td width=139 valign=top style='width:104.25pt;border:solid #231F20 1.0pt;
+  border-top:none;padding:0in 0in 0in 0in;height:63.25pt'>
+  <p class=MsoNormal style='text-align:justify;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:.1pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:6.1pt;text-align:justify;border:none'><b><i><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>max(s)</span></i></b></p>
+  </td>
+  <td width=475 valign=top style='width:356.5pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:63.25pt'>
+  <p class=MsoNormal style='margin-top:1.85pt;margin-right:1.9pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  103%;border:none'><span lang=RU style='font-size:11.0pt;line-height:103%;
+  font-family:"Verdana",sans-serif;color:black'>Возвращает символ с наибольшим
+  значением (кодом)</span></p>
+  <p class=MsoNormal style='margin-left:6.1pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Пример:</span></p>
+  <p class=MsoNormal style='margin-left:6.45pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s=’derevo’</span></p>
+  <p class=MsoNormal style='margin-left:6.1pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>max(s)
+  </span><span lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";
+  color:black'>→</span><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:black'> ’v’</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Чтобы соединить строку с
+числом необходимо применить преобразование типа с помощью функции <b>str():   
+‘string’ + str(10)</b></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:7.3pt;margin-bottom:6.0pt;
+margin-left:29.95pt;text-align:justify;text-indent:14.9pt;line-height:115%;
+border:none'><span lang=RU style='font-size:12.0pt;line-height:115%;color:#231F20'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:7.3pt;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:44.85pt;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Строки, как объекты Python, обладают методами
+(т.е. функциями, которые выполняют сами объекты). Основные методы перечислены в
+следующей таблице. Пусть строка, к которой применяются эти методы, называется <b><i>s1</i></b>.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:7.3pt;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:44.85pt;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:7.3pt;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:44.85pt;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:7.3pt;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:44.85pt;line-height:92%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:92%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<table class=3 border=1 cellspacing=0 cellpadding=0 width=624 style='margin-left:
+ 21.55pt;border-collapse:collapse;border:none'>
+ <tr style='height:16.4pt'>
+  <td width=164 valign=top style='width:122.7pt;border:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:16.4pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:center;
+  border:none'><b><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:black'>Метод</span></b></p>
+  </td>
+  <td width=460 valign=top style='width:345.05pt;border:solid #231F20 1.0pt;
+  border-left:none;padding:0in 0in 0in 0in;height:16.4pt'>
+  <p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:center;
+  border:none'><b><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:black'>Описание и результат</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:87.15pt'>
+  <td width=164 style='width:122.7pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-left:6.2pt;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:black'>s1 .
+  center(n)</span></i></b></p>
+  </td>
+  <td width=460 valign=top style='width:345.05pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-top:.85pt;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  85%;border:none'><span lang=RU style='font-size:11.0pt;line-height:85%;
+  font-family:"Verdana",sans-serif;color:black'>Возвращается строка s1,
+  дополненная пробелами справа и слева до ширины в <i>n </i>символов. Исходная
+  строка не изменяется. Если <i>n </i></span><span lang=RU style='font-size:
+  11.0pt;line-height:85%;font-family:"Arial Unicode MS";color:black'>≤ </span><i><span
+  lang=RU style='font-size:11.0pt;line-height:85%;font-family:"Verdana",sans-serif;
+  color:black'>len</span></i><span lang=RU style='font-size:11.0pt;line-height:
+  85%;font-family:"Verdana",sans-serif;color:black'>(<i>s</i>1), пробелы не
+  добавляются.</span></p>
+  <p class=MsoNormal style='margin-top:.65pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Пример:</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";color:black'>s1=’Zoom−Zoom’</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s1
+  . center(15) </span><span lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";
+  color:black'>→</span><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:black'> ’</span><span lang=RU style='font-size:11.0pt;font-family:"MS Gothic";
+  color:black'>␣␣␣</span><span lang=RU style='font-size:11.0pt;font-family:
+  "Arial Unicode MS";color:black'>Zoom−Zoom</span><span lang=RU
+  style='font-size:11.0pt;font-family:"MS Gothic";color:black'>␣␣␣</span><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>’</span></p>
+  </td>
+ </tr>
+ <tr style='height:87.15pt'>
+  <td width=163 style='width:122.05pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-left:6.2pt;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:black'>s1 .
+  ljust (n)</span></i></b></p>
+  </td>
+  <td width=461 valign=top style='width:345.7pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-top:1.45pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  80%;border:none'><span lang=RU style='font-size:11.0pt;line-height:80%;
+  font-family:"Verdana",sans-serif;color:black'>Строка s1 выравнивается по
+  левому краю (дополняется пробелами справа) в пространстве шириной <i>n </i>символов.
+  Если <i>n &lt; len</i>(<i>s</i>1), пробелы не добавляются.</span></p>
+  <p class=MsoNormal style='margin-top:.45pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Пример:</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";color:black'>s1=’Zoom−Zoom’</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s1
+  . ljust (15) </span><span lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";
+  color:black'>→ ’Zoom−Zoom</span><span lang=RU style='font-size:11.0pt;
+  font-family:"MS Gothic";color:black'>␣␣␣␣␣␣</span><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>’</span></p>
+  </td>
+ </tr>
+ <tr style='height:87.15pt'>
+  <td width=163 style='width:122.05pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-left:6.2pt;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:black'>s1 .
+  rjust (n)</span></i></b></p>
+  </td>
+  <td width=461 valign=top style='width:345.7pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-top:1.45pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  80%;border:none'><span lang=RU style='font-size:11.0pt;line-height:80%;
+  font-family:"Verdana",sans-serif;color:black'>Строка s1 выравнивается по
+  правому краю (дополняется пробелами слева) в пространстве шириной <i>n </i>символов.
+  Если <i>n &lt; len</i>(<i>s</i>1), пробелы не добавляются.</span></p>
+  <p class=MsoNormal style='margin-top:.45pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Пример:</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";color:black'>s1=’Zoom−Zoom’</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s1
+  . rjust (15) </span><span lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";
+  color:black'>→</span><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:black'> ’</span><span lang=RU style='font-size:11.0pt;font-family:"MS Gothic";
+  color:black'>␣␣␣␣␣␣</span><span lang=RU style='font-size:11.0pt;font-family:
+  "Arial Unicode MS";color:black'>Zoom−Zoom’</span></p>
+  </td>
+ </tr>
+ <tr style='height:116.8pt'>
+  <td width=163 style='width:122.05pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:116.8pt'>
+  <p class=MsoNormal style='margin-top:7.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.2pt;margin-bottom:.0001pt;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:black'>s1.count(s
+  [, i , j ])</span></i></b></p>
+  </td>
+  <td width=461 valign=top style='width:345.7pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:116.8pt'>
+  <p class=MsoNormal style='margin-top:2.3pt;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  80%;border:none'><span lang=RU style='font-size:11.0pt;line-height:80%;
+  font-family:"Verdana",sans-serif;color:black'>Определяется количество
+  вхождений подстроки s в строку s1. Результатом является число. Можно указать
+  позицию начала поиска <i>i </i>и окончания поиска <i>j </i>(по тем же
+  правилам, что и начало и конец среза). </span></p>
+  <p class=MsoNormal style='margin-top:2.3pt;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  80%;border:none'><span lang=RU style='font-size:11.0pt;line-height:80%;
+  font-family:"Verdana",sans-serif;color:black'>Примеры:</span></p>
+  <p class=MsoNormal style='margin-top:1.05pt;margin-right:153.5pt;margin-bottom:
+  0in;margin-left:6.15pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  80%;border:none'><span lang=RU style='font-size:11.0pt;line-height:80%;
+  font-family:"Verdana",sans-serif;color:black'>s1=’abrakadabra’ s1.count(’ab’)
+  </span><span lang=RU style='font-size:11.0pt;line-height:80%;font-family:
+  "Arial Unicode MS";color:black'>→</span><span lang=RU style='font-size:11.0pt;
+  line-height:80%;font-family:"Verdana",sans-serif;color:black'> 2</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:75.75pt;margin-bottom:
+  0in;margin-left:6.15pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  80%;border:none'><span lang=RU style='font-size:11.0pt;line-height:80%;
+  font-family:"Verdana",sans-serif;color:black'>s1.count(’ab’,1)      </span><span
+  lang=RU style='font-size:11.0pt;line-height:80%;font-family:"Arial Unicode MS";
+  color:black'>→      1 s1 . count(’ab’,1,−3) → 0, потому что  s1[1:−3] →</span><span
+  lang=RU style='font-size:11.0pt;line-height:80%;font-family:"Verdana",sans-serif;
+  color:black'> ’brakada’</span></p>
+  </td>
+ </tr>
+ <tr style='height:99.1pt'>
+  <td width=163 style='width:122.05pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:99.1pt'>
+  <p class=MsoNormal style='margin-top:6.55pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.2pt;margin-bottom:.0001pt;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;font-family:"Arial Unicode MS";color:black'>s1 . ﬁnd
+  (s [, i , j ])</span></i></b></p>
+  </td>
+  <td width=461 valign=top style='width:345.7pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:99.1pt'>
+  <p class=MsoNormal style='margin-top:3.5pt;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  81%;border:none'><span lang=RU style='font-size:11.0pt;line-height:81%;
+  font-family:"Verdana",sans-serif;color:black'>Определяется позиция первого
+  (считая слева) вхождения подстроки s в строку s1. Результатом является число.
+  Необязательные аргументы <i>i </i>и <i>j </i>определяют начало и конец
+  области поиска (как в предыдущем случае).</span></p>
+  <p class=MsoNormal style='margin-left:6.1pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Пример:</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s1=’abrakadabra’</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Arial Unicode MS";color:black'>s1 . ﬁnd
+  (’ br ’) →</span><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:black'> 1</span></p>
+  </td>
+ </tr>
+ <tr style='height:99.1pt'>
+  <td width=164 style='width:122.7pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:99.1pt'>
+  <p class=MsoNormal style='margin-top:6.55pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.2pt;margin-bottom:.0001pt;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;font-family:"Arial Unicode MS";color:black'>s1 . rﬁnd
+  (s [, i , j ])</span></i></b></p>
+  </td>
+  <td width=460 valign=top style='width:345.05pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:99.1pt'>
+  <p class=MsoNormal style='margin-top:3.5pt;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  81%;border:none'><span lang=RU style='font-size:11.0pt;line-height:81%;
+  font-family:"Verdana",sans-serif;color:black'>Определяется позиция последнего
+  (считая слева) вхождения подстроки s в строку s1. Результатом является число.
+  Необязательные аргументы <i>i </i>и <i>j</i></span></p>
+  <p class=MsoNormal style='margin-top:.85pt;margin-right:5.7pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  103%;border:none'><span lang=RU style='font-size:11.0pt;line-height:103%;
+  font-family:"Verdana",sans-serif;color:black'>определяют начало и конец
+  области поиска (как в предыдущем случае).</span></p>
+  <p class=MsoNormal style='margin-left:6.1pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Пример:</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s1=’abrakadabra’</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Arial Unicode MS";color:black'>s1 . rﬁnd
+  (’ br ’) →</span><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:black'> 8</span></p>
+  </td>
+ </tr>
+ <tr style='height:87.15pt'>
+  <td width=164 style='width:122.7pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-left:6.2pt;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:black'>s1 .
+  strip ()</span></i></b></p>
+  </td>
+  <td width=460 valign=top style='width:345.05pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-top:1.85pt;margin-right:5.7pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  103%;border:none'><span lang=RU style='font-size:11.0pt;line-height:103%;
+  font-family:"Verdana",sans-serif;color:black'>Создаётся копия строки, в
+  которой удалены пробелы в начале и в конце (если они есть или образовались в
+  результате каких-то операций).</span></p>
+  <p class=MsoNormal style='margin-top:2.2pt;margin-right:121.35pt;margin-bottom:
+  0in;margin-left:6.15pt;margin-bottom:.0001pt;text-indent:-.05pt;line-height:
+  75%;border:none'><span lang=RU style='font-size:11.0pt;line-height:75%;
+  font-family:"Verdana",sans-serif;color:black'>Пример: s1=’</span><span
+  lang=RU style='font-size:11.0pt;line-height:75%;font-family:"MS Gothic";
+  color:black'>␣</span><span lang=RU style='font-size:11.0pt;line-height:75%;
+  font-family:"Verdana",sans-serif;color:black'>breKeKeKeKs</span><span
+  lang=RU style='font-size:11.0pt;line-height:75%;font-family:"MS Gothic";
+  color:black'>␣</span><span lang=RU style='font-size:11.0pt;line-height:75%;
+  font-family:"Verdana",sans-serif;color:black'>’ s2=s1. strip ()</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s2 </span><span
+  lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";color:black'>→</span><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>
+  ’breKeKeKeKs’</span></p>
+  </td>
+ </tr>
+ <tr style='height:87.15pt'>
+  <td width=164 style='width:122.7pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:6.2pt;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:black'>s1 .
+  lstrip ()</span></i></b></p>
+  </td>
+  <td width=460 valign=top style='width:345.05pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-top:1.85pt;margin-right:5.7pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Создаётся
+  копия строки, в которой удалены пробелы в начале (если они есть или
+  образовались в результате каких-то операций).</span></p>
+  <p class=MsoNormal style='margin-top:2.2pt;margin-right:121.35pt;margin-bottom:
+  0in;margin-left:6.15pt;margin-bottom:.0001pt;text-indent:-.05pt;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Пример:
+  s1=’</span><span lang=RU style='font-size:11.0pt;font-family:"MS Gothic";
+  color:black'>␣</span><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:black'>breKeKeKeKs</span><span lang=RU style='font-size:11.0pt;
+  font-family:"MS Gothic";color:black'>␣</span><span lang=RU style='font-size:
+  11.0pt;font-family:"Verdana",sans-serif;color:black'>’ s2=s1. lstrip ()</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s2 </span><span
+  lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";color:black'>→</span><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>
+  ’breKeKeKeKs’</span></p>
+  </td>
+ </tr>
+ <tr style='height:87.15pt'>
+  <td width=164 style='width:122.7pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-left:6.2pt;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:black'>s1 .
+  rstrip ()</span></i></b></p>
+  </td>
+  <td width=460 valign=top style='width:345.05pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-top:1.85pt;margin-right:5.7pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Создаётся
+  копия строки, в которой удалены пробелы в конце (если они есть или
+  образовались в результате каких-то операций).</span></p>
+  <p class=MsoNormal style='margin-top:2.2pt;margin-right:121.35pt;margin-bottom:
+  0in;margin-left:6.15pt;margin-bottom:.0001pt;text-indent:-.05pt;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Пример:
+  s1=’</span><span lang=RU style='font-size:11.0pt;font-family:"MS Gothic";
+  color:black'>␣</span><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:black'>breKeKeKeKs</span><span lang=RU style='font-size:11.0pt;
+  font-family:"MS Gothic";color:black'>␣</span><span lang=RU style='font-size:
+  11.0pt;font-family:"Verdana",sans-serif;color:black'>’ s2=s1. rstrip ()</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s2 </span><span
+  lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";color:black'>→</span><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>
+  ’breKeKeKeKs’</span></p>
+  </td>
+ </tr>
+ <tr style='height:87.15pt'>
+  <td width=164 style='width:122.7pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:.55pt;border:none'><span lang=RU
+  style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:6.2pt;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:black'>s1 .
+  split ([&lt;разделитель&gt;[, &lt;лимит&gt;])</span></i></b></p>
+  </td>
+  <td width=460 valign=top style='width:345.05pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-left:6.15pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Разделяет
+  строку на подстроки (слова) по указанному разделителю и добавляет эти
+  подстроки (слова) в список, который возвращается в качестве результата. Если
+  разделитель не указан, используется пробел. Второй параметр задает количество
+  подстрок в результирующем списке. Пример:</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s1=’word1
+  word2 word3’</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s1.split() 
+  </span><span lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";
+  color:black'>→</span><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:black'> [’word1’  ‘word2’  ‘word3’]</span></p>
+  <p class=MsoNormal style='text-align:justify;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'> s1=
+  'red blue orange white’</span></p>
+  <p class=MsoNormal style='text-align:justify;background:#F2F2F2;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'> s1.split() 
+  </span><span lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";
+  color:black'>→</span><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:black'> ['red', 'blue', 'orange', 'white']</span></p>
+  <p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+  14.0pt;margin-left:0in;text-align:justify;background:white;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Метод
+  split() может принимать необязательный аргумент-строку, указывающей по какому
+  символу или подстроке следует выполнить разделение:</span></p>
+  <p class=MsoNormal style='text-align:justify;background:#F2F2F2;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'> s.split('e')</span></p>
+  <p class=MsoNormal style='text-align:justify;background:#F2F2F2;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>['r',
+  'd blu', ' orang', ' whit', '']</span></p>
+  <p class=MsoNormal style='text-align:justify;background:#F2F2F2;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'> '40030023'.split('00')</span></p>
+  <p class=MsoNormal style='text-align:justify;background:#F2F2F2;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>['4',
+  '3', '23']</span></p>
+  <p class=MsoNormal style='text-align:justify;background:#F2F2F2;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='height:87.15pt'>
+  <td width=164 style='width:122.7pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-left:6.75pt;border:none'><b><i><span
+  lang=RU style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:black'> ([&lt;разделитель&gt;).    
+  join(s1)</span></i></b></p>
+  </td>
+  <td width=460 valign=top style='width:345.05pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-bottom:14.0pt;text-align:justify;background:
+  white;border:none'><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+  color:black'>Метод строк join() выполняет обратное действие. Он формирует из
+  списка строку. Поскольку это метод строки, то впереди ставится
+  строка-разделитель, а в скобках — передается список:</span></p>
+  <p class=MsoNormal style='text-align:justify;background:#F2F2F2;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'> '-'.join(sl)</span></p>
+  <p class=MsoNormal style='text-align:justify;background:#F2F2F2;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>'red-blue-orange-white'</span></p>
+  <p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+  14.0pt;margin-left:0in;text-align:justify;background:white;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Если
+  разделитель не нужен, то метод применяется к пустой строке:</span></p>
+  <p class=MsoNormal style='text-align:justify;background:#F2F2F2;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'> ''.join(sl)</span></p>
+  <p class=MsoNormal style='text-align:justify;background:#F2F2F2;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>'redblueorangewhite'</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='height:86.95pt'>
+  <td width=164 style='width:122.7pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:86.95pt'>
+  <p class=MsoNormal style='margin-left:6.2pt;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:black'>s1 .
+  replace (s2 , s3 [, n])</span></i></b></p>
+  </td>
+  <td width=460 valign=top style='width:345.05pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:86.95pt'>
+  <p class=MsoNormal style='margin-top:4.1pt;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Создаётся
+  новая строка, в которой фрагмент (подстрока) s2 исходной строки заменяется на
+  фрагмент s3.  Необязательный  аргумент  n указывает количество замен (если
+  требуется заменить не все фрагменты). Пример:</span></p>
+  <p class=MsoNormal style='margin-top:1.05pt;margin-right:77.8pt;margin-bottom:
+  0in;margin-left:6.75pt;margin-bottom:.0001pt;text-indent:-.55pt;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s1=’breKeKeKeKs’
+  ss=s1.replace(’Ke’, ’XoXo’,2)</span></p>
+  <p class=MsoNormal style='margin-left:6.75pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>ss </span><span
+  lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";color:black'>→</span><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>
+  ’breXoXoXoXoKeKs’</span></p>
+  </td>
+ </tr>
+ <tr style='height:87.15pt'>
+  <td width=163 style='width:122.05pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-left:6.2pt;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:black'>s1 .
+  capitalize ()</span></i></b></p>
+  </td>
+  <td width=461 valign=top style='width:345.7pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:87.15pt'>
+  <p class=MsoNormal style='margin-top:1.85pt;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Создаётся
+  новая строка, в которой первая буква исходной строки становится заглавной
+  (прописной), а все остальные становятся маленькими (строчными). Пример:</span></p>
+  <p class=MsoNormal style='margin-top:1.05pt;margin-right:156.35pt;margin-bottom:
+  0in;margin-left:6.15pt;margin-bottom:.0001pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s1=’breKeKeKeKs’
+  s2=s1. capitalize ()</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s2 </span><span
+  lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";color:black'>→</span><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>
+  ’Brekekekeks’</span></p>
+  </td>
+ </tr>
+ <tr style='height:73.2pt'>
+  <td width=163 style='width:122.05pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:73.2pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:6.2pt;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:black'>s1
+  .swapcase()</span></i></b></p>
+  </td>
+  <td width=461 valign=top style='width:345.7pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:73.2pt'>
+  <p class=MsoNormal style='margin-top:1.85pt;margin-right:5.7pt;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;text-align:justify;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Создаётся
+  новая строка, в которой прописные буквы исходной строки заменяются на
+  строчные и наоборот.</span></p>
+  <p class=MsoNormal style='margin-top:2.2pt;margin-right:160.5pt;margin-bottom:
+  0in;margin-left:6.15pt;margin-bottom:.0001pt;text-indent:-.05pt;border:none'><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Пример:
+  s1=’breKeKeKeKs’ s2=s1.swapcase()</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s2 </span><span
+  lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";color:black'>→</span><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>
+  ’BREkEkEkEkS’</span></p>
+  </td>
+ </tr>
+ <tr style='height:64.25pt'>
+  <td width=163 style='width:122.05pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:64.25pt'>
+  <p class=MsoNormal style='margin-top:6.1pt;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:black'> s1
+  .upper()</span></i></b></p>
+  </td>
+  <td width=461 valign=top style='width:345.7pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:64.25pt'>
+  <p class=MsoNormal style='margin-top:1.85pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;line-height:103%;border:none'><span
+  lang=RU style='font-size:11.0pt;line-height:103%;font-family:"Verdana",sans-serif;
+  color:black'>Создаётся новая строка, в которой все буквы исходной строки
+  становятся заглавными (прописными). Пример:</span></p>
+  <p class=MsoNormal style='margin-top:1.05pt;margin-right:160.5pt;margin-bottom:
+  0in;margin-left:6.15pt;margin-bottom:.0001pt;line-height:68%;border:none'><span
+  lang=RU style='font-size:11.0pt;line-height:68%;font-family:"Verdana",sans-serif;
+  color:black'>s1=’breKeKeKeKs’ s2=s1.upper()</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s2 </span><span
+  lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";color:black'>→</span><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>
+  ’BREKEKEKEKS’</span></p>
+  </td>
+ </tr>
+ <tr style='height:56.95pt'>
+  <td width=163 style='width:122.05pt;border:solid #231F20 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in;height:56.95pt'>
+  <p class=MsoNormal style='margin-top:6.05pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.2pt;margin-bottom:.0001pt;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:black'>s1 .
+  lower()</span></i></b></p>
+  </td>
+  <td width=461 valign=top style='width:345.7pt;border-top:none;border-left:
+  none;border-bottom:solid #231F20 1.0pt;border-right:solid #231F20 1.0pt;
+  padding:0in 0in 0in 0in;height:56.95pt'>
+  <p class=MsoNormal style='margin-top:1.85pt;margin-right:0in;margin-bottom:
+  0in;margin-left:6.1pt;margin-bottom:.0001pt;line-height:103%;border:none'><span
+  lang=RU style='font-size:11.0pt;line-height:103%;font-family:"Verdana",sans-serif;
+  color:black'>Создаётся новая строка, в которой все буквы исходной строки
+  становятся маленькими (строчными). Пример:</span></p>
+  <p class=MsoNormal style='margin-top:1.05pt;margin-right:160.5pt;margin-bottom:
+  0in;margin-left:6.15pt;margin-bottom:.0001pt;line-height:68%;border:none'><span
+  lang=RU style='font-size:11.0pt;line-height:68%;font-family:"Verdana",sans-serif;
+  color:black'>s1=’breKeKeKeKs’ s2=s1.lower()</span></p>
+  <p class=MsoNormal style='margin-left:6.15pt;border:none'><span lang=RU
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s2 </span><span
+  lang=RU style='font-size:11.0pt;font-family:"Arial Unicode MS";color:black'>→</span><span
+  lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>
+  ’brekekekeks’</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+3.0pt;margin-left:0in;text-align:justify;text-indent:42.55pt;line-height:115%;
+page-break-after:avoid;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Метод format()</span></b></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:0in;text-align:justify;text-indent:42.55pt;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Метод <i>format()</i> применяется к строкам.
+Сформированная строка передается в функцию вывода.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+42.55pt;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Возможности <i>format()
+</i>широкие, рассмотрим основные.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt;line-height:
+150%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:150%;
+font-family:"Verdana",sans-serif;color:black'>size1 = &quot;length - {}, width
+- {}, height - {}&quot;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt;line-height:
+150%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:150%;
+font-family:"Verdana",sans-serif;color:black'>size1.format(3, 6, 2.3)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt;line-height:
+150%;border:none'><span lang=RU style='font-size:11.0pt;line-height:150%;
+font-family:"Verdana",sans-serif;color:black'>получим<b>:  'length - 3, width -
+6, height — 2.3'</b></span></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:0in;text-align:justify;text-indent:42.55pt;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Если фигурные скобки исходной строки пусты,
+то <u>подстановка аргументов</u> идет согласно порядку их следования. Если в
+фигурных скобках строки указаны индексы аргументов, порядок подстановки может
+быть изменен:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt;line-height:
+150%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:150%;
+font-family:"Verdana",sans-serif;color:black'>size2 = &quot;height - {2},
+length - {0}, width - {1}&quot;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt;line-height:
+150%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:150%;
+font-family:"Verdana",sans-serif;color:black'>size2.format(3, 6, 2.3)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt;line-height:
+150%;border:none'><span lang=RU style='font-size:11.0pt;line-height:150%;
+font-family:"Verdana",sans-serif;color:black'>получим<b>:  'height - 2.3,
+length - 3, width - 6'</b></span></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:0in;text-align:justify;text-indent:42.55pt;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Кроме того, аргументы могут передаваться по
+слову-ключу:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt;line-height:
+150%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:150%;
+font-family:"Verdana",sans-serif;color:black'>info = &quot;This is a {subj}.
+It's {prop}.&quot;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt;line-height:
+150%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:150%;
+font-family:"Verdana",sans-serif;color:black'>info.format(subj=&quot;table&quot;,
+prop=&quot;small&quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt;line-height:
+150%;border:none'><span lang=RU style='font-size:11.0pt;line-height:150%;
+font-family:"Verdana",sans-serif;color:black'>получим:  <b>&quot;This is a
+table. It's small.&quot;</b></span></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:0in;text-align:justify;text-indent:42.55pt;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Пример форматирования вещественных чисел
+(3.33333 – 0-ой элемент, 10/6 – 1-ый элемент):</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt;line-height:
+150%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:150%;
+font-family:"Verdana",sans-serif;color:black'>&quot;{1:.2f}
+{0:.3f}&quot;.format(3.33333, 10/6)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt;line-height:
+150%;border:none'><span lang=RU style='font-size:11.0pt;line-height:150%;
+font-family:"Verdana",sans-serif;color:black'>получим:  <b>'1.67 3.333'</b></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>Операции форматирования строк</span></i></b><span lang=RU
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'> могут выполняться двумя способами:</span></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><i><span lang=RU
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>Выражения форматирования строк (</span></i><span lang=RU
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>основан на модели функции printf из языка C).</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%;border:none'><b><span
+lang=RU style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:red'>!!!!</span></b><span lang=RU style='font-size:11.0pt;line-height:
+150%;font-family:"Verdana",sans-serif;color:red'> </span><span lang=RU
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>Выражение форматирования <u>всегда создает новую строку</u>, а не
+изменяет строку, расположенную в левой части.</span></p>
+
+<p class=MsoNormal style='line-height:150%;background:#F2F2F2;border:none'><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Courier New";
+color:black'>&gt;&gt;&gt; pupil = &quot;Ben&quot;</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:#F2F2F2;border:none'><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Courier New";
+color:black'>&gt;&gt;&gt; old = 16</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:#F2F2F2;border:none'><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Courier New";
+color:black'>&gt;&gt;&gt; grade = 9.2</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:#F2F2F2;border:none'><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Courier New";
+color:black'>&gt;&gt;&gt; <b>print</b>(&quot;It's %s, %d. Level: %f&quot; %
+(pupil, old, grade))</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:#F2F2F2;border:none'><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Courier New";
+color:black'>It's Ben, 16. Level: 9.200000</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>Здесь вместо трех комбинаций символов&nbsp;<span style='background:
+#F2F2F2'>%s</span>,&nbsp;<span style='background:#F2F2F2'>%d</span>,&nbsp;<span
+style='background:#F2F2F2'>%f</span>&nbsp;подставляются значения переменных
+pupil, old, grade.</span></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+“%d %s %d you” % (1, ‘spam’, 4)</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Courier New";color:black'>‘1
+spam 4 you’</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%;border:none'><u><span
+lang=RU style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>Обратите внимание</span></u><span lang=RU style='font-size:11.0pt;
+line-height:150%;font-family:"Verdana",sans-serif;color:black'>: когда
+вставляется более одного значения, в правой части выражения их необходимо
+сгруппировать с помощью круглых скобок. <b><i>Оператор форматирования %</i></b>
+ожидает получить справа либо один объект, либо список объектов.</span></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+“%s -- %s -- %s” % (42, 3.14159, [1, 2, 3])</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Courier New";color:black'>‘42
+-- 3.14159 -- [1, 2, 3]’</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>В левой части выражения всем значениям соответствует спецификатор
+%s, который соответствует операции преобразования в строку.</span></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><i><span lang=RU
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>Метод форматирования строк </span></i><span lang=RU
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>более уникальный для языка Python.</span></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Courier New";color:black'>&gt;&gt;&gt;age
+= 26</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Courier New";color:black'>&gt;&gt;&gt;name
+= 'Swaroop'</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Courier New";color:black'>&gt;&gt;&gt;print('Возраст
+{0} - {1} лет'.format(name, age))</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Courier New";color:black'>&gt;&gt;&gt;print('Возраст
+{} - {} лет'.format(name, age)) #без указания цифр</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Courier New";color:black'>#с
+именами именованных аргументов (например, {food}).</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+‘{motto}, {0} and {food}’.format(42, motto=3.14, food=[1, 2])</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%;border:none'><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Courier New";
+color:black'>‘3.14, 42 and [1, 2]’</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<table class=2 border=1 cellspacing=0 cellpadding=0 width=676 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=676 valign=top style='width:506.85pt;border:solid black 1.0pt;
+  background:#DBDBDB;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:150%;border:none'><span lang=RU
+  style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+  color:black'>&gt;&gt;&gt; <b>‘{0:.2f}’.format(1.2345)               </b><i>#
+  Строковый метод</i></span></p>
+  <p class=MsoNormal style='line-height:150%;border:none'><span lang=RU
+  style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+  color:black'>‘1.23’</span></p>
+  <p class=MsoNormal style='line-height:150%;border:none'><span lang=RU
+  style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+  color:black'>&gt;&gt;&gt; <b>format(1.2345, ‘.2f’)                  </b><i>#
+  Встроенная функция</i></span></p>
+  <p class=MsoNormal style='line-height:150%;border:none'><span lang=RU
+  style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+  color:black'>‘1.23’</span></p>
+  <p class=MsoNormal style='line-height:150%;border:none'><span lang=RU
+  style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+  color:black'>&gt;&gt;&gt; <b>‘%.2f’ % 1.2345                        </b><i>#
+  Выражение форматирования</i></span></p>
+  <p class=MsoNormal style='line-height:150%;border:none'><span lang=RU
+  style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+  color:black'>‘1.23’</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;border:none'><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;border:none'><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Таблица,
+в которой в компактной форме представлены возможности работы со строками:</span></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;border:none'><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<table class=1 border=1 cellspacing=0 cellpadding=0 width=676 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><b><span lang=RU style='font-size:
+  12.0pt;font-family:"Verdana",sans-serif;color:black'>Операция</span></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><b><span lang=RU style='font-size:
+  12.0pt;font-family:"Verdana",sans-serif;color:black'>Интерпретация</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S = ‘’ </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Пустая строка</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S = “spam’s” </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Строка в кавычках</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S = ‘s\np\ta\x00m’ </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Экранированные
+  последовательности</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S1 + S2 </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Конкатенация</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S * 3 </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Повторение</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S[i] </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Обращение к символу по индексу</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>len(S) </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Длина</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>“a %s parrot” % kind </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Выражение форматирования строки</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>“a {0} parrot”.format(kind) </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Строковый метод форматирования </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S.find(‘pa’) </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Вызов строкового метода: поиск</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S.rstrip() </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Удаление ведущих и конечных
+  пробельных символов</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S.replace(‘pa’, ‘xx’) </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Замена</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S.split(‘,’) </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Разбиение по
+  символу-разделителю</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S.isdigit() </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Проверка содержимого</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S.lower() </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Преобразование регистра
+  символов</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S.upper()</span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Преобразование регистра
+  символов</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S.isupper()</span></i></b></p>
+  </td>
+  <td width=470 rowspan=2 valign=top style='width:352.75pt;border-top:none;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Возвращает true, если в строке
+  хотя бы одна буква в верхнем (или нижнем) регистре</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S.islower()</span></i></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S.endswith(‘spam’) </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Проверка окончания строки</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>‘spam’.join(strlist) </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Сборка строки из списка</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S.encode(‘latin-1’) </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Кодирование строк Юникода</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:154.1pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><b><i><span lang=RU
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>S.count(T)&nbsp; </span></i></b></p>
+  </td>
+  <td width=470 valign=top style='width:352.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span lang=RU style='font-size:12.0pt;
+  font-family:"Verdana",sans-serif;color:black'>Возвращает число вхождений
+  строки&nbsp;T&nbsp;внутри строки&nbsp;S</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='border:none'><b><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:black'>Примеры использования строковых
+методов (класса str): </span></b></p>
+
+<p class=MsoNormal style='border:none'><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='border:none'><i><span lang=RU style='font-size:12.0pt;
+font-family:"Courier New";color:black'>name   =  'New string'   # Это  объект
+строки</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>#
+начинается ли строка с некоторой заданной подстроки?</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>if
+name.startswith('Ne'):     </span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>   
+print('Да,  строка  начинается на &quot;Ne&quot;')</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>#
+является ли некоторая строка частью данной строки?</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>if
+'i'  in  name: </span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>   
+print('Да,  строка  содержит букву &quot;i&quot;')</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>#метод <b>find</b> используется для определения позиции данной
+подстроки в строке; </span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>#возвращает -1, если подстрока не обнаружена.</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>if
+name.find('ing')  != -1:</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>   
+print('Да,  она   содержит строку  &quot;ing&quot;')</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># метод <b>join</b> - для объединения элементов последовательности
+с указанной </span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>#строкой в качестве разделителя между элементами</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>delimiter
+=  '_*_'</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>mylist
+= ['Бразилия', 'Россия', 'Индия', 'Китай']</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>print(delimiter.join(mylist))</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>‘Бразилия_*_Россия_*_Индия_*_Китай’</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># еще один пример с join: склеить три строки</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+names = [&quot;John&quot;, &quot;Paul&quot;, &quot;Ringo&quot;,
+&quot;George&quot;]</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+&quot;, &quot;.join(names)</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>'John,
+Paul, Ringo, George'</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># метод <b>replace</b> заменяет подстроку</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>S
+= ‘spammy’</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>S
+= S.replace(‘mm’, ‘xx’)</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>print(S)                #
+получим<b> </b>‘spaxxy’</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># метод <b>split</b> преобразует строку в список подстрок,
+окружающих строки-разделители</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>line
+= ‘bob,hacker,40’</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>line.split(‘,’)
+         # получим [‘bob’, ‘hacker’, ‘40’], разделитель запятая</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>#Разделители
+могут содержать более одного символа:</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>line
+= “i’mSPAMaSPAMprogrammer”</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>line.split(“SPAM”)       #
+получим [“i’m”, ‘a’, ‘programmer’]</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><i><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"Courier New";
+color:black'>&gt;&gt;&gt; 'My name is Simon'.split()</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><i><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"Courier New";
+color:black'>['My', 'name', 'is', 'Simon']</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:28.35pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Если необходимо <u>заменить одну
+подстроку фиксированного размера</u>, которая может появиться в любом месте,
+можно также выполнить операцию замены или отыскать подстроку с помощью метода
+find и затем воспользоваться операциями извлечения подстроки:</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+S = ‘xxxxSPAMxxxxSPAMxxxx’</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+where = S.find(‘SPAM’)    # Поиск позиции</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+where                    # Подстрока найдена со смещением 4</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>4</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+S = S[:where] + ‘EGGS’ + S[(where+4):]</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+S</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>‘xxxxEGGSxxxxSPAMxxxx’</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:28.35pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Если нужно производить <u>множество
+изменений длинных строк</u>, вы можете повысить производительность программы,
+преобразовав строку в объект, который допускает внесение изменений:</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+S = ‘spammy’</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+L = list(S)</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+L</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>[‘s’,
+‘p’, ‘a’, ‘m’, ‘m’, ‘y’]</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:28.35pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Встроенная функция <b>list</b>
+(или функция-конструктор объекта) создает новый список из элементов любой
+последовательности – в данном случае «разрывая» строку на символы и формируя из
+них список, элементы которого можно изменять:</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+L[3] = ‘x’               # Этот прием допустим для списков, но не для строк</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+L[4] = ‘x’</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+L</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>[‘s’,
+‘p’, ‘a’, ‘x’, ‘x’, ‘y’]</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:28.35pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Если после внесения изменений
+необходимо выполнить обратное преобразование (чтобы, например, записать
+результат в файл), можно использовать метод join, который «собирает» список
+обратно в строку:</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+S = ‘’.join(L)</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>&gt;&gt;&gt;
+S</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Courier New";color:black'>‘spaxxy’</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:28.35pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Пример обработки строк</span></i></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>: с клавиатуры вводится строка, содержащая имя, отчество и фамилию
+человека, например: Василий Алибабаевич Хрюндиков. Каждые два слова разделены
+одним пробелом, в начале строки пробелов нет. В результате обработки должна
+получиться новая строка, содержащая фамилию и инициалы: Хрюндиков В.А.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:28.35pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><i><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"Courier New";
+color:black'>print ( &quot;Введите имя, отчество и фамилию:&quot; ) </span></i></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><i><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"Courier New";
+color:black'>s = input() </span></i></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><i><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"Courier New";
+color:black'>fio = s.split() </span></i></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><i><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"Courier New";
+color:black'>s = fio[2] + &quot; &quot; + fio[0][0] + &quot;.&quot; + fio[1][0]
++ &quot;.&quot; </span></i></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><i><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"Courier New";
+color:black'>print ( s )</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Запись fio[0][0] обозначает «0-й символ из 0-го элемента списка
+fio», то есть, первая буква имени. Аналогично fio[1][0] – это первая буква
+отчества.</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='border:none'><b><i><span lang=RU style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:#0070C0'>Строковые методы </span></i></b><b><i><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>is…</span></i></b><b><i><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#0070C0'>
+удобно применять для проверки допустимости введенных пользователем данных:</span></i></b></p>
+
+<p class=MsoNormal style='border:none'><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:black'><img width=582 height=214
+id=image1.png src="part1_2_files/image002.jpg"></span></p>
+
+<p class=MsoNormal style='border:none'><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='border:none'><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:black'>Пример: запрос пароля,
+содержащего только буквы и цифры</span></p>
+
+<p class=MsoNormal style='background:white;border:none'><i><span lang=RU
+style='font-size:12.0pt;font-family:"Courier New";color:black'>while True:</span></i></p>
+
+<p class=MsoNormal style='background:white;border:none'><i><span lang=RU
+style='font-size:12.0pt;font-family:"Courier New";color:black'>   
+print('Введите новый пароль (только буквы и цифры')</span></i></p>
+
+<p class=MsoNormal style='background:white;border:none'><i><span lang=RU
+style='font-size:12.0pt;font-family:"Courier New";color:black'>    password =
+input()</span></i></p>
+
+<p class=MsoNormal style='background:white;border:none'><i><span lang=RU
+style='font-size:12.0pt;font-family:"Courier New";color:black'>    if
+password.isalnum():</span></i></p>
+
+<p class=MsoNormal style='background:white;border:none'><i><span lang=RU
+style='font-size:12.0pt;font-family:"Courier New";color:black'>        break </span></i></p>
+
+<p class=MsoNormal style='background:white;border:none'><i><span lang=RU
+style='font-size:12.0pt;font-family:"Courier New";color:black'>   
+print('Пароль должен содержать только буквы и цифры')</span></i></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:12.0pt;
+line-height:115%;font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

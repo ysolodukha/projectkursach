@@ -1,0 +1,556 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:"Quattrocento Sans";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:56.7pt 42.5pt 56.7pt 85.05pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in'><span lang=RU
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>Библиотека
+<b>Pandas&nbsp;</b> – это библиотека Python, содержащая высокоуровневые
+структуры данных и&nbsp; инструменты  для осуществления, в первую очередь,
+обработки (подготовки) данных. </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal;background:white'><i><span lang=RU style='font-size:
+12.0pt;font-family:"Times New Roman",serif;color:black;background:white'>Series</span></i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black;
+background:white'>&nbsp;– это маркированная одномерная структура данных, ее
+можно представить, как таблицу с одной строкой. С&nbsp;<i>Series</i>&nbsp;можно
+работать как с обычным массивом (обращаться по номеру индекса), и как с
+ассоциированным массивом, когда можно использовать ключ для доступа к элементам
+данных.&nbsp;<i>DataFrame</i>&nbsp;– это двумерная маркированная структура.
+Идейно она очень похожа на обычную таблицу, что выражается в способе ее
+создания и работе с ее элементами.&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><b><i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>Конструктор
+класса&nbsp;Series:</span></i></b></p>
+
+<div style='border:solid #EDEDED 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt;
+background:white'>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white;
+border:none;padding:0in'><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:black'>pandas.Series(data=None, index=None, dtype=None,
+name=None, copy=False, fastpath=False)</span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>data&nbsp;</span></i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>–
+массив, словарь или скалярное значение, на базе которого будет построен&nbsp;<i>Series;</i></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>index</span></i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>&nbsp;–
+список меток, который будет использоваться для доступа к элементам&nbsp;<i>Series</i>.
+Длина списка должна быть равна длине&nbsp;<i>data</i>;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>dtype&nbsp;</span></i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>–
+объект&nbsp;<i>numpy.dtype</i>, определяющий тип данных;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>copy&nbsp;</span></i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>–
+создает копию массива данных, если параметр равен&nbsp;<i>True&nbsp;</i>в ином
+случае ничего не делает.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>В
+большинстве случаев, при создании&nbsp;<i>Series,&nbsp;</i>используют только
+первые два параметра. </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white;
+border:none'><b><i><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>Конструктор класса&nbsp;DataFrame:</span></i></b></p>
+
+<div style='border:solid #EDEDED 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt;
+background:white'>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white;
+border:none;padding:0in'><span lang=RU style='font-family:"Courier New";
+color:black'>class pandas.DataFrame(data=None, index=None, columns=None,
+dtype=None, copy=False)</span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white;
+border:none'><i><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>data&nbsp;</span></i><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:black'>– массив&nbsp;<i>ndarray</i>,
+словарь (<i>dict</i>) или другой&nbsp;<i>DataFrame</i>;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white;
+border:none'><i><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>index&nbsp;</span></i><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:black'>– список меток для записей
+(имена строк таблицы);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white;
+border:none'><i><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>columns&nbsp;</span></i><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:black'>– список меток для полей
+(имена столбцов таблицы);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white;
+border:none'><i><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>dtype&nbsp;</span></i><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:black'>– объект&nbsp;<i>numpy.dtype</i>,
+определяющий тип данных;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white;
+border:none'><i><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>copy&nbsp;</span></i><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:black'>– создает копию массива
+данных, если параметр равен&nbsp;<i>True&nbsp;</i>в ином случае ничего не
+делает.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><b><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:red'>!!!!</span></b><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'> </span><b><span
+lang=RU style='font-size:11.5pt;font-family:"Arial",sans-serif;color:#0070C0;
+background:white'>Массивы NumPy имеют один dtype для всего массива, а pandas
+DataFrames имеют один dtype на столбец.</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Создание
+объекта&nbsp;</span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white;
+border:none'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#333333'>Создание&nbsp;</span><span lang=RU style='color:black'><a
+href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series"><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:blue;
+text-decoration:none'>Series</span></b></a></span><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#333333'>
+путем передачи списка значений (целочисленный индекс по умолчанию):</span></p>
+
+<div style='border:solid #C9C9C9 1.0pt;padding:8.0pt 8.0pt 8.0pt 8.0pt;
+background:#EEFFCC'>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><b><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#C65D09'>&gt;&gt;&gt; </span></b><span lang=RU
+style='font-size:10.0pt;font-family:"Courier New";color:#333333'>s </span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#666666'>=</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'> pd</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#666666'>.</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>Series([</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#208050'>1</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>, </span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#208050'>3</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>, </span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#208050'>5</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>, np</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#666666'>.</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>nan, </span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#208050'>6</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>, </span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#208050'>8</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>])</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><b><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#C65D09'>&gt;&gt;&gt; </span></b><span lang=RU
+style='font-size:10.0pt;font-family:"Courier New";color:#333333'>s</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#333333'>0    1.0</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#333333'>1    3.0</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#333333'>2    5.0</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#333333'>3    NaN</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#333333'>4    6.0</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#333333'>5    8.0</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#333333'>dtype: float64</span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-size:11.5pt;font-family:"Quattrocento Sans";color:#333333'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:black'>Создание</span><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#333333'>&nbsp;</span><span
+lang=RU style='color:black'><a
+href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame"><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:blue;
+text-decoration:none'>DataFrame</span></b></a></span><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#333333'> </span><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>путем
+передачи dict объектов, которые можно преобразовать в Series.</span></p>
+
+<div style='border:solid #C9C9C9 1.0pt;padding:8.0pt 8.0pt 8.0pt 8.0pt;
+background:#EEFFCC'>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><b><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#C65D09'>&gt;&gt;&gt; </span></b><span lang=RU
+style='font-size:10.0pt;font-family:"Courier New";color:#333333'>df2 </span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#666666'>=</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'> pd</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#666666'>.</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>DataFrame(</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><b><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#C65D09'>   ...: </span></b><span lang=RU style='font-size:
+10.0pt;font-family:"Courier New";color:#333333'>    {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><b><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#C65D09'>   ...: </span></b><span lang=RU style='font-size:
+10.0pt;font-family:"Courier New";color:#333333'>        </span><span lang=RU
+style='font-size:10.0pt;font-family:"Courier New";color:#4070A0'>&quot;A&quot;</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>: </span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#208050'>1.0</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>,</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><b><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#C65D09'>   ...: </span></b><span lang=RU style='font-size:
+10.0pt;font-family:"Courier New";color:#333333'>        </span><span lang=RU
+style='font-size:10.0pt;font-family:"Courier New";color:#4070A0'>&quot;B&quot;</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>: pd</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#666666'>.</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>Timestamp(</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#4070A0'>&quot;20130102&quot;</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>),</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><b><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#C65D09'>   ...: </span></b><span lang=RU style='font-size:
+10.0pt;font-family:"Courier New";color:#333333'>        </span><span lang=RU
+style='font-size:10.0pt;font-family:"Courier New";color:#4070A0'>&quot;C&quot;</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>: pd</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#666666'>.</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>Series(</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#208050'>1</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>,
+index</span><span lang=RU style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>=</span><span lang=RU style='font-size:10.0pt;font-family:"Courier New";
+color:#007020'>list</span><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#333333'>(</span><span lang=RU style='font-size:10.0pt;
+font-family:"Courier New";color:#007020'>range</span><span lang=RU
+style='font-size:10.0pt;font-family:"Courier New";color:#333333'>(</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#208050'>4</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>)),
+dtype</span><span lang=RU style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>=</span><span lang=RU style='font-size:10.0pt;font-family:"Courier New";
+color:#4070A0'>&quot;float32&quot;</span><span lang=RU style='font-size:10.0pt;
+font-family:"Courier New";color:#333333'>),</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><b><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#C65D09'>   ...: </span></b><span lang=RU style='font-size:
+10.0pt;font-family:"Courier New";color:#333333'>        </span><span lang=RU
+style='font-size:10.0pt;font-family:"Courier New";color:#4070A0'>&quot;D&quot;</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>: np</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#666666'>.</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>array([</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#208050'>3</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>] </span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#666666'>*</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'> </span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#208050'>4</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>,
+dtype</span><span lang=RU style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>=</span><span lang=RU style='font-size:10.0pt;font-family:"Courier New";
+color:#4070A0'>&quot;int32&quot;</span><span lang=RU style='font-size:10.0pt;
+font-family:"Courier New";color:#333333'>),</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><b><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#C65D09'>   ...: </span></b><span lang=RU style='font-size:
+10.0pt;font-family:"Courier New";color:#333333'>        </span><span lang=RU
+style='font-size:10.0pt;font-family:"Courier New";color:#4070A0'>&quot;E&quot;</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>: pd</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#666666'>.</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>Categorical([</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#4070A0'>&quot;test&quot;</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>, </span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#4070A0'>&quot;train&quot;</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>, </span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#4070A0'>&quot;test&quot;</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>, </span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#4070A0'>&quot;train&quot;</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>]),</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><b><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#C65D09'>   ...: </span></b><span lang=RU style='font-size:
+10.0pt;font-family:"Courier New";color:#333333'>        </span><span lang=RU
+style='font-size:10.0pt;font-family:"Courier New";color:#4070A0'>&quot;F&quot;</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>: </span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#4070A0'>&quot;foo&quot;</span><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:#333333'>,</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><b><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#C65D09'>   ...: </span></b><span lang=RU style='font-size:
+10.0pt;font-family:"Courier New";color:#333333'>    }</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><b><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#C65D09'>   ...: </span></b><span lang=RU style='font-size:
+10.0pt;font-family:"Courier New";color:#333333'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><b><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#C65D09'>   ...: </span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#333333'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><b><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#C65D09'>&gt;&gt;&gt; </span></b><span lang=RU
+style='font-size:10.0pt;font-family:"Courier New";color:#333333'>df2</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#333333'>     A          B    C  D      E    F</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#333333'>0  1.0 2013-01-02  1.0  3   test  foo</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#333333'>1  1.0 2013-01-02  1.0  3  train  foo</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#333333'>2  1.0 2013-01-02  1.0  3   test  foo</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:#EEFFCC;
+border:none;padding:0in'><span lang=RU style='font-size:10.0pt;font-family:
+"Courier New";color:#333333'>3  1.0 2013-01-02  1.0  3  train  foo</span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><b><i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>Работа
+с элементами&nbsp;DataFrame</span></i></b></p>
+
+<table class=1 border=1 cellspacing=0 cellpadding=0 width=633 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=255 valign=bottom style='width:191.15pt;border:solid black 1.0pt;
+  background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Операция</span></p>
+  </td>
+  <td width=170 valign=bottom style='width:127.6pt;border:solid black 1.0pt;
+  border-left:none;background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Синтаксис</span></p>
+  </td>
+  <td width=208 valign=bottom style='width:155.65pt;border:solid black 1.0pt;
+  border-left:none;background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Возвращаемый результат</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=255 valign=top style='width:191.15pt;border:solid black 1.0pt;
+  border-top:none;background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Выбор столбца</span></p>
+  </td>
+  <td width=170 valign=top style='width:127.6pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>df[col]</span></p>
+  </td>
+  <td width=208 valign=top style='width:155.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Series</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=255 valign=top style='width:191.15pt;border:solid black 1.0pt;
+  border-top:none;background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Выбор строки по метке</span></p>
+  </td>
+  <td width=170 valign=top style='width:127.6pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>df.loc[label]</span></p>
+  </td>
+  <td width=208 valign=top style='width:155.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Series</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=255 valign=top style='width:191.15pt;border:solid black 1.0pt;
+  border-top:none;background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Выбор строки по индексу</span></p>
+  </td>
+  <td width=170 valign=top style='width:127.6pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>df.iloc[loc]</span></p>
+  </td>
+  <td width=208 valign=top style='width:155.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Series</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=255 valign=top style='width:191.15pt;border:solid black 1.0pt;
+  border-top:none;background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Слайс по строкам</span></p>
+  </td>
+  <td width=170 valign=top style='width:127.6pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>df[0:4]</span></p>
+  </td>
+  <td width=208 valign=top style='width:155.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>DataFrame</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=255 valign=top style='width:191.15pt;border:solid black 1.0pt;
+  border-top:none;background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Выбор строк, отвечающих условию</span></p>
+  </td>
+  <td width=170 valign=top style='width:127.6pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>df[bool_vec]</span></p>
+  </td>
+  <td width=208 valign=top style='width:155.65pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:white;padding:5.25pt 10.5pt 5.25pt 10.5pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>DataFrame</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white;
+border:none'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

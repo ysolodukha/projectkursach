@@ -1,0 +1,1220 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:"Helvetica Neue";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:56.7pt 42.55pt 56.7pt 56.7pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+line-height:115%;page-break-after:avoid;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>ФАЙЛЫ</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Большие объемы данных имеет смысл хранить не
+в списках или словарях, а в <b><i>файлах</i></b>. Поэтому в языках
+программирования предусмотрена возможность работы с файлами. В Python файлы
+рассматриваются как <u>объекты файловых классов</u>, то есть, например, <u>текстовый
+файл – это тип данных</u> наряду с типами списка, словаря, целого числа и др.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Обычно файлы делят на текстовые и байтовые
+(бинарные). Первые рассматриваются как содержащие символьные данные, строки.
+Вторые – как поток байтов. Побайтово считываются, например, файлы изображений.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В ЛР рассмотрены базовые приемы чтения
+текстовых файлов и записи в них.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Путь к файлу может быть абсолютным или
+относительным. Относительный путь определяется с учетом местоположения текущего
+рабочего каталога. Текущим рабочим каталогом будет каталог из которого
+запускается файл, а не каталог, в котором расположен исполняемый файл.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Модуль </span><b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>os.path</span></b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'> содержит множество функций,
+предназначенных для манипулирования путями доступа к файлам. Он содержится в
+модуле </span><b><span style='font-size:12.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>os</span></b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>, и для его
+импортирования достаточно выполнить инструкцию  <b><i>import os</i></b>. </span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Полная документация модуля os.path приведена на сайте Python по
+адресу </span></i></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='color:black'><a href="http://docs.python.org/3/library/os.path.html"><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>http://docs.python.org/3/library/os.path.html</span></i></a></span><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>.</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Функция </span><b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#00B050'>os.path.join()</span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> возвращает строку, в которой путь доступа к файлу указан с
+использованием корректной версии разделителя. </span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; import os</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; os.path.join('usr', 'bin’, ‘spam')</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>'usr\\bin\\spam'              </span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><b><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Для получения значения текущего рабочего
+каталога</span></i></b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'> в виде строки используется функция
+</span><b><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#00B050'>os.getcwd()</span></b><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>,</span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> а для его изменения — функция </span><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:#00B050'>os.chdir()</span></b><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>.</span></b></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; import os</span></b></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; os.getcwd()</span></b></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>'C:\\Python34'</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; <b>os</b>.<b>chdir('С:\\Windows\\System32')</b></span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; os.getcwd()</span></b></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>'C:\\Windows\\System32'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>!!!!</span></b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'> При попытке
+перейти в несуществующий каталог Python выведет сообщение об ошибке.</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Проверка существования пути</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Вызов </span><b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#00B050'>os.path.exists (path)</span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> возвращает значение True, если файл (или папка), на который
+ссылается аргумент, существует.</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Вызов </span><b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#00B050'>os.path.isfile (path)</span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> возвращает значение True, если заданный аргументом путь
+существует и является файлом, и значение False в противном случае.</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Вызов </span><b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#00B050'>os.path.isdir (path)</span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> возвращает значение True, если заданный аргументом путь
+существует и является папкой; иначе — False.</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>C помощью функции </span><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:#00B050'>os.makedirs()</span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> можно <b><i>создавать новые папки</i></b> (каталоги). </span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; import os</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; os.makedirs('С:\\delicious\\walnut\\waffles’)           </span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># функция создаст все необходимые промежуточные папки, гарантируя
+существование полного пути.</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><b><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Обработка абсолютных и относительных путей</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Существуют два способа
+определения пути доступа к файлу:</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>абсолютный путь, </span></i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>который всегда начинается с имени корневой папки;</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>относительный путь, </span></i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>который задается относительно текущего рабочего каталога
+программы.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>При задании путей можно
+использовать:</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>• Одиночная точка является сокращенным обозначением, имеющим смысл
+&quot;данная папка&quot;. </span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>•• Двойная точка имеет смысл &quot;родительская папка&quot;.</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Вызов </span><b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#00B050'>os.path.abspath(path)</span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> возвращает строку <u>абсолютного пути</u> аргумента. Это простой
+способ преобразования относительного пути в абсолютный.</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Вызов </span><b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#00B050'>os.path.dirname (path)</span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> возвращает строку, содержащую всю часть пути, которая
+предшествует последней косой черте в аргументе <i>path. </i></span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Вызов </span><b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#00B050'>os.path.basename (path)</span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> возвращает строку, содержащую всю ту часть пути, которая следует
+за последней косой чертой в аргументе <i>path. </i></span></p>
+
+<table class=2 border=0 cellspacing=0 cellpadding=0 width=688 style='border-collapse:
+ collapse'>
+ <tr>
+  <td width=404 valign=top style='width:303.1pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>&gt;&gt;&gt; path ='C:\\Windows\\System32\\calc.exe'</span></p>
+  <p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>&gt;&gt;&gt; os.path.basename(path)</span></p>
+  <p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>'calc.exe'</span></p>
+  <p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>&gt;&gt;&gt; os.path.dirname(path)</span></p>
+  <p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>‘С:\\Windows\\System32'</span></p>
+  </td>
+  <td width=283 valign=top style='width:212.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'><img border=0 width=257 height=58 id=image2.png
+  src="part2_4_files/image001.jpg"></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Если нужны как имя папки, так и базовое имя, достаточно вызвать
+функцию </span><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#00B050'>os.path.split()</span></b><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>,</span></b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'> которая возвращает кортеж,
+включающий обе эти строки.</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; os.path.split</span></b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>(path)</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>('C:\\Windows\\System32’, 'calc.exe')</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Определение размеров файлов и содержимого папок</span></i></b></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Вызов функции </span><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#00B050'>os.path.getsize (path)</span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> возвращает выраженный в байтах размер файла, указанного в
+аргументе <i>path.</i></span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; os.path.getsize('C:\\Windows\\System32\\calc.exe')</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>776192</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Вызов </span><b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#00B050'>os.listdir (path)</span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> возвращает список строк с именами всех файлов с путем доступа,
+указанным в аргументе path. </span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt;<b> os.listdir('С:\\Windows\\System32</b>')</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>['0409', '12520437.cpx', '12520850.<b>cpx</b>', '5U877.ax',
+‘aaclient.dll',…]</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+page-break-after:avoid;border:none'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Функция open() – открытие файла</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Открытие файла выполняется с помощью
+встроенной в Python функции <i>open().</i> Обычно ей передают один или два
+аргумента. Первый – имя файла или имя с адресом, если файл находится не в том
+каталоге, где находится скрипт. Второй аргумент – режим, в котором открывается
+файл.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Обычно используются режимы <b>чтения ('r')</b>
+и <b>записи ('w').</b> Если файл открыт в режиме чтения, то запись в него
+невозможна. Можно только считывать данные из него. Если файл открыт в режиме
+записи, то в него можно только записывать данные, считывать нельзя.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Если файл открывается в режиме <b>'<i>w</i>'</b>,
+то все данные, которые в нем были до этого, стираются. <u>Файл становится
+пустым</u>. Если не надо удалять существующие в файле данные, тогда следует
+использовать вместо режима записи, режим <b>дозаписи ('a').</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Если файл отсутствует, то открытие его в
+режиме <b><i>'w'</i></b> создаст новый файл. Бывают ситуации, когда надо
+гарантировано создать новый файл, избежав случайной перезаписи данных
+существующего. В этом случае вместо режима <i>'w</i>' используется режим <b>'x'</b>.
+В нем <u>всегда создается новый файл для записи</u>. Если указано имя
+существующего файла, то будет выброшено исключение. Потери данных в уже
+имеющемся файле не произойдет.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Если при вызове <b><i>open()</i></b> второй
+аргумент не указан, то файл открывается в режиме чтения как текстовый файл.
+Чтобы открыть файл как байтовый, дополнительно к букве режима чтения/записи
+добавляется символ <b>'b'</b>. Буква <b>'t'</b> обозначает текстовый файл.
+Поскольку это тип файла по умолчанию, то обычно ее не указывают.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Нельзя указывать только тип файла, то есть <b>open(&quot;имя_файла&quot;,
+'b')</b> есть ошибка, даже если файл открывается на чтение. Правильно – <i>open(&quot;имя_файла&quot;,
+<b><u>'r</u></b>b').</i> Только текстовые файлы мы можем открыть командой <i>open(&quot;имя_файла&quot;),</i>
+потому что и <i>'r' </i>и<i> 't'</i> подразумеваются по-умолчанию.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Функция <b><i>open()</i></b> возвращает
+объект файлового типа. Его надо либо сразу связать с переменной, чтобы не
+потерять, либо сразу прочитать.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<table class=1 border=1 cellspacing=0 cellpadding=0 width=619 style='margin-left:
+ 41.45pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=74 style='width:55.45pt;border-top:black;border-left:black;
+  border-bottom:#BBBBBB;border-right:#BBBBBB;border-style:solid;border-width:
+  1.0pt;background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;border:none'><b><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Режим</span></b></p>
+  </td>
+  <td width=545 style='width:408.6pt;border-top:solid black 1.0pt;border-left:
+  none;border-bottom:solid #BBBBBB 1.0pt;border-right:solid #BBBBBB 1.0pt;
+  background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;border:none'><b><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Обозначение</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=74 style='width:55.45pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid #BBBBBB 1.0pt;border-right:solid #BBBBBB 1.0pt;
+  background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;border:none'><b><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>'r'</span></b></p>
+  </td>
+  <td width=545 style='width:408.6pt;border-top:none;border-left:none;
+  border-bottom:solid #BBBBBB 1.0pt;border-right:solid #BBBBBB 1.0pt;
+  background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal style='border:none'><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black'>открытие на чтение (является
+  значением по умолчанию).</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=74 style='width:55.45pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid #BBBBBB 1.0pt;border-right:solid #BBBBBB 1.0pt;
+  background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;border:none'><b><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>'w'</span></b></p>
+  </td>
+  <td width=545 style='width:408.6pt;border-top:none;border-left:none;
+  border-bottom:solid #BBBBBB 1.0pt;border-right:solid #BBBBBB 1.0pt;
+  background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal style='border:none'><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black'>открытие на запись, содержимое
+  файла удаляется, если файла не существует, создается новый.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=74 style='width:55.45pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid #BBBBBB 1.0pt;border-right:solid #BBBBBB 1.0pt;
+  background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;border:none'><b><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>'x'</span></b></p>
+  </td>
+  <td width=545 style='width:408.6pt;border-top:none;border-left:none;
+  border-bottom:solid #BBBBBB 1.0pt;border-right:solid #BBBBBB 1.0pt;
+  background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal style='border:none'><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black'>открытие на запись, если файла
+  не существует, иначе исключение.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=74 style='width:55.45pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid #BBBBBB 1.0pt;border-right:solid #BBBBBB 1.0pt;
+  background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;border:none'><b><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>'a'</span></b></p>
+  </td>
+  <td width=545 style='width:408.6pt;border-top:none;border-left:none;
+  border-bottom:solid #BBBBBB 1.0pt;border-right:solid #BBBBBB 1.0pt;
+  background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal style='border:none'><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black'>открытие на дозапись,
+  информация добавляется в конец файла.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=74 style='width:55.45pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid #BBBBBB 1.0pt;border-right:solid #BBBBBB 1.0pt;
+  background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;border:none'><b><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>'b'</span></b></p>
+  </td>
+  <td width=545 style='width:408.6pt;border-top:none;border-left:none;
+  border-bottom:solid #BBBBBB 1.0pt;border-right:solid #BBBBBB 1.0pt;
+  background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal style='border:none'><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black'>открытие в двоичном режиме.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=74 style='width:55.45pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid #BBBBBB 1.0pt;border-right:solid #BBBBBB 1.0pt;
+  background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;border:none'><b><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>'t'</span></b></p>
+  </td>
+  <td width=545 style='width:408.6pt;border-top:none;border-left:none;
+  border-bottom:solid #BBBBBB 1.0pt;border-right:solid #BBBBBB 1.0pt;
+  background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal style='border:none'><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black'>открытие в текстовом режиме
+  (является значением по умолчанию).</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=74 style='width:55.45pt;border-top:none;border-left:solid black 1.0pt;
+  border-bottom:solid #BBBBBB 1.0pt;border-right:solid #BBBBBB 1.0pt;
+  background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;border:none'><b><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>'+'</span></b></p>
+  </td>
+  <td width=545 style='width:408.6pt;border-top:none;border-left:none;
+  border-bottom:solid #BBBBBB 1.0pt;border-right:solid #BBBBBB 1.0pt;
+  background:white;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal style='border:none'><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black'>открытие на чтение и запись</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='color:black'><img border=0 width=579 height=180
+id=image3.png src="part2_4_files/image002.jpg"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='color:black'><img border=0 width=557 height=267
+id=image1.png src="part2_4_files/image003.jpg"></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+page-break-after:avoid;border:none'><b><span style='font-size:13.0pt;
+line-height:115%;color:black'><img border=0 width=576 height=195 id=image4.png
+src="part2_4_files/image004.jpg"></span></b></p>
+
+<p class=MsoNormal style='border:none'><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><b><span style='font-size:14.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:red'>!!!!</span></b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'> Обратите
+внимание: данные, получаемые из файла, всегда попадают в сценарий <u>в виде
+строки</u>, поэтому необходимо будет выполнять преобразование данных в другие
+типы объектов языка Python, если эта форма представления не подходит. При
+выполнении операции записи данных в файл необходимо передавать методам уже
+сформированные строки (интерпретатор Python не выполняет автоматическое
+преобразование объектов в строки). </span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%;background:white;
+border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'># Открывает файл в режиме записи
+(создает/очищает)</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; myfile = open(‘myfile.txt', 'w') </span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; myfile.write(‘hello text file\n')     # Записывает
+строку текста</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; myfile.write(‘goodbye text file\n')</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; myfile.close()                             #
+Выталкивает выходные буферы на диск</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'># открыть файл для добавления информации в конец</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; myfile = open(‘myfile.txt', 'a') </span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; myfile.write(‘new text\n')</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; myfile.close()  </span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>#Открывает файл для чтения: 'r' - no умолчанию</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; myfile = open('myfile.txt') </span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; myfile.reade()                            #Читает
+строку</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>'hello text file\n' </span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; content=myfile.read()</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; myfile.close()  </span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; print(content)</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>hello text file</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>goodbye text file</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%;background:white;
+border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>new text</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt;line-height:
+115%;background:white;border:none'><b><i><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Содержимое
+двоичных файлов</span></i></b><i><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'> </span></i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>представляется в виде строк типа bytes, и оно передается программе
+без каких-либо изменений.</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># <i>Файл открывается в двоичном режиме</i></span></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; data = open('data.bin', 'rb’).read() </span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; data                                 # Строка байтов
+хранит двоичные данные</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>b' </span></i><span style='color:black'><a href="about:blank"><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black;text-decoration:none'>\x00\x00\x00\x07spam\x00\x08'</span></i></a><a
+href="about:blank"><i><span style='font-size:11.0pt;line-height:150%;
+font-family:"Verdana",sans-serif;color:black'> </span></i></a></span></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; data[4:8]                         # Ведет себя как
+строка</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>b'spam'</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; data[4:8][0]           # Но в действительности хранит
+8-битные целые числа</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; bin(data[4:8][0])    # Функция bin() в Python 3.0</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>'0b110011’</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:115%;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Пример: <b><i>записать различные объекты в текстовый файл</i></b>.</span></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt;  X, Y,  Z = 43,  44,  45   </span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt;  S = 'Spam'     </span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt;  D = {'а':  1,   'b':  2}</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt;  L = [1,  2,  3]</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt;</span></i><span style='font-size:11.0pt;line-height:
+150%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt;  F = open(‘datafile.txt', 'w')         # Создает файл
+для записи</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt;  F.write(S + '\n')                        # Строку
+завершаем символом \n</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt;  F.write(‘%s,%s,%s\n' % (X,  Y,  Z))  # Преобразует
+числа в строки</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt;  F.write(str(L)+'$'+str(D)+'\n') # Преобразует и
+разделяет $</span></i></p>
+
+<p class=MsoNormal style='line-height:150%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt;  F.close()</span></i></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span style='color:
+black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Чтение
+файла</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>С помощью файлового метода <b>read()</b>
+можно прочитать файл целиком или только определенное количество байт. Пусть у
+нас имеется файл <i>data.txt</i> с таким содержимым:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>one - 1 - I</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>two - 2 - II</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>three - 3 - III</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>four - 4 - IV</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>five - 5 - V</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Откроем его и почитаем:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f1 = open('data.txt')</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f1.read(10)</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'one - 1 - '</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f1.read()</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'I\ntwo - 2 - II\nthree - 3 - III\nfour - 4 -
+IV\nfive - 5 - V\n'</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f1.read()</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>''</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; type(f1.read())</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&lt;class 'str'&gt;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Сначала считываются первые десять байтов,
+которые равны десяти символам. Это не бинарный файл, но мы все равно можем
+читать по байтам. Последующий вызов read() считывает весь оставшийся текст. <u>После
+этого объект файлового типа f1 становится пустым.</u></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Заметим, что метод <b><i>read()</i></b>
+возвращает строку, и что конец строки считывается как <b>'\n'</b>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Для того, чтобы читать файл построчно
+существует метод <b>readline():</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f1 = open('data.txt')</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f1.readline()</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>'one - 1 - I\n'</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f1.readline()</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>'two - 2 - II\n'</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f1.readline()</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>'three - 3 — III\n'</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Метод <b>readlines()</b> считывает сразу все
+строки и создает список:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f1 = open('data.txt')</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f1.readlines()</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>['one - 1 - I\n', 'two - 2 - II\n', 'three -
+3 - III\n',</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>'four - 4 - IV\n', 'five - 5 - V\n']</span></i></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Объект файлового типа относится к
+<u>итераторам</u>. Из таких объектов происходит <i>последовательное извлечение
+элементов</i>. Поэтому считывать данные из них можно сразу в цикле без
+использования методов чтения:</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+border:none'><i><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:black'>&gt;&gt;&gt; for i in open('data.txt'):</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>...    
+print(i)</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>...</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>one - 1 -
+I</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>two - 2 -
+II</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>three - 3
+- III</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>four - 4
+- IV</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>five - 5
+- V</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Здесь при выводе наблюдаются лишние пустые
+строки. Функция <i>print()</i> преобразует <i>'\n'</i> в переход на новую
+строку. К этому добавляет свой переход на новую строку. Создадим список строк
+файла без '\n':</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:150%;border:none'><i><span style='font-size:11.0pt;line-height:
+150%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; nums = []</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; for i in open('data.txt'):</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>...     nums.append(i[:-1])</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>...</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; nums</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>['one - 1 - I', 'two - 2 - II', 'three - 3 -
+III', </span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>'four - 4 - IV', 'five - 5 - V']</span></i></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Переменной i присваивается
+очередная строка файла. Мы берем ее срез от начала до последнего символа, не
+включая его. Следует иметь в виду, что '\n' это один символ, а не два.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Запись в
+файл</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Запись в файл выполняется с помощью методов <b>write()
+</b>и<b> writelines().</b> Во второй можно передать структуру данных:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; l = ['tree', 'four']</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f2 = open('newdata.txt', 'w')</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f2.write('one')</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f2.write(' two')</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f2.writelines(l)</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Метод <b><i>write()</i></b> возвращает
+количество записанных символов.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Закрытие
+файла</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>После того как работа с файлом закончена,
+важно не забывать его закрыть, чтобы освободить место в памяти. Делается это с
+помощью файлового метода <b>close().</b> Свойство файлового объекта <i>closed</i>
+позволяет проверить закрыт ли файл.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f1.close()</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f1.closed</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>True</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; f2.closed</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%;border:none'><i><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>False</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Если файл открывается в заголовке цикла (for
+i in open('fname')), то видимо интерпретатор его закрывает при завершении
+работы цикла или через какое-то время.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Модуль <b>OS</b> содержит
+дополнительные низкоуровневые функции, позволяющие работать с файлами и каталогами.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Примеры функций из модуля <b>os</b>
+для работы с каталогами:</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>chdir(&lt;имя каталога&gt;)
+– </span></b><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>делает указанный каталог текущим.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.4pt;
+line-height:115%;border:none'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>mkdir(&lt;имя каталога&gt;)
+– </span></b><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>удаляет пустой каталог.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>listdir(&lt;имя
+каталога&gt;) – </span></b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>возвращает список объектов в
+указанном каталоге.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>chdir(&lt;имя каталога&gt;)
+– </span></b><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>делает указанный каталог текущим.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>chdir(&lt;имя каталога&gt;)
+– </span></b><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>делает указанный каталог текущим.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>ЗАДАЧА:</span></b><span
+style='font-size:13.0pt;line-height:115%;font-family:"Helvetica Neue";
+color:#333333;background:white'> Выведите список файлов в указанной директории.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>РЕШЕНИЕ:</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:150%;background:#F8F8F8;
+border:none'><span style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'># ф-ия listdir() возвращает список всех объектов в указанном
+каталоге</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:150%;background:#F8F8F8;
+border:none'><b><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>from os import listdir</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:150%;background:#F8F8F8;
+border:none'><span style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'># isfile(&lt;объект&gt;) возвращает True, если объект является
+файлом</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:150%;background:#F8F8F8;
+border:none'><span style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'># join(&lt;путь1&gt;[,…(&lt;путьN&gt;]) – соединяет указанные
+элементы в пути, </span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:150%;background:#F8F8F8;
+border:none'><span style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:black'># при необходимости вставляя между ними разделители</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:150%;background:#F8F8F8;
+border:none'><b><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>from os.path import isfile, join</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:150%;background:#F8F8F8;
+border:none'><b><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>files = [f for f in listdir('/home') if
+isfile(join('/home', f))]</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:150%;background:#F8F8F8;
+border:none'><b><span style='font-size:11.0pt;line-height:150%;font-family:
+"Verdana",sans-serif;color:black'>print(files)</span></b></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

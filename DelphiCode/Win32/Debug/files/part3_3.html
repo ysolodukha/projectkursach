@@ -1,0 +1,697 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:Gungsuh;}
+@font-face
+	{font-family:Roboto;}
+@font-face
+	{font-family:"Helvetica Neue";}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+@font-face
+	{font-family:"\@Gungsuh";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#2E75B5;
+	font-weight:normal;}
+h2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:56.7pt 42.5pt 56.7pt 85.05pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+150%'><span lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+background:white'>NumPy включает в себя набор пакетов для решения
+специализированных задач, например:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:25.5pt;text-align:justify;text-indent:-.25in;line-height:150%;
+background:white'><span lang=RU style='font-size:10.0pt;line-height:150%;
+font-family:"Noto Sans Symbols"'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=RU style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black'>numpy.linalg</span></b><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black'> — реализует операции линейной алгебры (простое умножение векторов
+и матриц есть в базовом варианте);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:25.5pt;text-align:justify;text-indent:-.25in;line-height:150%;
+background:white'><span lang=RU style='font-size:10.0pt;line-height:150%;
+font-family:"Noto Sans Symbols"'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=RU style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black'>numpy.random</span></b><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black'> — реализует функции для работы со случайными величинами;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:25.5pt;text-align:justify;text-indent:-.25in;line-height:150%;
+background:white'><span lang=RU style='font-size:10.0pt;line-height:150%;
+font-family:"Noto Sans Symbols"'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=RU style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black'>numpy.fft</span></b><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black'> — реализует прямое и обратное преобразование Фурье.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:25.5pt;text-align:justify;line-height:150%;background:white'><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+150%;background:white;border:none'><b><i><span lang=RU style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black'>Наиболее
+важные атрибуты объектов ndarray:</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-.25in;line-height:150%;
+background:white;border:none'><span lang=RU style='font-size:10.0pt;line-height:
+150%;font-family:"Noto Sans Symbols"'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=RU style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black'>ndarray.ndim</span></b><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black'>&nbsp;- число измерений (чаще их называют &quot;оси&quot;)
+массива.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-.25in;line-height:150%;
+background:white;border:none'><span lang=RU style='font-size:10.0pt;line-height:
+150%;font-family:"Noto Sans Symbols"'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=RU style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black'>ndarray.shape</span></b><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black'>&nbsp;- размеры массива, его форма. Это кортеж натуральных чисел,
+показывающий длину массива по каждой оси. Для матрицы из n строк и m столбов,
+shape будет (n,m). Число элементов кортежа shape равно ndim.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-.25in;line-height:150%;
+background:white;border:none'><span lang=RU style='font-size:10.0pt;line-height:
+150%;font-family:"Noto Sans Symbols"'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=RU style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black'>ndarray.size</span></b><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black'>&nbsp;- количество элементов массива. Очевидно, равно произведению
+всех элементов атрибута shape.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-.25in;line-height:150%;
+background:white;border:none'><span lang=RU style='font-size:10.0pt;line-height:
+150%;font-family:"Noto Sans Symbols"'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=RU style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black'>ndarray.dtype</span></b><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black'>&nbsp;- объект, описывающий тип элементов массива. </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-.25in;line-height:150%;
+background:white;border:none'><span lang=RU style='font-size:10.0pt;line-height:
+150%;font-family:"Noto Sans Symbols"'>●<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=RU style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black'>ndarray.itemsize</span></b><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black'>&nbsp;- размер каждого элемента массива в байтах.</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+line-height:150%'><span lang=RU><img width=516 height=191 id=image5.png
+src="part3_3_files/image001.jpg" alt="../_images/threefundamental.png"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+150%'><span lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+background:white'>Концептуальная диаграмма, показывающая взаимосвязь между
+тремя фундаментальными объектами, используемыми для описания данных в массиве:
+1) сам ndarray, 2) объект типа данных, описывающий структуру одного элемента
+массива фиксированного размера, 3) скалярный объект Python, который
+возвращается при доступе к одному элементу массива.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%;background:white;
+border:none'><span lang=RU style='font-size:12.0pt;line-height:150%;font-family:
+"Helvetica Neue";color:#454545'>&nbsp;</span></p>
+
+<table class=2 border=1 cellspacing=0 cellpadding=0 width=576 style='margin-left:
+ 35.2pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=576 valign=top style='width:432.1pt;border:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:150%'><b><i><span lang=RU style='font-size:12.0pt;line-height:
+  150%;font-family:"Times New Roman",serif;color:#53CD70;background:white'>array
+  - функция, создающая объект типа ndarray</span></i></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><i><span lang=RU
+style='font-size:10.5pt;line-height:150%;font-family:"Helvetica Neue";
+background:white'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><b><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+background:white'>Основные типы данных dtype</span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU><img
+width=382 height=98 id=image15.png src="part3_3_files/image002.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><b><span lang=RU
+style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:red;background:white'>!!!!</span></b><span lang=RU style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;background:white'> Если
+выходим за рамки диапазона типа, то исключение не вызывается (идет отсчет от
+правой границы):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";background:white'>print (np.uint8(-1))       #выведет
+255, т.к. uint8 – беззнаковое число от 0 до 255</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><b><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+background:white'>Генерация случайных чисел в новом стиле:</span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU><img
+width=623 height=270 id=image4.png src="part3_3_files/image003.jpg"
+alt="https://miro.medium.com/max/1152/1*6RkkCzD3TTSCjzf6CV7nVw.png"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><b><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Инициализация
+матрицы:</span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=624 height=332 id=image1.png src="part3_3_files/image004.jpg"
+alt="Массивы NumPy"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><b><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Срезы
+в двумерном массиве:</span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><b><span lang=RU
+style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:red'>!!!!</span></b><span lang=RU style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif'> Обратите внимание, что при срезах:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=624 height=133 id=image2.png src="part3_3_files/image005.jpg"
+alt="Диаграмма сравнения списка Python и массива NumPy"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU><img
+width=514 height=261 id=image6.png src="part3_3_files/image006.jpg"
+alt="Массивы NumPy"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+150%'><b><span lang=RU style='font-size:14.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:red;background:white'>!!!!</span></b><span
+lang=RU style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:red;background:white'> </span><span lang=RU style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;background:white'>При
+нарезке массива на самом деле копирование не производится.&nbsp;Когда массив
+изменяется, изменения также отражаются в срезе.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+150%;background:white'><span lang=RU style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:#222222'>Чтобы выбрать столбец из
+матрицы просто сделайте срез по всем строкам и&nbsp; укажите индекс нужного
+столбца:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%;background:white'><span
+lang=RU style='font-family:"Courier New";color:black;background:#F3F4F6'>M[:, </span><span
+lang=RU style='font-family:"Courier New";color:#006666;background:#F3F4F6'>0</span><span
+lang=RU style='font-family:"Courier New";color:black;background:#F3F4F6'>]</span><span
+lang=RU style='font-family:"Courier New";color:black'>             #</span><span
+lang=RU style='font-family:"Courier New";color:#222222'>выберет 0-й столбец</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><b><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+background:white'>Математические операции между массивом и числом:</span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU><img
+width=624 height=255 id=image14.png src="part3_3_files/image007.jpg"
+alt="Массивы NumPy"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU>&nbsp;</span></p>
+
+<h2 style='margin-bottom:0in;line-height:150%;background:white'><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;color:#292929'>Арифметические
+операции с </span></i><i><span lang=RU style='font-size:12.0pt;line-height:
+150%;color:#454545;background:white'>массивами одинаковых размеров</span></i></h2>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU><img
+width=624 height=249 id=image13.png src="part3_3_files/image008.jpg"
+alt="Массивы NumPy"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#222222;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+150%'><b><i><span lang=RU style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:#333333;background:white'>Арифметические операции
+над матрицами</span></i></b><i><span lang=RU style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:#333333;background:
+white'>&nbsp;<b>разных размеров</b></span></i><span lang=RU style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#333333;
+background:white'> возможны в том случае, если размерность одной из матриц
+равно одному (будет использоваться&nbsp;правила трансляции):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU><img
+width=624 height=113 id=image7.jpg src="part3_3_files/image009.jpg"
+alt="Трансляция матриц NumPy"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#222222;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><b><span lang=RU
+style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:red;background:white'>!!!!</span></b><span lang=RU style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:#222222;background:
+white'> При несоответствии в размере выбрасываются ошибки:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; a = np.array([1,2,3], float)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; b = np.array([4,5], float)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; a + b</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:10.0pt;line-height:150%;font-family:"Courier New"'>Traceback
+(most recent call last):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:10.0pt;line-height:150%;font-family:"Courier New"'>File
+&quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:10.0pt;line-height:150%;font-family:"Courier New"'>ValueError:
+operands could not be broadcast together with shapes (3,) (2,)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU>&nbsp;</span></p>
+
+<h2 style='margin-bottom:0in;line-height:150%;background:white'><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;color:#333333'>Скалярное
+произведение -  метод dot() </span></i></h2>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU><img
+width=624 height=156 id=image12.jpg src="part3_3_files/image010.jpg"
+alt="Скалярное произведение матрицы"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><b><span lang=RU
+style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:red;background:white'>!!!!</span></b><span lang=RU style='font-size:11.5pt;
+line-height:150%;font-family:"Times New Roman",serif;color:#333333;background:
+white'> </span><span lang=RU style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:#333333;background:white'>Размерности
+обеих матриц должны совпадать с той стороны, где они соприкасаются.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+150%'><span lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#292929;background:white'>В NumPy всего <b><i>три типа векторов</i></b>:
+1D-массивы, 2D-векторы-строки и 2D-векторы-столбцы.&nbsp;Вот диаграмма явных
+преобразований между ними:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU><img
+width=624 height=265 id=image8.png src="part3_3_files/image011.jpg"
+alt="https://miro.medium.com/max/1270/1*d9j1sDyzpBXLxK11vU-Mtw.png"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:10.5pt;line-height:150%;font-family:"Helvetica Neue";
+background:white'>Flatten&nbsp;- это всегда копия,&nbsp;reshape&nbsp;(-1) -
+всегда вид,&nbsp;ravel&nbsp;- это вид, когда это возможно</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+150%'><b><span lang=RU style='font-size:14.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:red;background:white'>!!!!!</span></b><span
+lang=RU style='font-size:16.0pt;line-height:150%;font-family:"Georgia",serif;
+color:#292929;background:white'> </span><span lang=RU style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:#292929;background:
+white'>Одномерные массивы неявно интерпретируются как двухмерные
+векторы-строки, поэтому, как правило, нет необходимости преобразовывать между
+этими двумя - таким образом, соответствующая область заштрихована.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#292929;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+150%'><b><i><span lang=RU style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman",serif;background:white'>Функции<span style='color:#333333'>&nbsp;агрегирования</span></span></i></b><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#333333;background:white'> – </span><span lang=RU style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:#222222;background:
+white'>это методы NumPy, позволяющие заменять данные интегральными
+характеристиками вдоль некоторых осей.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=RU><img width=624
+height=322 id=image11.png src="part3_3_files/image012.jpg"
+alt="https://miro.medium.com/max/826/1*jmXqsVUNaBaUsBAkHgqb3A.png"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#292929;background:white'>Первое измерение&nbsp;</span><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>i
+<span style='color:#292929;background:white'>(ось = 0) отвечает за индексацию
+строк, второе измерение j (ось =1) – за столбцы.</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><b><span lang=RU
+style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:red;background:white'>!!!</span></b><span lang=RU style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:#222222;background:
+white'> Следует отметить, агрегирующие методы определены не только как методы
+модуля NumPy, но и для самих массивов: </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:#222222;background:white'>np.функция(A,
+axes)   эквивалентно    A.функция (axes), </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#222222;background:white'>где под функцией подразумевается одна из
+функций-агрегаторов, а под axes — индексы осей.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>Например: если а – это массив, то</span></p>
+
+<table class=1 border=1 cellspacing=0 cellpadding=0 width=589 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=213 valign=top style='width:159.5pt;border:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:150%'><span lang=RU style='font-family:"Courier New";color:#383A42;
+  background:#FBFDFF'>a.sum()</span></p>
+  </td>
+  <td width=163 valign=top style='width:122.35pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:150%'><span lang=RU style='font-family:"Courier New"'>или</span></p>
+  </td>
+  <td width=213 valign=top style='width:159.55pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:150%'><span lang=RU style='font-family:"Courier New";color:#383A42;
+  background:#FBFDFF'>np.sum(a)</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:Consolas'>&nbsp;</span></p>
+
+<h2 style='margin-bottom:0in;line-height:150%;background:white'><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;color:black'>Объединение
+массивов</span></i></h2>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%;background:white;
+border:none'><span lang=RU style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:black'>Несколько массивов могут быть объединены
+вместе вдоль разных осей с помощью функций hstack и vstack.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU><img
+width=519 height=416 id=image10.png src="part3_3_files/image013.jpg"
+alt="Массивы NumPy"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Объединение
+с одномерным массивом:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU><img
+width=473 height=387 id=image16.png src="part3_3_files/image014.jpg"
+alt="Массивы NumPy"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><b><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Разбиение
+массивов</span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:150%'><span lang=RU style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif'>Функция hsplit() - разбить массив
+вдоль горизонтальной оси, указав либо число возвращаемых массивов одинаковой
+формы, либо номера столбцов, после которых массив разбивается.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:150%'><span lang=RU style='font-family:"Times New Roman",serif'>Функция
+vsplit() разбивает массив вдоль вертикальной оси, а array_split() позволяет
+указать оси, вдоль которых произойдет разбиение.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU><img
+width=624 height=378 id=image3.png src="part3_3_files/image015.jpg"
+alt="Массивы NumPy"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><b><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Трехмерный
+массив</span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU><img
+width=624 height=300 id=image9.png src="part3_3_files/image016.jpg"
+alt="https://miro.medium.com/max/2448/1*WHg_s1NK4wd9sRb0uEqBsA.png"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Порядок
+вывода n-мерного массива NumPy следующий — последняя ось зацикливается быстрее
+всего, а первая медленнее всего. </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>Это значит, что
+вывод&nbsp;np.ones((4,3,2))&nbsp;будет иметь вид:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:black'>array([[[1., 1.],</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.,
+1.],</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.,
+1.]],</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[[1., 1.],</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.,
+1.],</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.,
+1.]],</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[[1., 1.],</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.,
+1.],</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.,
+1.]],</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[[1., 1.],</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.,
+1.],</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.,
+1.]]])</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU>&nbsp;</span></p>
+
+<h1 style='margin-top:0in;line-height:150%;background:white'><b><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#222222'>Математика многочленов</span></i></b></h1>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#222222;background:white'>NumPy предоставляет методы для работы с
+полиномами. Передавая список корней, можно получить коэффициенты уравнения:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Пример:
+<span style='color:#222222;background:white'>массив возвращает коэффициенты,
+соответствующие уравнению: x<sup>4</sup></span></span><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Gungsuh",serif;
+color:#222222;background:white'>−11x</span><sup><span lang=RU style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#222222;
+background:white'>3</span></sup><span lang=RU style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:#222222;background:
+white'>+9x<sup>2</sup></span><span lang=RU style='font-size:12.0pt;line-height:
+150%;font-family:"Gungsuh",serif;color:#222222;background:white'>+11x−10.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; np.poly([-1, 1, 1, 10])</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>array([ 1, -11,   9,  11, -10])</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#222222;background:white'>Может быть произведена и обратная операция:
+передавая список коэффициентов, функция root вернет все корни многочлена.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#222222;background:white'>Пример: дано уравнение x<sup>3</sup>+4x<sup>2</sup></span><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Gungsuh",serif;
+color:#222222;background:white'>−2x+3, найти корни</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; np.roots([1, 4, -2, 3])</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>array([-4.57974010+0.j        , 
+0.28987005+0.75566815j,</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>        0.28987005-0.75566815j])      </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'># <span style='color:#222222;background:white'>Заметим,
+что в этом уравнении&nbsp;&nbsp;два корня мнимые</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><b><i><span
+lang=RU style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Подмодуль
+<span style='color:#222222;background:white'>linalg</span></span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#222222;background:white'>NumPy также предоставляет набор встроенных
+функций и методов для работы с линейной алгеброй. Это всё можно найти в
+подмодуле linalg. </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New";color:#222222;background:white'>Пример: найти
+определитель матрицы </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; a = np.array([[4, 2, 0], [9, 3,
+7], [1, 2, 1]], float)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; a</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>array([[ 4.,  2.,  0.],</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>       [ 9.,  3.,  7.],</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>       [ 1.,  2.,  1.]])</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; np.linalg.det(a)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU
+style='font-family:"Courier New"'>-48.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:150%'><span lang=RU>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

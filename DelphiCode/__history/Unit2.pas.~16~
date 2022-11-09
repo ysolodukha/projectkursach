@@ -1,0 +1,139 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
+  Vcl.StdCtrls, Vcl.Samples.Gauges, Vcl.ComCtrls, Vcl.OleCtrls, SHDocVw;
+
+type
+  TEducation = class(TForm)
+    Image1: TImage;
+    BackButton: TImage;
+    Label1: TLabel;
+    Label2: TLabel;
+    FirstLevel: TImage;
+    SecondLevel: TImage;
+    ThirdLevel: TImage;
+    FourthLevel: TImage;
+    Level: TImage;
+    Gauge1: TGauge;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure BackButtonClick(Sender: TObject);
+    procedure BackButtonMouseEnter(Sender: TObject);
+    procedure BackButtonMouseLeave(Sender: TObject);
+    procedure FirstLevelMouseEnter(Sender: TObject);
+    procedure FirstLevelMouseLeave(Sender: TObject);
+    procedure SecondLevelMouseEnter(Sender: TObject);
+    procedure SecondLevelMouseLeave(Sender: TObject);
+    procedure ThirdLevelMouseEnter(Sender: TObject);
+    procedure ThirdLevelMouseLeave(Sender: TObject);
+    procedure FourthLevelMouseEnter(Sender: TObject);
+    procedure FourthLevelMouseLeave(Sender: TObject);
+    procedure FirstLevelClick(Sender: TObject);
+    procedure FormPaint(Sender: TObject);
+    procedure SecondLevelClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Education: TEducation;
+  f:TextFile;
+  s:string;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1,Unit3,Unit4,Unit5;
+
+procedure TEducation.FormPaint(Sender: TObject);
+begin
+  AssignFile(f,'files\1levelinfo.txt');
+  Reset(f);
+  while not eof(f) do begin
+    Readln(f,s);
+  end;
+  Gauge1.Progress:=25*StrToInt(s);
+  CloseFile(f);
+end;
+
+procedure TEducation.BackButtonMouseEnter(Sender: TObject);
+begin
+  if(BackButton.Proportional=True) then BackButton.Proportional:=False;
+end;
+
+procedure TEducation.BackButtonMouseLeave(Sender: TObject);
+begin
+  if(BackButton.Proportional=False) then BackButton.Proportional:=True;
+end;
+
+procedure TEducation.FirstLevelClick(Sender: TObject);
+begin
+  Part1_1.Show;
+  Education.Hide;
+end;
+
+procedure TEducation.FirstLevelMouseEnter(Sender: TObject);
+begin
+  if(FirstLevel.Proportional=True) then FirstLevel.Proportional:=False;
+end;
+
+procedure TEducation.FirstLevelMouseLeave(Sender: TObject);
+begin
+  if(FirstLevel.Proportional=False) then FirstLevel.Proportional:=True;
+end;
+
+procedure TEducation.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Application.Terminate;
+end;
+
+
+procedure TEducation.FourthLevelMouseEnter(Sender: TObject);
+begin
+  if(FourthLevel.Proportional=True) then FourthLevel.Proportional:=False;
+end;
+
+procedure TEducation.FourthLevelMouseLeave(Sender: TObject);
+begin
+  if(FourthLevel.Proportional=False) then FourthLevel.Proportional:=True;
+end;
+
+procedure TEducation.SecondLevelClick(Sender: TObject);
+begin
+  Part1_2.Show;
+  Education.Hide;
+end;
+
+procedure TEducation.SecondLevelMouseEnter(Sender: TObject);
+begin
+  if(SecondLevel.Proportional=True) then SecondLevel.Proportional:=False;
+end;
+
+procedure TEducation.SecondLevelMouseLeave(Sender: TObject);
+begin
+  if(SecondLevel.Proportional=False) then SecondLevel.Proportional:=True;
+end;
+
+procedure TEducation.ThirdLevelMouseEnter(Sender: TObject);
+begin
+  if(ThirdLevel.Proportional=True) then ThirdLevel.Proportional:=False;
+end;
+
+procedure TEducation.ThirdLevelMouseLeave(Sender: TObject);
+begin
+  if(ThirdLevel.Proportional=False) then ThirdLevel.Proportional:=True;
+end;
+
+procedure TEducation.BackButtonClick(Sender: TObject);
+begin
+  Education.Hide;
+  Form3.Show;
+end;
+
+end.

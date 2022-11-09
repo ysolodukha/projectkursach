@@ -1,0 +1,2749 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:56.7pt 42.55pt 56.7pt 56.7pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:115%;
+page-break-after:avoid;border:none'><b><i><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Словари</span></i></b></p>
+
+<p class=MsoNormal style='border:none'><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Обычные списки (массивы) представляют собой
+набор пронумерованных элементов, то есть для обращения к какому-либо элементу
+списка необходимо указать его номер. <i>Номер элемента в списке <b>однозначно
+идентифицирует</b> сам элемент.</i> Но идентифицировать данные по числовым
+номерам не всегда оказывается удобно. Например, маршруты поездов
+идентифицируются численно-буквенным кодом (число и одна буква), также
+численно-буквенным кодом идентифицируются авиарейсы, то есть для хранения
+информации о рейсах поездов или самолетов в качестве идентификатора удобно было
+бы использовать не число, а текстовую строку.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Структура данных, позволяющая
+идентифицировать ее элементы не по числовому индексу, а по <u>произвольному</u>,
+называется <b><i>словарем</i></b> или <b><i>ассоциативным массивом</i>.</b>
+Соответствующая структура данных в языке Python называется&nbsp;<b><span
+style='background:#F7F7F9'>dict</span>.</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Рассмотрим простой пример использования
+словаря. Заведем словарь&nbsp;<span style='background:#F7F7F9'>Capitals</span>,
+где <b><i>индексом</i></b> является название страны, а <b><i>значением</i></b>&nbsp;—
+название столицы этой страны. Это позволит легко определять по строке с
+названием страны ее столицу.</span></p>
+
+<div style='border:solid #929DB9 1.0pt;padding:0in 0in 0in 0in'>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none;padding:0in'><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>#&nbsp;Создадим&nbsp;пустой&nbsp;словать&nbsp;Capitals</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Capitals&nbsp;=&nbsp;dict()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>#&nbsp;Заполним&nbsp;его&nbsp;несколькими&nbsp;значениями</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Capitals['Russia']&nbsp;=&nbsp;'Moscow'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Capitals['Ukraine']&nbsp;=&nbsp;'Kiev'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Capitals['USA']&nbsp;=&nbsp;'Washington'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Countries&nbsp;=&nbsp;['Russia',&nbsp;'France',&nbsp;'USA',&nbsp;'Russia']</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>for&nbsp;country&nbsp;in&nbsp;Countries:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none;
+padding:0in'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;       
+#&nbsp;Для&nbsp;каждой&nbsp;страны&nbsp;из&nbsp;списка&nbsp;проверим,&nbsp;есть&nbsp;ли&nbsp;она&nbsp;в&nbsp;словаре&nbsp;Capitals</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;country&nbsp;in&nbsp;Capitals:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Столица&nbsp;страны&nbsp;'&nbsp;+&nbsp;country&nbsp;+&nbsp;':&nbsp;'&nbsp;+&nbsp;Capitals[country])</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;else:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('В&nbsp;базе&nbsp;нет&nbsp;страны&nbsp;c&nbsp;названием&nbsp;'&nbsp;+&nbsp;country)</span></b></p>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Итак, <u>каждый элемент
+словаря состоит из двух объектов</u>:&nbsp;<b><i>ключа</i></b>&nbsp;и&nbsp;<b><i>значения</i></b>.
+В нашем примере ключом является название страны, значением является название
+столицы. </span><b><u><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#C00000'>Ключ</span></u></b><u><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> <i>идентифицирует</i> элемент словаря</span></u><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>, </span><b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#C00000'>значение</span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> является <i>данными</i>, которые соответствуют данному ключу.
+Значения ключей&nbsp;— <b>уникальны</b>, <u>двух одинаковых ключей в словаре
+быть не может.</u></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В жизни широко распространены словари,
+например, привычные бумажные словари (толковые, орфографические,
+лингвистические). В них ключом является слово-заголовок статьи, а
+значением&nbsp;— сама статья. Для того, чтобы получить доступ к статье,
+необходимо указать слово-ключ.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Другой пример словаря, как структуры
+данных&nbsp;— телефонный справочник. В нем ключом является имя, а
+значением&nbsp;— номер телефона. И словарь, и телефонный справочник хранятся
+так, что легко найти элемент словаря по известному ключу (например, если записи
+хранятся в алфавитном порядке ключей, то легко можно найти известный ключ,
+например, бинарным поиском), но если ключ неизвестен, а известно лишь значение,
+то поиск элемента с данным значением может потребовать последовательного
+просмотра всех элементов словаря.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Особенностью ассоциативного массива является
+его <b>динамичность</b>: в него можно добавлять новые элементы с произвольными
+ключами и удалять уже существующие элементы. При этом размер используемой
+памяти пропорционален размеру ассоциативного массива. Доступ к элементам
+ассоциативного массива выполняется хоть и медленнее, чем к обычным массивам, но
+в целом довольно быстро.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В языке Python ключом может быть произвольный
+<b>неизменяемый </b>тип данных: целые и действительные числа, строки, кортежи.
+Ключом в словаре <u>не может быть множество</u>, но может быть элемент
+типа&nbsp;<span style='background:#F7F7F9'>frozenset</span>: специальный тип
+данных, являющийся аналогом типа&nbsp;<span style='background:#F7F7F9'>set</span>,
+который нельзя изменять после создания. Значением элемента словаря может быть
+любой тип данных, в том числе и изменяемый.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'><img
+width=444 height=277 id=image5.png src="part2_3_files/image001.png"></span></b></p>
+
+<p class=MsoNormal style='border:none'><span style='color:black'>&nbsp;</span></p>
+
+<table class=6 border=0 cellspacing=0 cellpadding=0 width=709 style='margin-left:
+ -1.7pt;border-collapse:collapse'>
+ <tr>
+  <td width=198 style='width:148.85pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span style='font-size:11.0pt;
+  font-family:Courier;color:#C00000'>&gt;&gt;&gt; </span><span
+  style='font-size:11.0pt;font-family:Courier;color:black'>eng2sp = </span><span
+  style='font-size:11.0pt;font-family:Courier;color:#7030A0'>dict</span><span
+  style='font-size:11.0pt;font-family:Courier;color:black'>() <br>
+  </span><span style='font-size:11.0pt;font-family:Courier;color:#C00000'>&gt;&gt;&gt;
+  </span><span style='font-size:11.0pt;font-family:Courier;color:black'>eng2sp<br>
+  </span><span style='font-size:11.0pt;font-family:Courier;color:blue'>{}</span></p>
+  </td>
+  <td width=510 style='width:382.75pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span style='font-size:11.0pt;
+  font-family:Courier;color:red'># создаем пустой словарь</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=709 colspan=2 style='width:531.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span style='font-size:11.0pt;
+  font-family:Courier;color:#C00000'>&gt;&gt;&gt; </span><span
+  style='font-size:11.0pt;font-family:Courier;color:black'>eng2sp[</span><span
+  style='font-size:11.0pt;font-family:Courier;color:#00B050'>'one'</span><span
+  style='font-size:11.0pt;font-family:Courier;color:black'>] = </span><span
+  style='font-size:11.0pt;font-family:Courier;color:#00B050'>'uno' </span><span
+  style='font-size:9.0pt;font-family:Courier;color:red'># добавляем 'uno' для
+  элемента с индексом 'one'</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=709 colspan=2 style='width:531.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span style='font-size:12.0pt;
+  color:black'>&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='border:none'><span style='font-size:11.0pt;
+font-family:Courier;color:#C00000'>&gt;&gt;&gt; </span><span style='font-size:
+11.0pt;font-family:Courier;color:black'>eng2sp<br>
+</span><span style='font-size:11.0pt;font-family:Courier;color:blue'>{'one':
+'uno'}<br>
+</span><span style='font-size:11.0pt;font-family:Courier;color:#C00000'>&gt;&gt;&gt;
+</span><span style='font-size:11.0pt;font-family:Courier;color:black'>eng2sp[</span><span
+style='font-size:11.0pt;font-family:Courier;color:#00B050'>'one'</span><span
+style='font-size:11.0pt;font-family:Courier;color:black'>]<br>
+</span><span style='font-size:11.0pt;font-family:Courier;color:blue'>'uno'<br>
+</span><span style='font-size:11.0pt;font-family:Courier;color:#C00000'>&gt;&gt;&gt;
+</span><span style='font-size:11.0pt;font-family:Courier;color:black'>eng2sp[</span><span
+style='font-size:11.0pt;font-family:Courier;color:#00B050'>'two'</span><span
+style='font-size:11.0pt;font-family:Courier;color:black'>] = </span><span
+style='font-size:11.0pt;font-family:Courier;color:#00B050'>'dos'</span></p>
+
+<table class=5 border=0 cellspacing=0 cellpadding=0 width=306 style='border-collapse:
+ collapse'>
+ <tr>
+  <td width=290 style='width:217.4pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span style='font-size:11.0pt;
+  font-family:Courier;color:#C00000'>&gt;&gt;&gt; </span><span
+  style='font-size:11.0pt;font-family:Courier;color:black'>eng2sp[</span><span
+  style='font-size:11.0pt;font-family:Courier;color:#00B050'>'three'</span><span
+  style='font-size:11.0pt;font-family:Courier;color:black'>] = </span><span
+  style='font-size:11.0pt;font-family:Courier;color:#00B050'>'tres'</span><span
+  style='font-size:11.0pt;font-family:Courier;color:black'><br>
+  </span><span style='font-size:11.0pt;font-family:Courier;color:#C00000'>&gt;&gt;&gt;
+  </span><span style='font-size:11.0pt;font-family:Courier;color:black'>eng2sp</span></p>
+  </td>
+  <td width=16 style='width:12.1pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='border:none'><span style='font-size:12.0pt;
+  color:black'>&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='border:none'><span style='font-size:11.0pt;
+font-family:Courier;color:blue'>{'three': 'tres', 'one': 'uno', 'two': 'dos'}<br>
+</span><span style='font-size:11.0pt;font-family:Courier;color:#C00000'>&gt;&gt;&gt;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Когда
+нужно использовать словари</span></b></p>
+
+<p class=MsoNormal style='border:none'><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Словари нужно использовать в
+следующих случаях:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:53.3pt;text-align:justify;text-indent:-17.85pt;line-height:115%;
+border:none'><span style='font-family:"Noto Sans Symbols";color:black'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Подсчет числа каких-то объектов. В этом случае нужно завести
+словарь, в котором ключами являются объекты, а значениями&nbsp;— их количество.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:53.3pt;text-align:justify;text-indent:-17.85pt;line-height:115%;
+border:none'><span style='font-family:"Noto Sans Symbols";color:black'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Хранение каких-либо данных, связанных с объектом. Ключи&nbsp;—
+объекты, значения&nbsp;— связанные с ними данные. Например, если нужно по
+названию месяца определить его порядковый номер, то это можно сделать при
+помощи словаря&nbsp;<span style='background:#F7F7F9'>Num['January'] = 1;
+Num['February'] = 2; ...</span>.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:53.3pt;text-align:justify;text-indent:-17.85pt;line-height:115%;
+border:none'><span style='font-family:"Noto Sans Symbols";color:black'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Установка соответствия между объектами (например,
+“родитель—потомок”). Ключ&nbsp;— объект, значение&nbsp;— соответствующий ему
+объект.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:53.3pt;text-align:justify;text-indent:-17.85pt;line-height:115%;
+border:none'><span style='font-family:"Noto Sans Symbols";color:black'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Если нужен обычный массив, но максимальное значение индекса
+элемента очень велико, и при этом будут использоваться не все возможные индексы
+(так называемый “разреженный массив”), то можно использовать ассоциативный
+массив для экономии памяти.</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+text-indent:35.45pt;line-height:115%;page-break-after:avoid;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Создание словаря</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Пустой словарь можно создать
+при помощи функции&nbsp;<b><i><span style='background:#F7F7F9'>dict()</span></i></b>&nbsp;или
+пустой пары фигурных скобок&nbsp;<b><span style='background:#F7F7F9'>{}</span></b>&nbsp;(вот
+почему фигурные скобки нельзя использовать для создания пустого множества). Для
+создания словаря с некоторым набором начальных значений можно использовать
+следующие конструкции:</span></p>
+
+<div style='border:solid #929DB9 1.0pt;padding:0in 0in 0in 0in'>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Capitals&nbsp;=&nbsp;{'Russia':&nbsp;'Moscow',&nbsp;'Ukraine':&nbsp;'Kiev',&nbsp;'USA':&nbsp;'Washington'}</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Capitals&nbsp;=&nbsp;dict(Russia&nbsp;=&nbsp;'Moscow',&nbsp;Ukraine&nbsp;=&nbsp;'Kiev',&nbsp;USA&nbsp;=&nbsp;'Washington')</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Capitals&nbsp;=&nbsp;dict([(&quot;Russia&quot;,&nbsp;&quot;Moscow&quot;),&nbsp;(&quot;Ukraine&quot;,&nbsp;&quot;Kiev&quot;),&nbsp;(&quot;USA&quot;,&nbsp;&quot;Washington&quot;)])</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Capitals&nbsp;=&nbsp;dict(zip([&quot;Russia&quot;,&nbsp;&quot;Ukraine&quot;,&nbsp;&quot;USA&quot;],&nbsp;[&quot;Moscow&quot;,&nbsp;&quot;Kiev&quot;,&nbsp;&quot;Washington&quot;]))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>print(Capitals)</span></b></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Первые два способа можно
+использовать только для создания небольших словарей, перечисляя все их
+элементы. Кроме того, во втором способе ключи передаются как именованные
+параметры функции&nbsp;<b><span style='background:#F7F7F9'>dict</span>,</b>
+поэтому в этом случае ключи могут быть только строками, причем являющимися
+корректными идентификаторами. В третьем и четвертом случае можно создавать
+большие словари, если в качестве аргументов передавать уже готовые списки,
+которые могут быть получены не обязательно перечислением всех элементов, а
+любым другим способом построены по ходу исполнения программы. В третьем способе
+функции&nbsp;<b><span style='background:#F7F7F9'>dict</span>&nbsp;</b>нужно
+передать список, каждый элемент которого является <b><i>кортежем из двух
+элементов: ключа и значения.</i></b> В четвертом способе используется
+функция&nbsp;<b><span style='background:#F7F7F9'>zip</span>,</b> которой
+передаются два списка одинаковой длины: список ключей и список значений.</span></p>
+
+<p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+12.0pt;margin-left:0in;text-indent:35.4pt;border:none'><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:#000305'>Также можно использовать
+генерацию словаря через <b><i>Dict comprehensions</i></b>:</span></p>
+
+<p class=MsoNormal style='margin-left:7.5pt;background:#EEEEEE;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'>Cities </span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#666666'>=</span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'> [</span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#4070A0'>&quot;Moscow&quot;</span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'>, </span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#4070A0'>&quot;Kiev&quot;</span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'>, </span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#4070A0'>&quot;Washington&quot;</span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'>]</span></p>
+
+<p class=MsoNormal style='margin-left:7.5pt;background:#EEEEEE;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'>States </span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#666666'>=</span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'> [</span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#4070A0'>&quot;Russia&quot;</span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'>, </span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#4070A0'>&quot;Ukraine&quot;</span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'>, </span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#4070A0'>&quot;USA&quot;</span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'>]</span></p>
+
+<p class=MsoNormal style='margin-left:7.5pt;background:#EEEEEE;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'>CapitalsOfState
+</span><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:#666666'>=</span><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:#000305'> {state: city </span><b><span style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:#007020'>for</span></b><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'> city,
+state </span><b><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:#007020'>in</span></b><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:#000305'> </span><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:#007020'>zip</span><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:#000305'>(Cities, States)}</span></p>
+
+<p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+12.0pt;margin-left:0in;border:none'><span style='font-size:11.0pt;font-family:
+"Verdana",sans-serif;color:#000305'>Это особенно полезно, когда нужно
+&quot;вывернуть&quot; словарь наизнанку:</span></p>
+
+<p class=MsoNormal style='margin-left:7.5pt;background:#EEEEEE;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'>StateByCapital
+</span><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:#666666'>=</span><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:#000305'> {CapitalsOfState[state]: state </span><b><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#007020'>for</span></b><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'> state </span><b><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#007020'>in</span></b><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'>
+CapitalsOfState}</span></p>
+
+<p class=MsoNormal style='margin-left:7.5pt;background:#EEEEEE;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:7.5pt;background:#EEEEEE;border:none'><b><span
+style='font-size:12.0pt;font-family:"Verdana",sans-serif;color:red'>По аналогии
+с множествами, словари являются неупорядоченной коллекцией!</span></b></p>
+
+<p class=MsoNormal style='border:none'><span style='font-size:12.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Часто словари используются, если требуется найти частоту
+встречаемости элементов в <b>последовательности (списке, строке, кортеже</b></span><b><span
+style='font-size:8.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> </span></b><b><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>)</span></b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>. Функция, которая возвращает словарь, содержащий статистику
+встречаемости элементов в последовательности:</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span style='font-size:
+12.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:#E36C0A'>def </span><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:blue'>histogram</span><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>(s):<br>
+    d = </span><span style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#7030A0'>dict</span><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>()</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span style='font-size:
+12.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>    </span><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#E36C0A'>for </span><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>c </span><span style='font-size:
+12.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:#E36C0A'>in </span><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>s:</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span style='font-size:
+12.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>        </span><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#E36C0A'>if </span><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>c </span><span style='font-size:
+12.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:#E36C0A'>not in </span><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>d:</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span style='font-size:
+12.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>           
+d[c] = 1</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span style='font-size:
+12.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:#E36C0A'>       
+else</span><span style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>:</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span style='font-size:
+12.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>           
+d[c] = d[c] + 1 </span><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:red'># или d[c] += 1</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span style='font-size:
+12.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:#E36C0A'>return </span><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>d</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Результат вызова функции histogram для списка, строки, кортежа
+соответственно: </span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:#C00000'>&gt;&gt;&gt;
+</span><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>histogram([2, 5, 6, 5, 4, 4, 4, 4, 3, 2, 2, 2, 2])</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:blue'>{2: 5, 3:
+1, 4: 4, 5: 2, 6: 1}<br>
+</span><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#C00000'>&gt;&gt;&gt; </span><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>histogram(</span><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#00B050'>&quot;ywte3475eryt3478e477477474&quot;</span><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>)</span></p>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:blue'>{'4': 6,
+'8': 1, 'e': 3, '3': 2, '7': 7, '5': 1, 'r': 1, 'y': 2, 'w': 1, 't': 2}</span></p>
+
+<table class=4 border=0 cellspacing=0 cellpadding=0 width=416 style='border-collapse:
+ collapse'>
+ <tr>
+  <td width=291 style='width:218.05pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:#C00000'>&gt;&gt;&gt; </span><span style='font-size:11.0pt;line-height:
+  115%;font-family:"Verdana",sans-serif;color:black'>histogram((5, 5, 5, 6, 5,</span><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:#00B050'> 'r'</span><span style='font-size:11.0pt;line-height:115%;
+  font-family:"Verdana",sans-serif;color:black'>, 5))</span></p>
+  <p class=MsoNormal style='line-height:115%;border:none'><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:blue'>{5: 5, 6: 1, 'r': 1}</span></p>
+  </td>
+  <td width=125 style='width:93.95pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><span
+  style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:7.5pt;line-height:115%;background:#EEEEEE;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#C00000'>&gt;&gt;&gt;</span><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:red'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid;
+border:none'><b><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:#000305'>Операции с элементами словарей</span></b></p>
+
+<p class=MsoNormal style='border:none'><span style='color:black'>&nbsp;</span></p>
+
+<table class=3 border=1 cellspacing=0 cellpadding=0 width=687 style='border-collapse:
+ collapse;border:none'>
+ <thead>
+  <tr>
+   <td width=177 valign=top style='width:132.4pt;border:solid black 1.0pt;
+   padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+   <p class=MsoNormal align=center style='text-align:center;border:none'><b><span
+   style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Операция</span></b></p>
+   </td>
+   <td width=510 valign=top style='width:382.7pt;border:solid black 1.0pt;
+   border-left:none;padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+   <p class=MsoNormal align=center style='text-align:center;border:none'><b><span
+   style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Значение</span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr>
+  <td width=177 valign=top style='width:132.4pt;border:solid black 1.0pt;
+  border-top:none;background:white;padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>value =
+  A[key]</span></i></b></p>
+  </td>
+  <td width=510 valign=top style='width:382.7pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='margin-right:11.35pt;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Получение
+  элемента по ключу. Если элемента с заданным ключом в словаре нет, то
+  возникает исключение&nbsp;<span style='background:#EEEEEE'>KeyError</span>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:132.4pt;border:solid black 1.0pt;
+  border-top:none;background:white;padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>value =
+  A.get(key)</span></i></b></p>
+  </td>
+  <td width=510 valign=top style='width:382.7pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='margin-right:11.35pt;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Получение
+  элемента по ключу. Если элемента в словаре нет, то&nbsp;<span
+  style='background:#EEEEEE'>get</span>&nbsp;возвращает&nbsp;<span
+  style='background:#EEEEEE'>None</span>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:132.4pt;border:solid black 1.0pt;
+  border-top:none;background:white;padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>value =
+  A.get(key, default_value)</span></i></b></p>
+  </td>
+  <td width=510 valign=top style='width:382.7pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='margin-right:115.6pt;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>То же,
+  но вместо <span style='background:#EEEEEE'>None </span>метод <span
+  style='background:#EEEEEE'>get </span>возвращает <span style='background:
+  #EEEEEE'>default_value</span>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:132.4pt;border:solid black 1.0pt;
+  border-top:none;background:white;padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>key in A</span></i></b></p>
+  </td>
+  <td width=510 valign=top style='width:382.7pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='margin-right:11.35pt;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Проверить
+  принадлежность&nbsp;<i>ключа</i>&nbsp;словарю.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:132.4pt;border:solid black 1.0pt;
+  border-top:none;background:white;padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>key not in A</span></i></b></p>
+  </td>
+  <td width=510 valign=top style='width:382.7pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='margin-right:11.35pt;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>То же,
+  что not key in A.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:132.4pt;border:solid black 1.0pt;
+  border-top:none;padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>A[key] =
+  value</span></i></b></p>
+  </td>
+  <td width=510 valign=top style='width:382.7pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='margin-right:11.35pt;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Добавление
+  нового элемента в словарь.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:132.4pt;border:solid black 1.0pt;
+  border-top:none;padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>del A[key]</span></i></b></p>
+  </td>
+  <td width=510 valign=top style='width:382.7pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='margin-right:11.35pt;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Удаление
+  пары ключ-значение с ключом key. Возбуждает исключение KeyError, если такого
+  ключа нет.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:132.4pt;border:solid black 1.0pt;
+  border-top:none;padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>if key in A:</span></i></b></p>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>del A[key]</span></i></b></p>
+  </td>
+  <td width=510 valign=top style='width:382.7pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='margin-right:11.35pt;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Удаление
+  пары ключ-значение с предварительной проверкой наличия ключа.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:132.4pt;border:solid black 1.0pt;
+  border-top:none;padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>try:</span></i></b></p>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>del A[key]</span></i></b></p>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>except
+  KeyError:</span></i></b></p>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>pass</span></i></b></p>
+  </td>
+  <td width=510 valign=top style='width:382.7pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='margin-right:11.35pt;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Удаление
+  пары ключ-значение с перехватыванием и обработкой исключения.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:132.4pt;border:solid black 1.0pt;
+  border-top:none;padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>value =
+  A.pop(key)</span></i></b></p>
+  </td>
+  <td width=510 valign=top style='width:382.7pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='margin-right:11.35pt;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Удаление
+  пары ключ-значение с ключом&nbsp;<span style='background:#EEEEEE'>key</span>&nbsp;и
+  возврат значения удаляемого элемента.</span></p>
+  <p class=MsoNormal style='margin-right:11.35pt;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Если
+  такого ключа нет, то возбуждается&nbsp;<span style='background:#EEEEEE'>KeyError</span>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:132.4pt;border:solid black 1.0pt;
+  border-top:none;padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>value =
+  A.pop(key, default_value)</span></i></b></p>
+  </td>
+  <td width=510 valign=top style='width:382.7pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='margin-right:11.35pt;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>То же,
+  но вместо генерации исключения возвращается&nbsp;<span style='background:
+  #EEEEEE'>default_value</span>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:132.4pt;border:solid black 1.0pt;
+  border-top:none;padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>A.pop(key,
+  None)</span></i></b></p>
+  </td>
+  <td width=510 valign=top style='width:382.7pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='margin-right:11.35pt;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Это
+  позволяет проще всего организовать безопасное удаление элемента из словаря.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:132.4pt;border:solid black 1.0pt;
+  border-top:none;background:white;padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='border:none'><b><i><span style='font-size:11.0pt;
+  font-family:"Verdana",sans-serif;color:black;background:#EEEEEE'>len(A)</span></i></b></p>
+  </td>
+  <td width=510 valign=top style='width:382.7pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:6.0pt 4.8pt 6.0pt 4.8pt'>
+  <p class=MsoNormal style='margin-right:11.35pt;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Возвращает
+  количество пар&nbsp;<i>ключ-значение</i>, хранящихся в словаре.</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='page-break-after:avoid;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#000305'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Работа с
+элементами словаря</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Основная операция: получение значения
+элемента по ключу, записывается так же, как и для списков:&nbsp;<b><i><span
+style='background:#F7F7F9'>A[key]</span>.</i></b> Если элемента с заданным
+ключом нет в словаре, то возникает исключение&nbsp;<span style='background:
+#F7F7F9'>KeyError</span>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Другой способ определения значения по
+ключу&nbsp;— метод&nbsp;<i><span style='background:#F7F7F9'>get</span>:</i>&nbsp;<b><i><span
+style='background:#F7F7F9'>A.get(key)</span>.</i></b> Если элемента с
+ключом&nbsp;<i><span style='background:#F7F7F9'>get</span></i>&nbsp;нет в
+словаре, то возвращается значение&nbsp;<span style='background:#F7F7F9'>None</span>.
+В форме записи с двумя аргументами&nbsp;<b><i><span style='background:#F7F7F9'>A.get(key,
+val)</span></i></b>&nbsp;метод возвращает значение&nbsp;<span style='background:
+#F7F7F9'>val</span>, если элемент с ключом&nbsp;<span style='background:#F7F7F9'>key</span>&nbsp;отсутствует
+в словаре.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Проверить принадлежность элемента словарю
+можно операциями&nbsp;<b><i><span style='background:#F7F7F9'>in</span>&nbsp;</i></b>и&nbsp;<b><i><span
+style='background:#F7F7F9'>not in</span></i></b>, как и для множеств.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Для добавления нового элемента в словарь
+нужно просто присвоить ему какое-то значение:&nbsp;<b><i><span
+style='background:#F7F7F9'>A[key] = value</span>.</i></b></span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Для удаления элемента из
+словаря можно использовать операцию&nbsp;<b><i><span style='background:#F7F7F9'>del
+A[key]</span></i></b>&nbsp;(операция возбуждает исключение&nbsp;<span
+style='background:#F7F7F9'>KeyError</span>, если такого ключа в словаре нет.
+Вот два безопасных способа удаления элемента из словаря.</span></p>
+
+<div style='border:solid #929DB9 1.0pt;padding:0in 0in 0in 0in'>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>A&nbsp;=&nbsp;{'ab'&nbsp;:&nbsp;'ba',&nbsp;'aa'&nbsp;:&nbsp;'aa',&nbsp;'bb'&nbsp;:&nbsp;'bb',&nbsp;'ba'&nbsp;:&nbsp;'ab'}</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>key&nbsp;=&nbsp;'ac'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>if&nbsp;key&nbsp;in&nbsp;A:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;del&nbsp;A[key]</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>try:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;del&nbsp;A[key]</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>except&nbsp;KeyError:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;print('There&nbsp;is&nbsp;no&nbsp;element&nbsp;with&nbsp;key&nbsp;&quot;'&nbsp;+&nbsp;key&nbsp;+&nbsp;'&quot;&nbsp;in&nbsp;dict')</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>print(A)</span></b></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>В первом случае мы предварительно
+проверяем наличие элемента, а во втором - перехватываем и обрабатываем
+исключение.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Еще один способ удалить элемент из словаря:
+использование метода&nbsp;<i><span style='background:#F7F7F9'>pop</span>:<b>&nbsp;<span
+style='background:#F7F7F9'>A.pop(key)</span>.</b></i> Этот метод возвращает
+значение удаляемого элемента, если элемент с данным ключом отсутствует в
+словаре, то возбуждается исключение. Если методу&nbsp;<i><span
+style='background:#F7F7F9'>pop</span></i>&nbsp;передать второй параметр, то
+если элемент в словаре отсутствует, то метод&nbsp;<i><span style='background:
+#F7F7F9'>pop</span></i>&nbsp;возвратит значение этого параметра. Это позволяет
+проще всего организовать безопасное удаление элемента из словаря:&nbsp;<b><i><span
+style='background:#F7F7F9'>A.pop(key, None)</span>.</i></b></span></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Перебор
+элементов словаря</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Можно легко организовать
+перебор ключей всех элементов в словаре:</span></p>
+
+<div style='border:solid #929DB9 1.0pt;padding:0in 0in 0in 0in'>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>A&nbsp;=&nbsp;dict(zip('abcdef',&nbsp;list(range(6))))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>for&nbsp;key&nbsp;in&nbsp;A:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;print(key,&nbsp;A[key])</span></b></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Получим:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>a 0</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>b 1</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>c 2</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>d 3</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>e 4</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>f 5</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Следующие методы возвращают&nbsp;<b><i>представления</i>&nbsp;</b>элементов
+словаря. Представления во многом похожи на множества, но они изменяются, если
+менять значения элементов словаря. Метод&nbsp;<b><i><span style='background:
+#F7F7F9'>keys</span>&nbsp;</i></b>возвращает представление ключей всех
+элементов, метод&nbsp;<b><i><span style='background:#F7F7F9'>values</span></i></b>&nbsp;возвращает
+представление всех значений, а метод&nbsp;<b><i><span style='background:#F7F7F9'>items</span>&nbsp;</i></b>возвращает
+представление всех пар (кортежей) из ключей и значений.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Соответственно, быстро проверить, есть ли
+значение&nbsp;<b><span style='background:#F7F7F9'>v</span></b><span
+style='background:#F7F7F9'>al</span>&nbsp;среди всех значений элементов
+словаря&nbsp;<span style='background:#F7F7F9'>A</span>&nbsp;можно так:&nbsp;<b><i><span
+style='background:#F7F7F9'>val in A.values()</span>,</i></b> а организовать
+цикл так, чтобы в переменной&nbsp;<b><span style='background:#F7F7F9'>key</span></b>&nbsp;был
+ключ элемента, а в переменной&nbsp;<b><span style='background:#F7F7F9'>val</span></b>,
+было его значение можно так:</span></p>
+
+<div style='border:solid #929DB9 1.0pt;padding:0in 0in 0in 0in'>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>A&nbsp;=&nbsp;dict(zip('abcdef',&nbsp;list(range(6))))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>for&nbsp;key,&nbsp;val&nbsp;in&nbsp;A.items():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;print(key,&nbsp;val)</span></b></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Получим:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>a 0</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>b 1</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>c 2</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>d 3</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>e 4</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>f 5</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Метод <b><i>clear()</i></b> удаляет все
+элементы словаря, но не удаляет сам словарь. В итоге остается пустой словарь:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>{'dog': 'собака', 'cat': 'кошка', 'mouse':
+'мышь', </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'bird': 'птица', 'elephant': 'слон'}</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a.clear()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>{}</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Метод <b><i>fromkeys()</i></b> позволяет
+создать словарь из списка, элементы которого становятся ключами. Применять
+метод можно как классу <b>dict</b>, так и к его объектам:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a = [1, 2, 3]</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; c = dict.fromkeys(a)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; c</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>{1: None, 2: None, 3: None}</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; d = dict.fromkeys(a, 10)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; d</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>{1: 10, 2: 10, 3: 10}</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; c</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>{1: None, 2: None, 3: None}</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Метод get() позволяет получить элемент по его
+ключу:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; nums.get(1)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'one'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Равносильно&nbsp;<span style='background:
+#E9E9E9'>nums[1]</span>.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Метод <b><i>pop()</i></b> удаляет из словаря элемент по указанному
+ключу и возвращает значение удаленной пары. Метод <b><i>popitem()</i></b> не
+принимает аргументов, удаляет и возвращает произвольный элемент.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; nums.pop(1)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'one'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; nums</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>{2: 'two', 3: 'three'}</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; nums.popitem()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>(2, 'two')</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; nums</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>{3: 'three'}</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>С помощью setdefault() можно добавить элемент в словарь:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; nums.setdefault(4, 'four')</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'four'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; nums</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>{3: 'three', 4: 'four'}</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Равносильно&nbsp;<i><span
+style='background:#E9E9E9'>nums[4] = 'four'</span></i>, если элемент с ключом 4
+отсутствует в словаре. Если он уже есть, то&nbsp;<i><span style='background:
+#E9E9E9'>nums[4] = 'four'</span></i>&nbsp;перезапишет старое значение, <i>setdefault()</i>
+– нет.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>С помощью <b>update()</b>
+можно добавить в словарь другой словарь:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; nums.update({6: 'six', 7:
+'seven'})</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; nums</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>{3: 'three', 4: 'four', 6: 'six', 7: 'seven'}</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Также метод обновляет значения
+существующих ключей.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>ЗАДАЧА.</span></i></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> <span style='background:white'>Отсортируйте словарь по значению в
+порядке возрастания и убывания.</span></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black;background:white'>РЕШЕНИЕ:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Импортируем нужный модуль и
+объявляем словарь:</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.45pt;margin-bottom:.0001pt;text-align:justify;line-height:115%;
+background:#F8F8F8;border:none'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>import operator</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.45pt;margin-bottom:.0001pt;text-align:justify;line-height:115%;
+background:#F8F8F8;border:none'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>d = {1: 2, 3: 4, 4: 3, 2: 1,
+0: 0}</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.45pt;margin-bottom:.0001pt;text-align:justify;line-height:115%;
+background:white;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'># Сортируем в порядке
+возрастания:</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.45pt;margin-bottom:.0001pt;text-align:justify;line-height:115%;
+background:#F8F8F8;border:none'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>result =
+dict(sorted(d.items(), key=operator.itemgetter(1)))</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.45pt;margin-bottom:.0001pt;text-align:justify;line-height:115%;
+background:white;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'># И в порядке убывания:</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black;
+background:#F8F8F8'>result
+=&nbsp;dict(sorted(d.items(),&nbsp;key=operator.itemgetter(1),&nbsp;reverse=True))</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Кортежи</span></b></p>
+
+<p class=MsoNormal style='border:none'><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Кортежи (tuple)</span></i></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> в Python – это те же списки за одним исключением -  <u>кортежи
+неизменяемые структуры данных</u>. Так же как списки они могут состоять из
+элементов разных типов, перечисленных через запятую. Кортежи заключаются в <u>круглые</u>,
+а не квадратные скобки.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>a = (10, 2.13, &quot;square&quot;, 89, 'C')</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Сравнение кортежей и списков</span></b></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+6.0pt;margin-left:53.4pt;text-align:justify;text-indent:-.25in;background:white;
+border:none'><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:black'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Кортеж
+определяется так же, как список, за исключением того, что набор элементов
+заключается в круглые скобки, а не в квадратные.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:53.4pt;text-align:justify;text-indent:-.25in;background:white;
+border:none'><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:black'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Элементы
+кортежа заданы в определённом порядке, как и в списке. Элементы кортежа
+индексируются с нуля, как и элементы списка, таким образом, первый элемент не
+пустого кортежа&nbsp;— это всегда a_tuple[0].</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:53.4pt;text-align:justify;text-indent:-.25in;background:white;
+border:none'><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:black'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Отрицательные
+значения индекса отсчитываются от конца кортежа, как и в списке. Последний
+элемент имеет индекс -1.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:14.0pt;
+margin-left:53.4pt;text-align:justify;text-indent:-.25in;background:white;
+border:none'><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:black'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Создание
+среза кортежа («slicing») аналогично созданию среза списка. Когда создаётся
+срез списка, получается новый список; когда создаётся срез кортежа, получается
+новый кортеж.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>В логическом контексте <b><i>пустой
+кортеж является ложью</i></b>. Любой кортеж состоящий по крайней мере из одного
+элемента — <b>истина</b>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Чтобы создать кортеж из
+одного элемента, <u>необходимо после него поставить запятую.</u> Без запятой
+Python предполагает, что вы просто добавили еще одну пару скобок, что не
+создает кортеж.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Из кортежа можно извлекать элементы и брать
+срезы:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a[3]</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>89</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a[1:3]</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>получим:</span></i><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'> (2.13,
+'square')</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Однако <b><i>изменять его элементы нельзя</i></b>:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black;background:white'>По сути дела, <b><i>tuple()</i></b>
+«замораживает» список, а <b><i>list()</i></b> «размораживает» кортеж.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Кортежи удобно использовать, когда надо <u>защитить
+список от изменений</u>. Можно преобразовать кортеж в список, можно выполнить
+обратную операцию с помощью встроенных в Python функций <b><i>list()</i></b> и <b><i>tuple():</i></b></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a = (10, 2.13,
+&quot;square&quot;, 89, 'C')</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; b = [1, 2, 3]</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; c = list(a)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; d = tuple(b)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; c</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>[10, 2.13, 'square', 89, 'C']</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; d</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>получим:</span></i><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'> (1, 2,
+3)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;page-break-after:avoid;border:none'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Создаем пустой кортеж:</span></p>
+
+<div style='border:solid #AACC99 1.0pt;padding:6.0pt 6.0pt 6.0pt 6.0pt;
+margin-left:35.4pt;margin-right:0in'>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none;
+padding:0in'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a = tuple() <i># С помощью
+встроенной функции tuple()</i></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none;
+padding:0in'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none;
+padding:0in'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none;
+padding:0in'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a = () <i># С помощью литерала
+кортежа</i></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none;
+padding:0in'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none;
+padding:0in'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>()</span></b></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Создаем кортеж из одного элемента:</span></p>
+
+<div style='border:solid #AACC99 1.0pt;padding:6.0pt 6.0pt 6.0pt 6.0pt;
+margin-left:35.4pt;margin-right:0in'>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none;
+padding:0in'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a = ('s', )</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none;
+padding:0in'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none;
+padding:0in'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>('s',)</span></b></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Запятая обязательно! Иначе получим строку. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Можно создать кортеж из итерируемого объекта
+с помощью функции <b><i>tuple()</i></b></span></p>
+
+<div style='border:solid #AACC99 1.0pt;padding:6.0pt 6.0pt 6.0pt 6.0pt;
+margin-left:35.4pt;margin-right:0in'>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none;
+padding:0in'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a = tuple('hello, world!')</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none;
+padding:0in'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none;
+padding:0in'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>('h', 'e', 'l', 'l', 'o', ',', ' ', 'w', 'o',
+'r', 'l', 'd', '!')</span></b></p>
+
+</div>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Операции с кортежами</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;page-break-after:avoid;border:none'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Доступ к элементам кортежа</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Можно получить доступ к элементам кортежа с помощью индекса.<br>
+<i>Например:</i> необходимо вывести элемент с индексом 1:</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>thistuple = (&quot;помидор&quot;,  &quot;огурец&quot;, 
+&quot;лук&quot;)</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>print(thistuple[1])</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Получим: </span></i><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>огурец</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Изменить элемент корежа</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>После создания кортежа <u>нельзя</u>
+вносить изменения в него. Кортеж —&nbsp;<b>неизменяемый</b>.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>thistuple = (&quot;помидор&quot;,  &quot;огурец&quot;, 
+&quot;лук&quot;)</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>thistuple[1] =  &quot;морковка&quot;  </span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Получим: </span></i><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Traceback (most recent call
+last):</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>  File
+&quot;&lt;pyshell#3&gt;&quot;, line 1, in &lt;module&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>   
+thistuple[1] =  &quot;морковка&quot;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>TypeError:
+'tuple' object does not support item assignment</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Итерация по кортежу</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Можно
+перебирать элементы кортежа с помощью цикла&nbsp;for.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>thistuple = (&quot;помидор&quot;,  &quot;огурец&quot;, 
+&quot;лук&quot;)</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>for x in thistuple:  </span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    print(x)</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Получим: </span></i><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>помидор</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>                огурец</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>                лук</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Длина кортежа</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Для определения количества элементов списка, используют
+метод&nbsp;<b><i>len().</i></b><br>
+<i>Например: </i>необходимо вывести количество элементов в кортеже:</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>thistuple = (&quot;помидор&quot;,  &quot;огурец&quot;, 
+&quot;лук&quot;)</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>print(len(thistuple))</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Получим: </span></i><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>3</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Добавление элементов</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>После
+создания кортежа, нельзя добавлять в него элементы. Кортеж —&nbsp;<b>неизменяемый</b>.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>thistuple = (&quot;помидор&quot;,  &quot;огурец&quot;, 
+&quot;лук&quot;)</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>thistuple[3] = &quot;морковка&quot;  </span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Получим: </span></i><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Traceback (most recent call
+last):</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>  File
+&quot;&lt;pyshell#3&gt;&quot;, line 1, in &lt;module&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>   
+thistuple[3] =  &quot;морковка&quot;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>TypeError:
+'tuple' object does not support item assignment</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Удаление элементов</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Нельзя
+удалять элементы по отдельности, но можно полностью удалить кортеж с помощью
+ключевого слово&nbsp;<b><i>del</i></b>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>thistuple = (&quot;помидор&quot;,  &quot;огурец&quot;, 
+&quot;лук&quot;)  </span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>del thistuple  </span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>print(thistuple)</span></b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>  # эта команда
+вызовет ошибку, так как thistuple больше не существует</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Методы кортежа</span></b></p>
+
+<p class=MsoNormal style='border:none'><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>В Python существуют два
+встроенных метода:</span></p>
+
+<table class=2 border=0 cellspacing=0 cellpadding=0 width=695 style='border-collapse:
+ collapse'>
+ <thead>
+  <tr>
+   <td width=144 style='width:108.25pt;border:none;border-right:solid gainsboro 1.0pt;
+   background:white;padding:6.0pt 9.0pt 6.0pt 9.0pt'>
+   <p class=MsoNormal style='text-align:justify;border:none'><b><span
+   style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Метод</span></b></p>
+   </td>
+   <td width=551 style='width:413.25pt;background:white;padding:6.0pt 9.0pt 6.0pt 9.0pt'>
+   <p class=MsoNormal style='text-align:justify;border:none'><b><span
+   style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Значение</span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr>
+  <td width=144 style='width:108.25pt;border-top:solid gainsboro 1.0pt;
+  border-left:none;border-bottom:none;border-right:solid gainsboro 1.0pt;
+  background:white;padding:6.0pt 9.0pt 6.0pt 9.0pt'>
+  <p class=MsoNormal style='text-align:justify;border:none'><b><i><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>count()</span></i></b></p>
+  </td>
+  <td width=551 style='width:413.25pt;border:none;border-top:solid gainsboro 1.0pt;
+  background:white;padding:6.0pt 9.0pt 6.0pt 9.0pt'>
+  <p class=MsoNormal style='text-align:justify;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Возвращает
+  количество раз, которое указанный элемент встречается в кортеже</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 style='width:108.25pt;border-top:solid gainsboro 1.0pt;
+  border-left:none;border-bottom:none;border-right:solid gainsboro 1.0pt;
+  background:white;padding:6.0pt 9.0pt 6.0pt 9.0pt'>
+  <p class=MsoNormal style='text-align:justify;border:none'><b><i><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>index()</span></i></b></p>
+  </td>
+  <td width=551 style='width:413.25pt;border:none;border-top:solid gainsboro 1.0pt;
+  background:white;padding:6.0pt 9.0pt 6.0pt 9.0pt'>
+  <p class=MsoNormal style='text-align:justify;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Ищет
+  кортеж по указанному значению и возвращает его индекс</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;page-break-after:avoid;border:none'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Примеры
+использовния:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В Python можно использовать кортежи, чтобы
+присваивать значение нескольким переменным сразу.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt;&nbsp;v&nbsp;=&nbsp;('a',&nbsp;2,&nbsp;True)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt;&nbsp;(x,&nbsp;y,&nbsp;z)&nbsp;=&nbsp;v</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt;&nbsp;x</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'a'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt;&nbsp;y</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>2</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt;&nbsp;z</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>True</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>v</span></b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;— это
+кортеж из трех <u>элементов</u>, а <b>(x, y, z)</b>&nbsp;— кортеж из трёх <u>переменных</u>.
+Присвоение одного другому приводит к присвоению каждого значения из v каждой
+переменной в указанном порядке.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Предположим, что вы хотите присвоить имена
+диапазону значений. Вы можете использовать встроенную функцию <b><i>range()</i></b>
+для быстрого присвоения сразу нескольких последовательных значений.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt;&nbsp;(MONDAY,&nbsp;TUESDAY,&nbsp;WEDNESDAY,&nbsp;THURSDAY,&nbsp;FRIDAY,&nbsp;SATURDAY,&nbsp;SUNDAY)&nbsp;=&nbsp;range(7)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt;&nbsp;MONDAY</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>0</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt;&nbsp;TUESDAY</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>1</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt;&nbsp;SUNDAY</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>6</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Встроенная функция <b>range()</b> создаёт
+последовательность целых чисел. (Строго говоря, функция range() возвращает
+итератор, а не список или кортеж) MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY,
+SATURDAY, и SUNDAY&nbsp;— определяемые переменные. Теперь каждой переменной
+присвоено конкретное значение: MONDAY&nbsp;— это 0, TUESDAY&nbsp;— 1, и так
+далее.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;background:white;border:none'><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;background:white;border:none'><b><i><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Множества</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><b><i><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Множество</span></i></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> в языке&nbsp;<b>Python</b> — это структура данных, эквивалентная
+множествам в математике. Множество может состоять из <u>различных элементов</u>.
+Элементами множества может быть <u>любой <b><i>неизменяемый тип данных</i></b></u>:
+числа, строки, кортежи. <u>Изменяемые типы данных не могут быть элементами
+множества</u>, в частности, нельзя сделать элементом множества список (но можно
+сделать кортеж) или другое множество.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><b><i><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Порядок
+элементов в множестве не определен</span></i></b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'> в отличие от
+массивов, где элементы хранятся в виде последовательного списка.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>В множество можно добавлять
+элементы, можно удалять элементы из множества, можно перебирать элементы
+множества, можно выполнять операции над множествами (объединение, пересечение,
+разность). Можно проверять принадлежность элемента множеству.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Еще раз обратим внимание на
+то, что в множествах порядок хранения элементов не определен (более того,
+элементы множества хранятся не подряд, как в списке, а при помощи хитрых
+алгоритмов). Это позволяет выполнять операции типа “проверить принадлежность
+элемента множеству” быстрее, чем просто перебирая все элементы множества.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Требование неизменяемости
+элементов множества накладывается особенностями представления множества в
+памяти компьютера.</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>В логическом контексте <b>пустое множество&nbsp;— ложь</b>.</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Любое множество, содержащее хотя бы один элемент&nbsp;— <b>истина</b>.</span></p>
+
+<p class=MsoNormal align=center style='margin-left:35.4pt;text-align:center;
+line-height:115%;background:white;border:none'><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'><img width=169
+height=168 id=image1.png src="part2_3_files/image002.png"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-family:"Verdana",sans-serif;color:#C00000'>&gt;&gt;&gt; </span></b><b><span
+style='font-family:"Verdana",sans-serif;color:black'>s1.intersection(s2) </span></b><span
+style='font-family:"Verdana",sans-serif;color:red'># пересечение множеств через
+вызов метода (s1 &amp; s2)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-family:"Verdana",sans-serif;color:blue'>{0, 1}</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-family:"Verdana",sans-serif;color:#C00000'>&gt;&gt;&gt; </span></b><b><span
+style='font-family:"Verdana",sans-serif;color:black'>s1.union(s2) </span></b><span
+style='font-family:"Verdana",sans-serif;color:red'># объединение множеств через
+вызов метода (s1 &amp; s2)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-family:"Verdana",sans-serif;color:blue'>{0, 1, 2, 3, 4, '5'}</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-family:"Verdana",sans-serif;color:#C00000'>&gt;&gt;&gt;</span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Задание множеств</span></b></p>
+
+<p class=MsoNormal style='border:none'><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Множество
+задается перечислением всех его элементов в фигурных скобках. Исключением
+является <b><i>пустое множество</i></b>, которое можно создать при помощи
+функции&nbsp;<b><i><span style='background:#F7F7F9'>set()</span>.</i></b> Если
+функции&nbsp;<b><i><span style='background:#F7F7F9'>set</span></i></b>&nbsp;передать
+в качестве параметра список, строку или кортеж, то она вернёт множество,
+составленное из элементов списка, строки, кортежа. <i>Например:</i></span></p>
+
+<div style='border:solid #929DB9 1.0pt;padding:0in 0in 0in 0in;background:white'>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none;padding:0in'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>A&nbsp;=&nbsp;{1,&nbsp;2,&nbsp;3}</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none;padding:0in'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>A&nbsp;=&nbsp;set('qwerty')</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none;padding:0in'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>print(A)</span></b></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>выведет&nbsp;<span
+style='background:#F7F7F9'>{'e', 'q', 'r', 't', 'w', 'y'}</span>.</span></p>
+
+<div style='border:solid #AACC99 1.0pt;padding:6.0pt 6.0pt 6.0pt 6.0pt;
+margin-left:35.45pt;margin-right:0in'>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a = set()</span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a</span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:black'>set()</span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a =
+set('hello')</span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a</span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:black'>{'h', 'o', 'l', 'e'}</span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a = {'a',
+'b', 'c', 'd'}</span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a</span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:black'>{'b', 'c', 'a', 'd'}</span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a = {i ** 2
+for i in range(10)} <i># генератор множеств</i></span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a</span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:black'>{0, 1, 4, 81, 64, 9, 16,
+49, 25, 36}</span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a = {}  <i>#
+А так нельзя!</i></span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; type(a)</span></b></p>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+11.0pt;font-family:"Verdana",sans-serif;color:black'>&lt;class 'dict'&gt;</span></b></p>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><u><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><u><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Каждый элемент может входить в множество <b><i>только один раз !</i></b>,
+порядок задания элементов неважен</span></u><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>. <i>Например</i>:</span></p>
+
+<div style='border:solid #929DB9 1.0pt;padding:0in 0in 0in 0in;background:white'>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none;padding:0in'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>A&nbsp;=&nbsp;{1,&nbsp;2,&nbsp;3}</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none;padding:0in'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>B&nbsp;=&nbsp;{3,&nbsp;2,&nbsp;3,&nbsp;1}</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none;padding:0in'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>print(A&nbsp;==&nbsp;B)</span></b></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;background:white;border:none'><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>выведет&nbsp;<span
+style='background:#F7F7F9'>True</span>, так как&nbsp;<span style='background:
+#F7F7F9'>A</span>&nbsp;и&nbsp;<span style='background:#F7F7F9'>B</span>&nbsp;—
+равные множества.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Поскольку каждый элемент
+может входить в множество только один раз,&nbsp;<span style='background:#F7F7F9'>set('Hello')</span>&nbsp;вернет
+множество из четырех элементов:&nbsp;<span style='background:#F7F7F9'>{'H',
+'e', 'l', 'o'}</span>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;page-break-after:avoid;background:white;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Работа с элементами множеств</span></b></p>
+
+<p class=MsoNormal style='border:none'><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Узнать число элементов в
+множестве можно при помощи функции&nbsp;<b><i><span style='background:#F7F7F9'>len</span>.</i></b></span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Перебрать
+все элементы множества (<u>в неопределенном порядке!</u>) можно при помощи
+цикла&nbsp;<b><i><span style='background:#F7F7F9'>for</span>:</i></b></span></p>
+
+<div style='border:solid #929DB9 1.0pt;padding:0in 0in 0in 0in;background:white'>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none;padding:0in'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>primes&nbsp;=&nbsp;{2,&nbsp;3,&nbsp;5,&nbsp;7,&nbsp;11}</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none;padding:0in'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>for&nbsp;num&nbsp;in&nbsp;primes:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none;padding:0in'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;print(num)</span></b></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+background:white;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Проверить, принадлежит ли элемент
+множеству можно при помощи операции&nbsp;<b><i><span style='background:#F7F7F9'>in</span></i></b>,
+возвращающей значение типа&nbsp;<b><i><span style='background:#F7F7F9'>bool</span></i></b>.
+Аналогично есть противоположная операция&nbsp;<b><i><span style='background:
+#F7F7F9'>not in</span>.</i></b> Для добавления элемента в множество есть
+метод&nbsp;<b><span style='background:#F7F7F9'>add</span>:</b></span></p>
+
+<div style='border:solid #929DB9 1.0pt;padding:0in 0in 0in 0in;background:white'>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none;padding:0in'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>A&nbsp;=&nbsp;{1,&nbsp;2,&nbsp;3}</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none;padding:0in'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>print(1&nbsp;in&nbsp;A,&nbsp;4&nbsp;not&nbsp;in&nbsp;A)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none;padding:0in'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>A.add(4)</span></b></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Из множества можно сделать
+список при помощи функции&nbsp;<b><i><span style='background:#F7F7F9'>list</span></i></b>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Операции с множествами</span></b></p>
+
+<p class=MsoNormal style='border:none'><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>С множествами в языке&nbsp;<b>Python</b>
+можно выполнять обычные для математики операции над множествами.</span></p>
+
+<table class=1 border=1 cellspacing=0 cellpadding=0 width=663 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A | B<br>
+  A.union(B)</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border:solid black 1.0pt;border-left:
+  none;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black'>Возвращает множество, являющееся
+  объединением множеств&nbsp;<span style='background:#F7F7F9'>A</span>&nbsp;и&nbsp;<span
+  style='background:#F7F7F9'>B</span>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A |= B<br>
+  A.update(B)</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black'>Добавляет в множество&nbsp;<span
+  style='background:#F7F7F9'>A</span>&nbsp;все элементы из <b>множества</b>&nbsp;<span
+  style='background:#F7F7F9'>B</span>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A &amp; B<br>
+  A.intersection(B)</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black'>Возвращает множество, являющееся
+  пересечением множеств&nbsp;<span style='background:#F7F7F9'>A</span>&nbsp;и&nbsp;<span
+  style='background:#F7F7F9'>B</span>.</span></p>
+  </td>
+ </tr>
+ <tr style='height:30.85pt'>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt;height:30.85pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>А==В</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:30.85pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  6.0pt;margin-left:5.65pt;background:white;border:none'><span
+  style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Все
+  элементы А принадлежат В, все элементы В принадлежат А.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black;background:white'>А.isdisjoint(В)&nbsp;</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black;background:white'>Истина, если А и В не
+  имеют общих элементов</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A &amp;= B<br>
+  A.intersection_update(B)</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black'>Оставляет в множестве&nbsp;<span
+  style='background:#F7F7F9'>A</span>&nbsp;только те элементы, которые есть в
+  множестве&nbsp;<span style='background:#F7F7F9'>B</span>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A - B<br>
+  A.difference(B)</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black'>Возвращает разность множеств&nbsp;<span
+  style='background:#F7F7F9'>A</span>&nbsp;и&nbsp;<span style='background:#F7F7F9'>B</span>&nbsp;(элементы,
+  входящие в&nbsp;<span style='background:#F7F7F9'>A</span>, но не входящие
+  в&nbsp;<span style='background:#F7F7F9'>B</span>).</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A -= B<br>
+  A.difference_update(B)</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black'>Удаляет из множества&nbsp;<span
+  style='background:#F7F7F9'>A</span>&nbsp;все элементы, входящие в&nbsp;<span
+  style='background:#F7F7F9'>B</span>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A ^ B<br>
+  A.symmetric_difference(B)</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black'>Возвращает симметрическую разность
+  множеств&nbsp;<span style='background:#F7F7F9'>A</span>&nbsp;и&nbsp;<span
+  style='background:#F7F7F9'>B</span>&nbsp;(</span><span style='font-family:
+  "Arial",sans-serif;color:black;background:white'>возвращает новое множество,
+  которое содержит только уникальные элементы обоих множеств.</span><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>).</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A ^= B<br>
+  A.symmetric_difference_update(B)</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black;background:white'>Множество из элементов,
+  встречающихся в одном множестве, но не встречающиеся в обоих.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A &lt;= B<br>
+  A.issubset(B)</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black'>Возвращает&nbsp;<span style='background:
+  #F7F7F9'>true</span>, если&nbsp;<span style='background:#F7F7F9'>A</span>&nbsp;является
+  подмножеством&nbsp;<span style='background:#F7F7F9'>B</span>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A &gt;= B<br>
+  A.issuperset(B)</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black'>Возвращает&nbsp;<span style='background:
+  #F7F7F9'>true</span>, если&nbsp;<span style='background:#F7F7F9'>B</span>&nbsp;является
+  подмножеством&nbsp;<span style='background:#F7F7F9'>A</span>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A &lt; B</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black'>Эквивалентно&nbsp;<span style='background:
+  #F7F7F9'>A &lt;= B and A != B</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A &gt; B</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black'>Эквивалентно&nbsp;<span style='background:
+  #F7F7F9'>A &gt;= B and A != B</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A.copy()</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black'>Копия множества</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A.add(elem)</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black'>Добавляет <b>один!</b> элемент в множество</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A.remove(elem)</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black;background:white'>Удаляет </span><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>один! </span></b><span style='font-size:11.0pt;line-height:115%;
+  font-family:"Verdana",sans-serif;color:black;background:white'>элемент из
+  множества. Порождает Keyerror, если такого элемента не существует.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A.discard(elem)</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black;background:white'>Удаляет </span><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>один!</span></b><span style='font-size:11.0pt;line-height:115%;
+  font-family:"Verdana",sans-serif;color:black'> <span style='background:white'>элемент,
+  если он находится в множестве.</span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A.pop()</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black;background:white'>Удаляет произвольный
+  элемент из множества (так как множества не упорядочены) и возвращает его
+  значение.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=309 style='width:231.6pt;border:solid black 1.0pt;border-top:none;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>A.clear()</span></b></p>
+  </td>
+  <td width=355 style='width:265.95pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:5.65pt;margin-bottom:
+  0in;margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+  "Verdana",sans-serif;color:black;background:white'>Очистка множества</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>frozenset</span></b></p>
+
+<p class=MsoNormal style='border:none'><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Единственное отличие <b><i>set</i></b> от <b><i>frozenset</i></b>
+заключается в том, что set - <u>изменяемый</u> тип данных, а <b><i>frozenset</i></b>
+- нет. Примерно похожая ситуация со&nbsp;</span><a
+href="https://pythonworld.ru/tipy-dannyx-v-python/spiski-list-funkcii-i-metody-spiskov.html"><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>списками</span></a><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;и&nbsp;</span><a
+href="https://pythonworld.ru/tipy-dannyx-v-python/kortezhi-tuple.html"><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>кортежами</span></a><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<div style='border:solid #AACC99 1.0pt;padding:6.0pt 6.0pt 0in 6.0pt'>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; </span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>a = set('qwerty')</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; </span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>b = frozenset('qwerty')</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; </span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>a == b</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>True</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; True</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>True</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; </span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>type(a - b)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&lt;class 'set'&gt;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; </span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>type(a | b)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&lt;class 'set'&gt;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; </span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>a.add(1)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; </span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>b.add(1)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Traceback (most recent call
+last):</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>  File &quot;&lt;stdin&gt;&quot;,
+line 1, in &lt;module&gt;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>AttributeError: 'frozenset'
+object has no attribute 'add'</span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:15.0pt;margin-right:0in;margin-bottom:
+7.5pt;margin-left:0in;text-align:justify;page-break-after:avoid;background:
+white;border:none'><b><i><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:black'>ЗАДАЧА.</span></i></b><span style='font-size:16.0pt;font-family:
+"Calibri",sans-serif;color:black'> </span><b><span style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:black'> Введите последовательность
+чисел, разделённых запятой. Составьте список и кортеж с этими числами. Выведите
+на экран.</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span style='color:black'><a
+href="https://tproger.ru/problems/python-3-exercises-for-beginners-geekbrains/#891_54"><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black;background:#F8F8F8;text-decoration:none'>Вариант решения</span></i></b></a></span><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>:</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:#F8F8F8;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>values = input('Введите числа через запятую: ')</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:#F8F8F8;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>ints_as_strings = values.split(',')</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:#F8F8F8;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>ints = map(int, ints_as_strings)</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:#F8F8F8;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>lst = list(ints)</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:#F8F8F8;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>tup = tuple(lst)</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:#F8F8F8;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>print('Список:', lst)</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:#F8F8F8;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>print('Кортеж:', tup)</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

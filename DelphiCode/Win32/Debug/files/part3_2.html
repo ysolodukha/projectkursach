@@ -1,0 +1,1182 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h1
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	font-size:24.0pt;
+	font-family:"Times New Roman",serif;}
+h3
+	{margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#1E4D78;
+	font-weight:normal;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:56.7pt 42.5pt 56.7pt 85.05pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+.5in;line-height:normal'><span lang=RU style='font-size:11.5pt;font-family:
+"Times New Roman",serif'>В состав стандартной
+библиотеки&nbsp;Python&nbsp;входит множество модулей, позволяющих работать
+практически со всеми протоколами Интернета и решающих в том числе наиболее
+часто встречающиеся задачи:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-align:justify;text-indent:-.25in;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.5pt;font-family:"Times New Roman",serif'>разбор&nbsp;URL-адреса
+и строки запроса на составляющие,</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-align:justify;text-indent:-.25in;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.5pt;font-family:"Times New Roman",serif'>преобразование
+гиперссылок,</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-align:justify;text-indent:-.25in;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.5pt;font-family:"Times New Roman",serif'>обмен
+данными по протоколу&nbsp;HTTP.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-align:justify;line-height:normal'><span lang=RU
+style='font-size:11.5pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:#FCFCFC'><b><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:#067A34'>URI</span></b><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#404040'>&nbsp;(</span><i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>англ.</span></i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>&nbsp;<b>U</b>niform&nbsp;<b>R</b>esource&nbsp;<b>I</b>dentifier)
+- унифицированный (единообразный) идентификатор ресурса.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:#FCFCFC'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:black'>Пример URI приведен на рисунке.
+Обязательными атрибутами являются: имя, схема, путь, и Userinfo в случае
+авторизации.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:#FCFCFC'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:#404040'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal'><span lang=RU><img width=636 height=147 id=image1.png
+src="part3_2_files/image001.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:#FCFCFC;border:none'><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#404040'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:#FCFCFC;border:none'><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:black'>Как HTTP-запрос (<i>англ.</i>&nbsp;Request),
+так и HTTP-ответ (<i>англ.</i>&nbsp;Response) имеют следующий формат:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;text-align:justify;text-indent:-.25in;line-height:normal;
+background:#FCFCFC;border:none'><span lang=RU>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>Стартовая строка (<i>англ.</i>&nbsp;Starting Line) — определяет
+тип сообщения (обязательна);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;text-align:justify;text-indent:-.25in;line-height:normal;
+background:#FCFCFC;border:none'><span lang=RU>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>Заголовки (<i>англ.</i>&nbsp;Headers) — характеризуют тело
+сообщения, параметры передачи и прочие сведения (могут отсутствовать);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;text-align:justify;text-indent:-.25in;line-height:normal;
+background:#FCFCFC;border:none'><span lang=RU>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>Пустая строка;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;text-align:justify;text-indent:-.25in;line-height:normal;
+background:#FCFCFC;border:none'><span lang=RU>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>Тело сообщения (<i>англ.</i>&nbsp;Message Body) — непосредственно
+данные сообщения (например, код HTML-страницы или файл).</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:#FCFCFC;border:none'><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#404040'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal'><i><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Основные&nbsp;HTTP-заголовки
+и их предназначение:</span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>GET&nbsp;-
+заголовок запроса при передаче данных методом&nbsp;GET;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>POST&nbsp;-
+заголовок запроса при передаче данных методом&nbsp;POST;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Host&nbsp;-
+название домена;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Accept&nbsp;-&nbsp;MIME-типы,
+поддерживаемые&nbsp;Web-браузером;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Accept-Language&nbsp;-
+список поддерживаемых языков в порядке предпочтения;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Accept-Charset&nbsp;-
+список поддерживаемых кодировок;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Accept-Encoding&nbsp;-
+список поддерживаемых методов сжатия;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Content-Туре&nbsp;-
+тип передаваемых данных;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Content-Length&nbsp;-
+длина передаваемых данных при методе&nbsp;POST;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Cookie&nbsp;-
+информация об установленных&nbsp;cookies;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Last-Modified&nbsp;-
+дата последней модификации файла;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Location&nbsp;-
+перенаправление на другой&nbsp;URL-адрес;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Pragma&nbsp;-
+заголовок, запрещающий кэширование документа в протоколе&nbsp;HTTP/1.0;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Cache-Control&nbsp;-
+заголовок, управляющий кэшированием документа в протоколе&nbsp;HTTP/1.1;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Referer&nbsp;-&nbsp;URL-адрес,
+с которого пользователь перешел на наш сайт;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Server&nbsp;-
+название и версия программного обеспечения&nbsp;Web-сервера;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal'><span
+lang=RU style='font-size:10.0pt;font-family:"Noto Sans Symbols"'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>User-Agent&nbsp;-
+информация об используемом&nbsp;Web-браузере.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:#FCFCFC;border:none'><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#404040'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal'><span lang=RU><img width=623 height=452 id=image2.png
+src="part3_2_files/image002.png" alt="_images/13_01_10.png"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal'><i><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Код состояния HTTP</span></i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'> — часть
+первой строки ответа сервера при запросах по протоколу HTTP. Он представляет
+собой целое число из трёх десятичных цифр. Первая цифра указывает на класс
+состояния. За кодом ответа обычно следует отделённая пробелом поясняющая фраза </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>•
+1xx: Informational (информационные) </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>•
+2xx: Success (успешно): </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+14.2pt;line-height:normal'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif'>– 200 OK («хорошо») </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+14.2pt;line-height:normal'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif'>– 201 Created («создано») </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+14.2pt;line-height:normal'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif'>– 202 Accepted («принято») </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>•
+3xx: Redirection (перенаправление) </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>•
+4xx: Client Error (ошибка клиента): </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+14.2pt;line-height:normal'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif'>– 400 Bad Request («неверный запрос»); </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+14.2pt;line-height:normal'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif'>– 404 Not Found («не найдено») </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>•
+5xx: Server Error (ошибка сервера): </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+14.2pt;line-height:normal'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif'>– 500 Internal Server Error («внутренняя ошибка
+сервера») </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+14.2pt;line-height:normal'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif'>– 501 Not Implemented («не реализовано») </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+14.2pt;line-height:normal'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif'>– 502 Bad Gateway («ошибочный шлюз»)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+14.2pt;line-height:normal'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif'> – 504 Gateway Timeout («шлюз не отвечает»)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-size:12.0pt;font-family:
+"Arial",sans-serif;color:#222222'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal;background:white'><span lang=RU style='font-size:
+12.0pt;font-family:"Times New Roman",serif;color:black'>Разобрать&nbsp;URL-адрес
+на составляющие позволяет </span><b><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#009242'>функция&nbsp;urlparse()</span></b><b><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#00B050'>
+</span></b><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>с</span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#222222;background:white'>тандартного модуля </span><b><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#222222;
+background:lime'>urllib.parse</span></b><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:black'>.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal;background:white'><span lang=RU style='font-size:
+12.0pt;font-family:"Times New Roman",serif;color:#222222'>Возвращаемое значение
+представляет собой&nbsp;</span><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:black'>именованный кортеж</span><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#222222'>,
+что означает, что к его элементам можно получить доступ по индексу или как к
+именованным атрибутам:</span></p>
+
+<table class=1 border=1 cellspacing=0 cellpadding=0 width=616 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=94 style='width:70.65pt;border:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Атрибут</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border:solid black 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Индекс</span></p>
+  </td>
+  <td width=332 style='width:249.15pt;border:solid black 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Обозначение</span></p>
+  </td>
+  <td width=124 style='width:93.35pt;border:solid black 1.0pt;border-left:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Значение
+  по умолчанию</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=94 style='width:70.65pt;border:solid black 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>scheme</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:-5.5pt;text-indent:5.5pt;line-height:normal'><span lang=RU
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>0</span></p>
+  </td>
+  <td width=332 style='width:249.15pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Спецификатор
+  схемы URL</span></p>
+  </td>
+  <td width=124 style='width:93.35pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>параметр&nbsp;схемы</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=94 style='width:70.65pt;border:solid black 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>netloc</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>1</span></p>
+  </td>
+  <td width=332 style='width:249.15pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Часть
+  сетевого расположения</span></p>
+  </td>
+  <td width=124 style='width:93.35pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>пустой
+  строкой</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=94 style='width:70.65pt;border:solid black 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>path</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>2</span></p>
+  </td>
+  <td width=332 style='width:249.15pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Иерархический
+  путь</span></p>
+  </td>
+  <td width=124 style='width:93.35pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>пустой
+  строкой</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=94 style='width:70.65pt;border:solid black 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>params</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>3</span></p>
+  </td>
+  <td width=332 style='width:249.15pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Параметры
+  для последнего элемента пути</span></p>
+  </td>
+  <td width=124 style='width:93.35pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>пустой
+  строкой</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=94 style='width:70.65pt;border:solid black 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>query</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>4</span></p>
+  </td>
+  <td width=332 style='width:249.15pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Компонент
+  запроса</span></p>
+  </td>
+  <td width=124 style='width:93.35pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>пустой
+  строкой</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=94 style='width:70.65pt;border:solid black 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>fragment</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>5</span></p>
+  </td>
+  <td width=332 style='width:249.15pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Идентификатор
+  фрагмента</span></p>
+  </td>
+  <td width=124 style='width:93.35pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>пустой
+  строкой</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=94 style='width:70.65pt;border:solid black 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>username</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+  </td>
+  <td width=332 style='width:249.15pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Имя
+  пользователя</span></p>
+  </td>
+  <td width=124 style='width:93.35pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>None</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=94 style='width:70.65pt;border:solid black 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>password</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+  </td>
+  <td width=332 style='width:249.15pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Пароль</span></p>
+  </td>
+  <td width=124 style='width:93.35pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>None</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=94 style='width:70.65pt;border:solid black 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>hostname</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+  </td>
+  <td width=332 style='width:249.15pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Имя
+  хоста (нижний регистр)</span></p>
+  </td>
+  <td width=124 style='width:93.35pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>None</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=94 style='width:70.65pt;border:solid black 1.0pt;border-top:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>port</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border-top:none;border-left:none;border-bottom:
+  solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+  </td>
+  <td width=332 style='width:249.15pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Номер
+  порта как целое число, если присутствует</span></p>
+  </td>
+  <td width=124 style='width:93.35pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>None</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
+lang=RU style='font-size:14.0pt;font-family:"Times New Roman",serif;background:
+white'>!!!!</span></b><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+background:white'> urlparse распознает netloc, только если он правильно введен
+с помощью '//'.&nbsp;Иначе предполагается, что ввод является относительным
+URL-адресом и, таким образом, начинается с компонента пути.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt;
+urlparse('www.cwi.nl/%7Eguido/Python.html')</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>ParseResult(scheme='', netloc='',
+path='www.cwi.nl/%7Eguido/Python.html', params='', query='', fragment='')</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; urlparse('help/Python.html')</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>ParseResult(scheme='', netloc='',
+path='help/Python.html', params='', query='', fragment='')</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal'><b><span lang=RU style='font-size:14.0pt;font-family:"Times New Roman",serif'>!!!!
+</span></b><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Обратите
+внимание на то, что <b><i>значение параметра</i></b>&nbsp;<b>&lt;<i>Запрос</i>&gt;
+(query)</b>&nbsp;возвращается в виде строки. Строка запроса является составной
+конструкцией, содержащей пары&nbsp;<i>параметр=значение</i>. Все специальные
+символы внутри названия параметра и значения кодируются последовательностями <b>%nn</b>.
+Например, для параметра str, имеющего значение  <i>&quot;Строка&quot;</i>&nbsp;в
+кодировке&nbsp;Windows-1251, строка запроса будет выглядеть так:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-family:"Courier New";
+color:black'>  str=%Dl%F2%F0%EE%EA%E0</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Если
+строка запроса содержит несколько пар&nbsp;<i>параметр=значение</i>, то они
+разделяются символом&nbsp;<b>&amp;</b>. Добавим параметр&nbsp;v&nbsp;со
+значением 10:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-family:"Courier New";
+color:black'>  str=%Dl%F2%F0%EE%EA%E0&amp;v=10</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>В
+строке запроса может быть несколько параметров с одним названием, но разными
+значениями,- например, если передаются значения нескольких выбранных пунктов в
+списке с множественным выбором:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-family:"Courier New";
+color:black'>  str=%Dl%F2%F0%EE%EA%EG&amp;v=10&amp;v=20</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif'>Выполнить обратную операцию (собрать&nbsp;URL-адрес из
+отдельных значений) позволяет функция&nbsp;<b><span style='color:#00B050'>urlunparse</span>
+</b>(&lt;Последовательность&gt;).</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-indent:28.35pt;line-height:
+normal'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Вместо
+функции&nbsp;urlparse()&nbsp;можно воспользоваться функцией&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#00B050'>urlsplit</span></b><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#00B050'>
+</span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>(&lt;URL-адрес&gt;[,
+&lt;Схема&gt; [, &lt;Разбор якоря&gt;] ]). </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif'>Ее отличие от&nbsp;urlparse() проявляется в том, что
+она не выделяет из интернет-адреса параметры.&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif'>Выполнить обратную операцию (собрать&nbsp;URL-адрес из
+отдельных значений) позволяет функция <b><span style='color:#00B050'>urlunsplit</span></b><span
+style='color:#00B050'> </span>(&lt;Последовательность&gt;).</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-size:12.0pt;font-family:
+"Arial",sans-serif;color:#222222'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal;background:white'><span lang=RU style='font-size:
+12.0pt;font-family:"Times New Roman",serif;color:#222222;background:white'>Модуль
+</span><b><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black;background:lime'>http.client</span></b><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black;
+background:white'> </span><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:#222222;background:white'>определяет классы,
+реализующие клиентскую сторону протоколов HTTP и HTTPS.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-size:12.0pt;font-family:
+"Arial",sans-serif;color:#222222'>&nbsp;</span></p>
+
+<h1 style='margin-bottom:0in;text-align:justify;text-indent:28.35pt;background:
+white'><i><span lang=RU style='font-size:12.0pt;color:black'>АВТОМАТИЧЕСКИЙ
+СБОР ДАННЫХ В ИНТЕРНЕТЕ</span></i><span lang=RU style='font-size:12.0pt;
+color:black'> </span><span lang=RU style='font-size:12.0pt;color:black;
+font-weight:normal'>(Web Scraping, веб-скрейпинг) - <span style='background:
+white'>получения веб-данных путем извлечения их со страниц веб-ресурсов.</span></span></h1>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:#202122;background:white'>Автоматический сбор
+данных с веб-страниц можно упростить с помощью модулей Python:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal;
+background:white;border:none'><span lang=RU style='font-size:10.0pt;font-family:
+"Noto Sans Symbols";color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>webbrowser </span></b><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:black'>поставляется вместе с Python и
+предназначен для открытия браузера на определенной веб-странице. </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal;
+background:white;border:none'><span lang=RU style='font-size:10.0pt;font-family:
+"Noto Sans Symbols";color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>requests </span></b><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:black'>загружает файлы и веб-страницы
+из Интернета. </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal;
+background:white;border:none'><span lang=RU style='font-size:10.0pt;font-family:
+"Noto Sans Symbols";color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>BeautifulSoup </span></b><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:black'>предназначен для
+синтаксического анализа кода HTML-языка, на котором написаны веб-страницы. </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:21.3pt;text-align:justify;text-indent:-21.3pt;line-height:normal;
+background:white;border:none'><span lang=RU style='font-size:10.0pt;font-family:
+"Noto Sans Symbols";color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>Selenium </span></b><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:black'>запускает веб-браузер и
+управляет его работой; способен заполнять формы и имитировать щелчки мышью в
+браузере.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-size:10.5pt;font-family:"Arial",sans-serif;color:#202122;
+background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal;background:white'><span lang=RU style='font-size:
+12.0pt;font-family:"Times New Roman",serif;color:#00B050'>Функция <b>open ()</b></span><b><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>
+<span style='background:lime'>модуля webbrowser</span></span></b><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>
+запускает браузер с использованием указанного URL-адреса. </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><i><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Пример
+программы с использованием модуля webbrowser</span></i></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal;background:white'><span lang=RU style='font-size:
+12.0pt;font-family:"Times New Roman",serif;color:black'>Написать программу,
+которая открывает (указывает) в  приложении Google Maps адрес, содержащийся в
+буфере обмена.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal;background:white'><span lang=RU style='font-size:
+12.0pt;font-family:"Times New Roman",serif;color:black'>Если загрузить в
+браузер страницу http://maps.google.com/ и выполнить поиск по интересующему
+почтовому адресу, то URL-адрес, отображаемый в адресной строке браузера, будет
+выглядеть примерно так:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:black'>Поиск
+адреса: 870 Valencia St, San Francisco, CA</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-size:10.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><u><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:black'>https://www.google.com/maps/place/870+Valencia+St/@37.7590311</span></u><span
+lang=RU style='font-size:10.0pt;font-family:"Courier New";color:black'>,
+122.4215096,17z/data=!3ml!4bl!4m2!3ml!Is0x808f7e3dadc07a37:0xc86b0b2bb93b73d8</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal;background:white'><span lang=RU style='font-size:
+12.0pt;font-family:"Times New Roman",serif;color:black'>URL-адрес содержит
+почтовый адрес, но, кроме него, включает также дополнительный текст. Веб-сайты
+часто вставляют дополнительные данные в URL-адреса, которые используются для
+отслеживания привычек посетителей или адаптации сайта к запросам пользователей.
+Если исключить эти данные и выполнить в браузере переход по упрощенному адресу </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:black'>https://www.google.com/maps/place/870+Valencia+St+San+Francisco+CA/,
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:black'>то по-прежнему отображается нужная
+страница. Следовательно, достаточно настроить программу на страницу 
+https://www.google.com/maps/place/<i>ваша_адресная_строка</i>, где <i>ваша_адресная_строка
+</i>— это почтовый адрес, в соответствии с которым должна быть открыта карта.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>import webbrowser,
+pyperclip </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'># Получение почтового
+адреса из буфера обмена.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>address =
+pyperclip.paste()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>webbrowser.open('https://www.google.com/maps/place/'
++  address)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#202122;
+background:white'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal'><b><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;background:lime'>requests</span></b><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;background:
+white'> - это HTTP-библиотека Python, основная цель разработки которой -
+сделать HTTP-запросы более простыми и удобными.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:black;background:white'>Примеры разных видов
+запросов (GET, POST, HEAD, PUT, DELETE):</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; r =
+requests.get('https://api.github.com/events')  # GET-запрос</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; r =
+requests.post('https://httpbin.org/post', data = {'key':'value'})</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; r =
+requests.head('https://httpbin.org/get')</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; r =
+requests.put('https://httpbin.org/put', data = {'key':'value'})</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; r =
+requests.delete('https://httpbin.org/delete')</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal;background:white'><span lang=RU style='font-size:
+12.0pt;font-family:"Times New Roman",serif;color:black'>Метод </span><b><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#00B050'>raise_for_status()</span></b><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>
+— это эффективный способ гарантированной остановки программы<b> </b>в случае
+неудачной загрузки. </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:black'>Данный метод возбуждает исключение, если в
+процессе загрузки файла произошла ошибка, и не совершает никаких действий в
+случае успешной загрузки.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:black'>Можно обернуть строку кода
+raise_for_status() конструкцией try/except, чтобы обработать эту ошибку, не
+допуская аварийной остановки программы.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>res= requests.get ('http://invalid’)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>try:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>    res.raise_for_status
+() </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>except Exception as exc:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>    print('Возникла
+проблема: %s' % (exc))</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>#в результате выведет:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>Возникла проблема: 404
+Client Error: Not Found</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-indent:28.35pt;line-height:
+normal;background:white'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:black'>Целесообразно всегда вызывать метод
+raise_for_status() после функции requests.get(). Это позволяет убедиться в том,
+что загрузка действительно была осуществлена, прежде чем предоставить программе
+возможность дальнейшего выполнения.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal;background:white'><span lang=RU style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif'>Ответ на запрос&nbsp;GET&nbsp;содержит информацию. Она
+находится в теле сообщения и называется&nbsp;пейлоад (payload). Используя
+атрибуты и методы библиотеки&nbsp;Response, можно получить пейлоад в различных
+форматах.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-indent:28.35pt;line-height:
+normal'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>Для
+того, чтобы получить содержимое запроса в байтах, необходимо использовать <b><span
+style='color:#00B050'>.content</span></b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; r =
+requests.get('https://api.github.com/events')  # GET-запрос</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; r.content</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
+lang=RU style='font-family:"Courier New"'>b</span></b><span lang=RU
+style='font-family:"Courier New"'>'[{&quot;repository&quot;:{&quot;open_issues&quot;:0,&quot;url&quot;:&quot;https://github.com/...</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black;
+background:white'>Однако, зачастую требуется конвертировать полученную
+информацию в&nbsp;строку&nbsp;в кодировке UTF-8.&nbsp;response&nbsp;делает это
+при помощи&nbsp;</span><b><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:#00B050;background:white'>.text</span></b><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black;
+background:white'>.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>В
+случае успешного запроса загруженная страница сохраняется в виде строки в
+переменной text объекта Response. Т.е. можно прочитать содержимое ответа
+сервера.&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>&gt;&gt;&gt;res =
+requests.get ('http://www.gutenberg.org/cache/epub/1112/pg1112.txt’)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>В переменной res.text
+хранится полный текст пьесы в виде одной длинной строки; результат вызова
+len(res.text) говорит о том, что эта строка содержит более 178 000 символов. </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>&gt;&gt;&gt;len(res.text)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>178981</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>&gt;&gt;&gt;print
+(res.text [: 250])</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>Вызов print (res.text [:
+250]) отображает лишь первые 250 символов.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal;background:white'><span lang=RU style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-indent:
+28.35pt;line-height:normal;background:white'><span lang=RU style='font-size:
+12.0pt;font-family:"Times New Roman",serif;color:black'>Записать веб-страницу в
+файл можно с помощью цикла for по возвращаемому значению метода </span><b><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#00B050'>iter_content
+()</span></b><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#00B050'> </span><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>объекта Response. Метод iter_content () возвращает порции
+содержимого на каждой стадии цикла. Каждая порция данных — это данные байтового
+типа, и нужно самому указать, сколько байтов должна содержать каждая порция. </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal'><span lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><i><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:black'>Алгоритм процесса загрузки и сохранения файла:</span></i></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:black'>1.  Вызов функции requests.get () для
+загрузки файла.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:black'>2.  Вызов функции open () с аргументом
+'wb' для создания нового файла в режиме записи двоичных данных.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:black'>3.  Цикл по возвращаемому значению метода
+iter_content () объекта Response.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:black'>4.  Вызов метода write () на каждой
+итерации для записи содержимого файла.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white'><span lang=RU style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:black'>5.  Вызов метода close () для закрытия
+файла.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
+lang=RU style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#202122;
+background:white'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Times New Roman",serif;color:black'>Пример1:
+скачать содержимое страницы </span><span lang=RU style='font-family:"Courier New";
+color:black'>http://www.gutenberg.org/cache/epub/1112/pg1112.txt</span><span
+lang=RU style='font-family:"Times New Roman",serif;color:black'> в файл 1.txt
+порциями по 100000 байт.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>&gt;&gt;&gt; import
+requests</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>&gt;&gt;&gt; res =
+requests.get('http://www.gutenberg.org/cache/epub/1112/pg1112.txt’)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>&gt;&gt;&gt;
+res.raise_for_status()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>&gt;&gt;&gt; playFile =
+open(‘1.txt', ‘wb') </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>&gt;&gt;&gt; for chunk in
+res.iter_content(100000): </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>       
+playFile.write(chunk)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>100000</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>78983</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>&gt;&gt;&gt; playFile.close()</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>Метод write () возвращает
+количество байтов, записанных в файл (по умолчанию 1 байт). В примере первая
+порция включала 100000 байт, для оставшейся части файла понадобилось только
+78983 б.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal;background:white'><span
+lang=RU style='font-family:"Courier New";color:black'>В рабочем каталоге
+появился файл RomeoAndJuliet.txt. </span></p>
+
+<h3 style='margin-top:0in;line-height:normal;background:white'><span lang=RU
+style='font-family:"Times New Roman",serif;color:black'>&nbsp;</span></h3>
+
+<h3 style='margin-top:0in;line-height:normal;background:white'><span lang=RU
+style='font-family:"Times New Roman",serif;color:black'>Пример2:</span></h3>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; import requests</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; url =
+'https://learn.python.ru/media/projects/sl1_Cj4bKxp.png'</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; im = requests.get(url,
+stream=True)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>&gt;&gt;&gt; with open('new.png', 'wb') as f:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span lang=RU
+style='font-family:"Courier New"'>...       f.write(im.content)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:
+normal;background:white;border:none'><span lang=RU style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:black'>По умолчанию stream=False, это
+сделано для того, чтобы препятствовать загрузке больших объемов данных, т.к. мы
+можем не знать размеры скачиваемых объектов. После выполнения данного скрипта,
+мы увидим новое изображение под названием new.png в директории, из которой у
+нас запущен скрипт.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><a
+name="_gjdgxs"></a><span lang=RU style='font-family:"Arial",sans-serif;
+color:#222222;background:white'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

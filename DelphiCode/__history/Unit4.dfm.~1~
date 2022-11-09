@@ -1,0 +1,14 @@
+object Test: TTest
+  Left = 0
+  Top = 0
+  Caption = #1054#1073#1091#1095#1072#1102#1097#1077'-'#1090#1077#1089#1090#1080#1088#1091#1102#1097#1080#1077' '#1087#1088#1080#1083#1086#1078#1077#1085#1080#1077' | '#1071#1079#1099#1082' Python | '#1058#1077#1089#1090
+  ClientHeight = 433
+  ClientWidth = 622
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+end

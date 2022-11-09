@@ -1,0 +1,2821 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:56.7pt 42.55pt 56.7pt 56.7pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>ФУНКЦИИ</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><a
+name=gjdgxs></a><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Функция</span></i></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> в программировании представляет собой обособленный участок кода,
+который можно вызывать, обратившись к нему по имени, которым он был назван. При
+вызове происходит выполнение команд тела функции.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Функции можно сравнить с небольшими
+программками, которые сами по себе, т. е. автономно, не исполняются, а
+встраиваются в обычную программу. Нередко их так и называют – <b><i>подпрограммы</i></b>.
+Других ключевых отличий функций от программ нет. Функции также при
+необходимости могут получать и возвращать данные. Только обычно они их получают
+не с ввода (клавиатуры, файла и др.), а из вызывающей программы. Сюда же они
+возвращают результат своей работы.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Существует множество встроенных в язык
+программирования функций. Например, <i>print(), input(), int(), float(), str(),
+type().</i> Код их тела нам не виден, он где-то &quot;спрятан внутри
+языка&quot;. Нам же предоставляется только интерфейс – <i>имя функции.</i></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>С другой стороны, программист всегда может
+определять свои функции. Их называют <b><i>пользовательскими</i></b>.
+Предположим, надо три раза подряд запрашивать на ввод пару чисел и складывать
+их. С этой целью можно использовать цикл:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>i = 0</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>while i &lt; 3:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    a = int(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    b = int(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    print(a+b)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    i += 1</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Однако, что если перед каждым запросом чисел,
+надо выводить надпись, зачем они нужны, и каждый раз эта надпись разная. Мы не
+можем прервать цикл, а затем вернуться к тому же циклу обратно. Придется
+отказаться от него, и тогда получится длинный код, содержащий в разных местах
+одинаковые участки:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;Сколько книг и тетрадей?&quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>a = int(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>b = int(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;Всего&quot;, a+b,
+&quot;шт.&quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;Сколько карандашей и
+пеналов?&quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>a = int(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>b = int(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;Всего&quot;, a+b,
+&quot;шт.&quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;Сколько блокнотов и ручек?&quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>a = int(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>b = int(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;Всего&quot;, a+b,
+&quot;шт.&quot;)</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Пример исполнения программы:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Сколько книг и тетрадей?</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>15</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>5</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Всего 20 шт.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Сколько карандашей и пеналов?</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>50</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>12</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Всего 62 шт.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Сколько блокнотов и ручек?</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>16</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>8</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Всего 24 шт.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Внедрение функций позволяет решить проблему
+дублирования кода в разных местах программы. Благодаря им можно исполнять один
+и тот же участок кода не сразу, а только тогда, когда он понадобится.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Определение
+функции. Оператор def</span></b></p>
+
+<p class=MsoNormal style='border:none'><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В языке программирования Python функции
+определяются с помощью оператора <b><i>def</i>.</b> Рассмотрим код:</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>def countSchool():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    a = int(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    b = int(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    print(&quot;Всего&quot;, a+b,
+&quot;шт.&quot;)</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Это пример определения функции.
+Функция состоит из заголовка и тела. Заголовок оканчивается двоеточием и
+переходом на новую строку. Тело имеет отступ.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Ключевое слово <b>def</b> сообщает
+интерпретатору, что перед ним определение функции. За <b>def</b> следует имя
+функции. Оно может быть любым, также как и всякий идентификатор, например,
+переменная. В программировании весьма желательно давать всему осмысленные
+имена.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>После имени функции ставятся скобки. В
+приведенном примере они пустые. Это значит, что <b><i>функция не принимает
+никакие данные из вызывающей ее программы</i></b>. Однако она могла бы их
+принимать, и тогда в скобках были бы указаны так называемые параметры.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>После двоеточия следует тело, содержащее
+инструкции, которые выполняются при вызове функции. Следует различать определение
+функции и ее вызов. В программном коде они не рядом и не вместе. Можно
+определить функцию, но ни разу ее не вызвать. Нельзя вызвать функцию, которая
+не была определена. Определив функцию, но ни разу не вызвав ее, вы никогда не
+выполните ее тела.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;border:none'><span
+style='color:black'><img width=463 height=222 id=image2.png
+src="part2_1_files/image001.jpg"></span></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Вызов
+функции</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Рассмотрим полную версию программы с
+функцией:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def countSchool():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    a = int(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    b = int(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    print(&quot;Всего&quot;, a+b,
+&quot;шт.&quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;Сколько книг и тетрадей?&quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>countSchool ()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;Сколько карандашей и
+пеналов?&quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>countSchool ()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;Сколько блокнотов и ручек?&quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>countSchool ()</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>После вывода на экран каждого
+информационного сообщения осуществляется вызов функции, который выглядит просто
+как упоминание ее имени со скобками. Поскольку в функцию мы ничего не передаем
+скобки опять же пустые. В приведенном коде функция вызывается три раза.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Когда функция вызывается, поток выполнения
+программы переходит к ее определению и начинает исполнять ее тело. После того,
+как тело функции исполнено, поток выполнения возвращается в основной код в то
+место, где функция вызывалась. Далее исполняется следующее за вызовом
+выражение.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:14.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:red'>!</span></b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'> В языке Python <u>определение
+функции должно предшествовать ее вызовам</u>. Это связано с тем, что
+интерпретатор читает код строка за строкой и о том, что находится ниже по коду,
+ему еще неизвестно. Поэтому если вызов функции предшествует ее определению, то
+возникает ошибка (выбрасывается исключение NameError):</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>print(&quot;?&quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>countSchool ()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;Сколько карандашей и
+пеналов?&quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>countSchool ()Сколько книг и тетрадей</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;Сколько блокнотов и ручек?&quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>countSchool ()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def countSchool():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    a = int(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    b = int(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    print(&quot;Всего&quot;, a+b,
+&quot;шт.&quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Результат:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Сколько книг и тетрадей</span></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>?</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Traceback (most recent call last):</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  File &quot;test.py&quot;, line 2, in
+&lt;module&gt;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    <b>countSchool</b> ()</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>NameError: name '<b> countSchool</b> ' is not
+defined</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;page-break-after:avoid;border:none'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+text-indent:35.45pt;line-height:115%;page-break-after:avoid;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Функции придают программе структуру</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Польза функций не только в возможности
+многократного вызова одного и того же кода из разных мест программы. Не менее
+важно, что благодаря им программа обретает четкую структуру. Функции как бы
+разделяют ее на обособленные части, каждая из которых выполняет свою конкретную
+задачу.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Пусть надо написать программу, вычисляющую
+площади разных фигур. Пользователь указывает, площадь какой фигуры он хочет
+вычислить. После этого вводит исходные данные. Например, длину и ширину в
+случае прямоугольника. Чтобы разделить поток выполнения на несколько ветвей,
+следует использовать оператор <i>if-elif-else:</i></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>figure =
+input(&quot;1-прямоугольник, 2-треугольник, 3-круг: &quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>if figure == '1':</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  a = float(input(&quot;Ширина: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  b = float(input(&quot;Высота: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  print(&quot;Площадь: %.2f&quot; % (a*b))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>elif figure == '2':</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  a = float(input(&quot;Основание: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  h = float(input(&quot;Высота: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  print(&quot;Площадь: %.2f&quot; % (0.5 * a
+* h))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>elif figure == '3':</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  r = float(input(&quot;Радиус: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  print(&quot;Площадь: %.2f&quot; % (3.14 *
+r**2))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>else:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  print(&quot;Ошибка ввода&quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Следующий вариант использует
+функции:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def rectangle():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    a = float(input(&quot;Ширина: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    b = float(input(&quot;Высота: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    print(&quot;Площадь: %.2f&quot; % (a*b))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def triangle():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    a = float(input(&quot;Основание: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    h = float(input(&quot;Высота: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    print(&quot;Площадь: %.2f&quot; % (0.5 *
+a * h))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def circle():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    r = float(input(&quot;Радиус: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    print(&quot;Площадь: %.2f&quot; % (3.14 *
+r**2))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>figure = input(&quot;1-прямоугольник,
+2-треугольник, 3-круг: &quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>if figure == '1':</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  rectangle()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>elif figure == '2':</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  triangle()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>elif figure == '3':</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  circle()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>else:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  print(&quot;Ошибка ввода&quot;)</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Он кажется сложнее, а каждая из
+трех функций вызывается всего один раз. Однако из общей логики программы как бы
+убраны и обособлены инструкции для нахождения площадей. Программа теперь
+состоит из отдельных &quot;кирпичиков Лего&quot;. В основной ветке мы можем
+комбинировать их как угодно. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Если понадобится вычислить площадь
+треугольника по формуле Герона, а не через высоту, то не придется искать код во
+всей программе. Мы пойдем к месту определения функций и изменим тело одной из
+них.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Эти функции мы сможем использовать даже в
+другой программе, сославшись на данный файл с кодом.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Локальные
+и глобальные переменные</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В программировании особое внимание уделяется
+концепции о <i>локальных</i> и <i>глобальных переменных</i>, а также связанное
+с ними представление об областях видимости. Соответственно, <b><i>локальные
+переменные</i></b> видны только в локальной области видимости, которой может
+выступать отдельно взятая функция. <b><i>Глобальные переменные</i></b> видны во
+всей программе. &quot;Видны&quot; – значит, известны, доступны. К ним можно
+обратиться по имени и получить связанное с ними значение.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><u><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>К глобальной переменной можно обратиться из
+локальной области видимости</span></u><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>. <u>К локальной переменной
+нельзя обратиться из глобальной области видимости</u>, потому что локальная
+переменная существует только в момент выполнения тела функции. При выходе из
+нее, локальные переменные исчезают. Компьютерная память, которая под них
+отводилась, освобождается. Когда функция будет снова вызвана, локальные
+переменные будут созданы заново.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Вернемся к программе вычисления площади,
+немного упростив ее для удобства:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def rectangle():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    a = float(input(&quot;Ширина: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    b = float(input(&quot;Высота: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    print(&quot;Площадь: %.2f&quot; % (a*b))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def triangle():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    a = float(input(&quot;Основание: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    h = float(input(&quot;Высота: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    print(&quot;Площадь: %.2f&quot; % (0.5 *
+a * h))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>figure = input(&quot;1-прямоугольник,
+2-треугольник: &quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>if figure == '1':</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  rectangle()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>elif figure == '2':</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  triangle()</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Сколько здесь переменных? Какие
+из них являются глобальными, а какие – локальными?</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Здесь пять переменных. Глобальной является
+только&nbsp;<b><i><span style='background:#E9E9E9'>figure</span></i></b>.
+Переменные&nbsp;<b><span style='background:#E9E9E9'>a</span></b>&nbsp;и&nbsp;<b><span
+style='background:#E9E9E9'>b</span></b>&nbsp;из функции <b>rectangle(),</b> а
+также&nbsp;<b><span style='background:#E9E9E9'>a</span></b>&nbsp;и&nbsp;<b><span
+style='background:#E9E9E9'>h</span></b>&nbsp;из <b>triangle()</b> – локальные. </span><b><span
+style='font-size:14.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:red'>!</span></b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>При этом локальные переменные с
+одним и тем же идентификатором&nbsp;<span style='background:#E9E9E9'>a</span>,
+но объявленные в разных функциях, – <b>разные переменные!</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Следует отметить, что идентификаторы&nbsp;<span
+style='background:#E9E9E9'>r<i>ectangle</i></span>&nbsp;и&nbsp;<i><span
+style='background:#E9E9E9'>triangle</span></i>, хотя и не являются именами
+переменных, а представляют собой имена функций, также имеют область видимости.
+В данном случае она глобальная, так как функции объявлены непосредственно в
+основной ветке программы.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В приведенной программе к глобальной области
+видимости относятся заголовки объявлений функций, объявление и присваивание
+переменной&nbsp;<i><span style='background:#E9E9E9'>figure</span></i>,
+конструкция условного оператора.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>К локальной области относятся тела функций.
+Если, находясь в глобальной области видимости, мы попытаемся обратиться к
+локальной переменной, то возникнет ошибка:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>…</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>elif figure == '2':</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  triangle()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(a)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Пример выполнения:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>1-прямоугольник, 2-треугольник: 2</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Основание: 4</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Высота: 5</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Площадь: 10.00</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Traceback (most recent call last):</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  File &quot;test.py&quot;, line 17, in
+&lt;module&gt;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    print(a)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>NameError: name 'a' is not defined</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Однако мы можем обращаться из функций к глобальным переменным:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def rectangle():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    a = float(input(&quot;Ширина %s: &quot; %
+figure))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    b = float(input(&quot;Высота %s: &quot; %
+figure))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    print(&quot;Площадь: %.2f&quot; % (a*b))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def triangle():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    a = float(input(&quot;Основание %s:
+&quot; % figure))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    h = float(input(&quot;Высота %s: &quot; %
+figure))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    print(&quot;Площадь: %.2f&quot; % (0.5 *
+a * h))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>figure = input(&quot;1-прямоугольник,
+2-треугольник: &quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>if figure == '1':</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  rectangle()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>elif figure == '2':</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  triangle()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Пример выполнения:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>1-прямоугольник, 2-треугольник: 1</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Ширина 1: 6.35</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Высота 1: 2.75</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Площадь: 17.46</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В данном случае из тел функций происходит
+обращение к имени&nbsp;<i><span style='background:#E9E9E9'>figure</span>,</i>
+которое, из-за того, что было объявлено в глобальной области видимости, видимо
+во всей программе.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Если функции будут вычислять результат, то
+его надо где-то сохранить для дальнейшего использования. Для этого подошли бы
+глобальные переменные. В них можно записать результат. Напишем программу вот
+так:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>result = 0</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def rectangle():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    a = float(input(&quot;Ширина: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    b = float(input(&quot;Высота: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    result = a*b</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def triangle():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    a = float(input(&quot;Основание: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    h = float(input(&quot;Высота: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    result = 0.5 * a * h</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>figure = input(&quot;1-прямоугольник,
+2-треугольник: &quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>if figure == '1':</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  rectangle()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>elif figure == '2':</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  triangle()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;Площадь: %.2f&quot; % result)</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Итак, мы ввели в программу
+глобальную переменную result и инициировали ее нулем. В функциях ей
+присваивается результат вычислений. В конце программы ее значение выводится на
+экран. Мы ожидаем, что программа будет прекрасно работать. Однако…</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>1-прямоугольник, 2-треугольник: 2</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Основание: 6</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Высота: 4.5</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Площадь: 0.00</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>… что-то пошло не так.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Дело в том, что в Python присвоение значения
+переменной совмещено с ее объявлением. (Во многих других языках это не так.)
+Поэтому, когда имя&nbsp;<i><span style='background:#E9E9E9'>result</span></i>&nbsp;впервые
+упоминается в локальной области видимости, и при этом происходит присваивание
+ей значения, то <i><u>создается локальная переменная&nbsp;<span
+style='background:#E9E9E9'>result</span></u></i>. Это <u>ДРУГАЯ</u> переменная,
+никак не связанная с глобальной&nbsp;<i><span style='background:#E9E9E9'>result</span></i>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Когда функция завершает свою работу, то
+значение <i>локальной&nbsp;<span style='background:#E9E9E9'>result</span></i>&nbsp;теряется,
+а ГЛОБАЛЬНАЯ НЕ БЫЛА ИЗМЕНЕНА!</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Когда мы вызывали внутри функции
+переменную&nbsp;<i><span style='background:#E9E9E9'>figure</span>,</i> то
+ничего ей не присваивали. Наоборот, мы запрашивали ее значение. Интерпретатор
+искал ее значение сначала в локальной области видимости и не находил. После
+этого шел в глобальную и находил.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В случае с&nbsp;<span style='background:#E9E9E9'>r<i>esult</i></span>&nbsp;он
+ничего не ищет. Он выполняет вычисления справа от знака присваивания, <u>создает</u></span><b><u><span
+style='font-size:14.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:red'>!</span></u></b><u><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'> локальную переменную&nbsp;<i><span
+style='background:#E9E9E9'>result</span></i></span></u><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>,
+связывает ее с полученным значением.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>На самом деле можно
+принудительно обратиться к глобальной переменной. Для этого существует команда
+global:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>result = 0</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def rectangle():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    a = float(input(&quot;Ширина: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    b = float(input(&quot;Высота: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    global result</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    result = a*b</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def triangle():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    a = float(input(&quot;Основание: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    h = float(input(&quot;Высота: &quot;))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    global result</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    result = 0.5 * a * h</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>figure = input(&quot;1-прямоугольник,
+2-треугольник: &quot;)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>if figure == '1':</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  rectangle()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>elif figure == '2':</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>  triangle()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;Площадь: %.2f&quot; % result)</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>В таком варианте программа будет
+работать правильно.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Однако менять значения глобальных переменных
+в теле функции – плохая практика. В больших программах программисту трудно
+отследить, где, какая функция и почему изменила их значение. Программист
+смотрит на исходное значение глобальной переменной и может подумать, что оно
+остается таким же. Сложно заметить, что какая-то функция поменяла его. Подобное
+ведет к логическим ошибкам.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Чтобы избавиться от необходимости
+использовать глобальные переменные, для функций <u>существует возможность
+возврата результата своей работы в основную ветку программы</u>. И уже это
+полученное из функции значение можно присвоить глобальной переменной в
+глобальной области видимости. Это делает программу более понятной.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Существуют </span><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:red'>четыре правила</span></b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>, позволяющие судить о том,
+в какой области видимости находится переменная — <b><i>локальной</i></b> или <b><i>глобальной</i></b>.</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>1.  Если переменная используется в глобальной области видимости
+(т.е. вне какой-либо функции), то она всегда является глобальной переменной.</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>2.  Если переменная была объявлена в функции с использованием
+инструкции global, то она является глобальной.</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>3.  В противном случае, если переменная используется в операции
+присваивания в функции, то она является локальной.</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>4.  Но если переменной нигде в функции не присваивается значение,
+то она является глобальной.</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;background:white;
+border:none'><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<table class=2 border=1 cellspacing=0 cellpadding=0 width=676 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=676 valign=top style='width:506.85pt;border:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><b><i><span
+  style='font-size:14.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:red;background:white'>!!!</span></i></b><i><span style='font-size:11.0pt;
+  line-height:115%;font-family:"Verdana",sans-serif;color:black;background:
+  white'> Рекомендуется не изменять значения глобальных переменных внутри
+  функции. Если ваша функция должна поменять какую-то переменную, пусть лучше
+  она вернёт это значением, и вы сами при вызове функции явно присвоите в
+  переменную это значение. Если следовать этому правилу, то функции получаются
+  независимыми от кода, и их можно легко копировать из одной программы в
+  другую.</span></i></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:115%;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:red'>!!!!</span></b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'> Значениями по умолчанию могут
+быть снабжены только параметры, находящиеся в конце списка параметров (параметр
+со значением по умолчанию не может предшествовать параметру без значения по
+умолчанию).</span></p>
+
+<div align=center>
+
+<table class=1 border=1 cellspacing=0 cellpadding=0 width=532 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=213 valign=top style='width:159.5pt;border:solid black 1.0pt;
+  background:#92D050;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>можно</span></p>
+  <p class=MsoNormal style='line-height:115%;border:none'><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>def func(a, b=5) </span></p>
+  </td>
+  <td width=106 valign=top style='width:79.8pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>&nbsp;</span></p>
+  </td>
+  <td width=213 valign=top style='width:159.55pt;border:solid black 1.0pt;
+  border-left:none;background:#FF7F61;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='line-height:115%;border:none'><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>нельзя</span></p>
+  <p class=MsoNormal style='line-height:115%;border:none'><span
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>def func(a=5, b) </span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+page-break-after:avoid;border:none'><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Возврат
+значений из функции. Оператор return</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Функции могут передавать какие-либо данные из
+своих тел в основную ветку программы. Говорят, что <i>функция возвращает
+значение</i>. В большинстве языков программирования, в том числе Python, выход
+из функции и передача данных в то место, откуда она была вызвана, выполняется
+оператором <b><i>return</i></b>.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Если интерпретатор Python,
+выполняя тело функции, встречает <i>return,</i> то он &quot;забирает&quot;
+значение, указанное после этой команды, и &quot;уходит&quot; из функции.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def cylinder():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    r = float(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    h = float(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    # площадь боковой поверхности цилиндра:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    side = 2 * 3.14 * r * h</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    # площадь одного основания цилиндра:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    circle = 3.14 * r**2</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    # полная площадь цилиндра:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    full = side + 2 * circle</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    return full</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>square = cylinder()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(square)</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Пример выполнения:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>3</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>7</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>188.4</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В данной программе в основную ветку из
+функции возвращается значение <i>локальной переменной&nbsp;<span
+style='background:#E9E9E9'>full</span></i>. <u>Не сама переменная, а ее
+значение</u></span><b><i><span style='font-size:14.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:red;background:white'>!!!</span></i></b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>, в данном случае – какое-либо число, полученное в результате
+вычисления площади цилиндра.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В основной ветке программы это значение
+присваивается глобальной переменной&nbsp;<b><span style='background:#E9E9E9'>square</span>.</b>
+То есть выражение&nbsp;<b><span style='background:#E9E9E9'>square = cylinder()</span></b>&nbsp;выполняется
+так:</span></p>
+
+<p class=MsoNormal style='margin-left:0in;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Вызывается функция&nbsp;<b><span style='background:#E9E9E9'>cylinder()</span>.</b></span></p>
+
+<p class=MsoNormal style='margin-left:0in;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Из нее возвращается значение.</span></p>
+
+<p class=MsoNormal style='margin-left:0in;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Это значение присваивается переменной&nbsp;<b><span
+style='background:#E9E9E9'>square</span>.</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Не обязательно присваивать результат
+переменной, его можно сразу вывести на экран:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(cylinder())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Здесь число, полученное из cylinder(),
+непосредственно передается функции print(). Если мы в программе просто напишем
+cylinder(), не присвоив полученные данные переменной или не передав их
+куда-либо дальше, то эти данные будут потеряны. Но синтаксической ошибки не
+будет.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В функции может быть несколько операторов <b>return</b>.
+Однако всегда <u>выполняется только один из них</u>. Тот, которого первым
+достигнет поток выполнения. Допустим, мы решили обработать исключение,
+возникающее на некорректный ввод. Пусть тогда в ветке <b>except</b> обработчика
+исключений происходит выход из функции без всяких вычислений и передачи
+значения:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def cylinder():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    try:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>        r = float(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>        h = float(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    except ValueError:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>        return</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    side = 2 * 3.14 * r * h</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    circle = 3.14 * r**2</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    full = side + 2 * circle</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    return full</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(cylinder())</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Если попытаться вместо цифр
+ввести буквы, то сработает <i>return</i>, вложенный в <i>except.</i> Он
+завершит выполнение функции, так что все нижеследующие вычисления, в том числе <i>return
+full</i>, будут опущены. Пример выполнения:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>r</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>None</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>None</span></b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>, которое нам
+вернул &quot;пустой&quot; return принадлежит классу NoneType. Когда после
+return ничего не указывается, то по умолчанию считается, что там стоит объект
+None. В Python всякая функция что-либо возвращает. Если в ней нет оператора <i>return</i>,
+то она возвращает <i>None</i>. То же самое, как если в ней имеется
+&quot;пустой&quot; <i>return</i>.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Возврат
+нескольких значений</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В Python можно возвращать из функции
+несколько объектов, перечислив их через запятую после команды return:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def cylinder():</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    r = float(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    h = float(input())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    side = 2 * 3.14 * r * h</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    circle = 3.14 * r**2</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    full = side + 2 * circle</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    return side, full</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>sCyl, fCyl = cylinder()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;Площадь боковой поверхности
+%.2f&quot; % sCyl)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;Полная площадь %.2f&quot; % fCyl)</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Из функции <i>cylinder()</i>
+возвращаются два значения. Первое из них присваивается переменной&nbsp;<b><span
+style='background:#E9E9E9'>sCy</span></b><span style='background:#E9E9E9'>l</span>,
+второе –&nbsp;<b><span style='background:#E9E9E9'>fCyl</span></b>. Возможность
+такого группового присвоения – особенность Python, обычно не характерная для
+других языков:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a, b, c = 10, 15, 19</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>10</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; b</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>15</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; c</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>19</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Смысл здесь в том, что перечисление значений
+через запятую (например,&nbsp;<span style='background:#E9E9E9'>10, 15, 19</span>)
+создает объект типа <b>tuple (кортеж).</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Когда же кортеж присваивается сразу
+нескольким переменным, то происходит сопоставление его элементов
+соответствующим в очереди переменным. Это называется <b><i>распаковкой</i></b>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Таким образом, когда из функции возвращается
+несколько значений, на самом деле из нее возвращается один объект класса <b>tuple.</b>
+Перед возвратом эти несколько значений упаковываются в кортеж. Если же после
+оператора <i>return</i> стоит только одна переменная или объект, то ее/его тип
+сохраняется как есть.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Распаковка не является обязательной. Будет
+работать и так:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>…</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(cylinder())</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Пример выполнения:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>4</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>3</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>(75.36, 175.84)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>На экран выводится кортеж, о чем говорят
+круглые скобки. Его также можно присвоить одной переменной, а потом вывести ее
+значение на экран.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Параметры
+и аргументы функции</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В программировании функции могут не только
+возвращать данные, но также принимать их, что реализуется с помощью так
+называемых параметров, которые указываются в скобках в заголовке функции.
+Количество параметров может быть любым.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Параметры </span></i></b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>представляют собой локальные переменные, которым присваиваются
+значения в момент вызова функции</span></i><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>. Конкретные
+значения, которые передаются в функцию при ее вызове, будем называть <b><i>аргументами</i></b>.
+Следует иметь в виду, что встречается иная терминология. Например, формальные
+параметры и фактические параметры. В Python же обычно все называют аргументами.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Рассмотрим схему и поясняющий ее пример:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'><img width=487 height=317 id=image1.png
+src="part2_1_files/image002.png"
+alt="Параметры и аргументы функции. Схема и пример"></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Когда функция вызывается, то ей
+передаются аргументы. В примере указаны глобальные переменные&nbsp;<b><span
+style='background:#E9E9E9'>num1</span></b>&nbsp;и&nbsp;<b><span
+style='background:#E9E9E9'>num2</span></b>. <u>Однако на самом деле передаются
+не эти переменные, а их значения</u>. В данном случае числа 100 и 12. Другими
+словами, мы могли бы писать&nbsp;<span style='background:#E9E9E9'>mathem(100,
+12)</span>. Разницы не было бы.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Когда интерпретатор переходит к функции,
+чтобы начать ее исполнение, он присваивает переменным-параметрам переданные в
+функцию значения-аргументы. В примере переменной&nbsp;<b><span
+style='background:#E9E9E9'>a</span></b>&nbsp;будет присвоено 100,&nbsp;<b><span
+style='background:#E9E9E9'>b</span></b>&nbsp;будет присвоено 12.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Изменение значений&nbsp;<b><span
+style='background:#E9E9E9'>a</span></b>&nbsp;и&nbsp;<b><span style='background:
+#E9E9E9'>b</span></b>&nbsp;в теле функции никак не скажется на значениях
+переменных&nbsp;<b><span style='background:#E9E9E9'>num1</span></b>&nbsp;и&nbsp;<b><span
+style='background:#E9E9E9'>num2</span></b>. Они останутся прежними. В Python
+такое поведение характерно для неизменяемых типов данных, к которым относятся,
+например, числа и строки. Говорят, что в <i>функцию данные передаются <b><u>по
+значению</u></b></i>. Так, когда <b>a</b> присваивалось число 100, то это было
+уже другое число, не то, на которое ссылается переменная&nbsp;<b><span
+style='background:#E9E9E9'>num1</span></b>. <u>Число 100 было скопировано и
+помещено в отдельную ячейку памяти для переменной&nbsp;<b><span
+style='background:#E9E9E9'>a</span></b>.</u></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Существуют изменяемые типы данных. Для
+Python, это, например, списки и словари. В этом случае данные передаются <b><i><u>по
+ссылке</u></i></b>. В функцию передается ссылка на них, а не сами данные. И эта
+ссылка связывается с локальной переменной. Изменения таких данных через
+локальную переменную обнаруживаются при обращении к ним через глобальную. Это
+есть следствие того, что несколько переменных ссылаются на одни и те же данные,
+на одну и ту же область памяти.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Необходимость передачи по ссылке связана в
+первую очередь с экономией памяти. Сложные типы данных, по сути представляющие
+собой структуры данных, обычно копировать не целесообразно. </span></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Произвольное
+количество аргументов</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Обратим внимание еще на один момент. </span><b><i><span
+style='font-size:14.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:red;background:white'>!!!</span></i></b><i><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Количество
+аргументов и параметров совпадает.</span></i><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'> Нельзя передать
+три аргумента, если функция принимает только два. Нельзя передать один
+аргумент, если функция требует два обязательных. В рассмотренном примере они
+обязательные.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Однако в Python у функций бывают параметры,
+которым уже присвоено значение по-умолчанию. В таком случае, при вызове можно
+не передавать соответствующие этим параметрам аргументы. Хотя можно и передать.
+Тогда значение по умолчанию заменится на переданное.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def cylinder(h, r = 1):</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    side = 2 * 3.14 * r * h</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    circle = 3.14 * r**2</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    full = side + 2 * circle</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    return full</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>figure1 = cylinder(4, 3)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>figure2 = cylinder(5)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(figure1)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(figure2)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Вывод:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>131.88</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>37.68</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>При втором вызове <b>cylinder()</b> мы
+указываем только один аргумент. Он будет присвоен переменной-параметру&nbsp;<b><span
+style='background:#E9E9E9'>h</span></b>. Переменная&nbsp;<b><span
+style='background:#E9E9E9'>r</span></b>&nbsp;будет равна 1.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Согласно правилам синтаксиса Python при
+определении функции параметры, которым присваивается значение по-умолчанию
+должны следовать (находиться сзади) за параметрами, не имеющими значений по
+умолчанию.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>А вот при вызове функции, можно явно
+указывать, какое значение соответствует какому параметру. В этом случае их
+порядок не играет роли:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>…</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>figure3 = cylinder(10, 2)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>figure4 = cylinder(r=2, h=10)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(figure3)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(figure4)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В данном случае оба вызова – это вызовы с
+одними и теми же аргументами-значениями. Просто в первом случае сопоставление
+параметрам-переменным идет в порядке следования. Во-втором случае – по ключам,
+которыми выступают имена параметров.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Функция может быть определена так, что в нее
+можно не передать ни одного аргумента, можно передать множество:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>def oneOrMany(*a):</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    print(a)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>oneOrMany(1)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>oneOrMany('1',1, 2, 'abc')</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>oneOrMany()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Результат:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>(1,)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>('1', 1, 2, 'abc')</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Опять же, судя по скобкам, здесь возникает
+кортеж.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Встроенные
+функции</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Язык Python включает много уже определенных,
+т. е. встроенных в него, функций. Перечень всех встроенных в Python функций
+можно найти в официальной документации по языку: </span><a
+href="https://docs.python.org/3/library/functions.html"><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:blue'>https://docs.python.org/3/library/functions.html</span></a><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>. В переводе на русский можно посмотреть здесь: </span><a
+href="https://pythoner.name/documentation/library/functions"><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:blue'>https://pythoner.name/documentation/library/functions</span></a><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Рассмотрим следующие встроенные функции,
+условно разбив их на группы:</span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-.25in;line-height:115%;border:none'><span style='font-family:"Noto Sans Symbols";
+color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>функции для работы с символами – <b><i>ord(), chr(), len()</i></b></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-.25in;line-height:115%;border:none'><span style='font-family:"Noto Sans Symbols";
+color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>математические функции – <b><i>abs(), round(), divmod(), pow(),
+max(), min(), sum()</i></b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Функция <b><i>ord()</i></b> позволяет
+получить номер символа по таблице Unicode. Соответственно, принимает она в
+качестве аргумента одиночный символ, заключенный в кавычки:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; ord('z')</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>122</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; ord('ф')</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>1092</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; ord('@')</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>64</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Функция <b><i>chr()</i></b> выполняет
+обратное действие. Она позволяет получить символ по его номеру:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; chr(87)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'W'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; chr(1049)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'Й'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; chr(10045)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'</span></b><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Arial Unicode MS";color:black'>✽</span></b><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Функция <b><i>len()</i></b> в качестве
+аргумента принимает объект, который состоит из более простых объектов,
+количество которых она подсчитывает. Числа – это простые объекты, их нельзя
+передавать в len(). Строки можно:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; len('abc')</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>3</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; s1 = '------'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; s2 = '_______'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; len(s1) &gt; len(s2)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>False</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; len(s1)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>6</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; len(s2)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>7</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Функция <b><i>abs()</i></b> возвращает
+абсолютное значение числа:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; abs(-2.2)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>2.2</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; abs(9)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>9</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Если требуется округлить вещественное число
+до определенного знака после запятой, то следует воспользоваться функцией <b><i>round():</i></b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a = 10/3</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>3.3333333333333335</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; round(a,2)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>3.33</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; round(a)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>3</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Если второй аргумент не задан, то округление
+идет до целого числа. Есть одна специфическая особенность этой функции. Второй
+аргумент может быть отрицательным числом. В этом случае округляться начинают
+единицы, десятки, сотни и т. д., то есть целая часть:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; round(5321, -1)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>5320</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; round(5321, -3)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>5000</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; round(5321, -4)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>10000</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Функция именно округляет согласно правилу
+округления из математики, а не отбрасывает. Поэтому 5 тысяч неожиданно
+округляются до десяти.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; round(3.76, 1)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>3.8</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; round(3.72, 1)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>3.7</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; round(3.72)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>4</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; round(3.22)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>3</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Если нужно просто избавиться от дробной части
+без округления, следует воспользоваться функцией <b><i>int():</i></b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; int(3.78)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>3</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Нередко функцию <b><i>round()</i></b>
+используют совместно с функцией <b><i>print(),</i></b> избегая форматирования
+вывода:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a = 3.45673</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; print(&quot;Number: %.2f&quot; %
+a)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Number: 3.46</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; print(&quot;Number:&quot;,
+round(a,2))</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Number: 3.46</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В последнем случае код выглядит более ясным.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Функция <b><i>divmod()</i></b> выполняет
+одновременно деление нацело и нахождение остатка от деления:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; divmod(10, 3)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>(3, 1)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; divmod(20, 7)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>(2, 6)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Возвращает она <u>кортеж</u>. В других языках
+нередко встречаются две отдельные функции: div() и mod(). Первая делит нацело,
+вторая находит остаток от целочисленного деления (деления по модулю). В Python
+и многих других языках для этого используются специальные символы-операнды:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; 10 // 3</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>3</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; 10 % 3</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>1</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Функция <b><i>pow()</i></b> возводит в
+степень. Первое число – основание, второе – показатель:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; pow(3, 2)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>9</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; pow(2, 4)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>16</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>То же самое можно проделать так:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; 3**2</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>9</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; 2**4</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>16</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Однако <i>pow()</i> может принимать третий
+необязательный аргумент. Это число, на которое делится по модулю результат
+возведения в степень:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; pow(2, 4, 4)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>0</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; 2**4 % 4</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>0</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Преимуществом первого способа является его
+более быстрое выполнение.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Функции <b><i>max(), min() </i></b>и<b><i>
+sum()</i></b> находят соответственно максимальный, минимальный элемент и сумму
+элементов аргумента:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; max(10, 12, 3)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>12</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; min(10, 12, 3, 9)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>3</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a = (10, 12, 3, 10)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; sum(a)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>35</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В <i>sum()</i> нельзя передать перечень
+элементов, должна быть структура данных, например, кортеж. В <i>min() </i>и<i>
+max()</i> также чаще передают один так называемый итерируемый объект:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; max(a)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>12</span></b></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:35.45pt;
+line-height:115%;page-break-after:avoid;border:none'><b><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Модули</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Встроенные в язык программирования функции
+доступны сразу. Чтобы их вызвать, не надо выполнять никаких дополнительных
+действий. Однако за время существования любого популярного языка на нем было
+написано столько функций и классов, которые оказались востребованными
+множеством программистов и в разных областях, что включить весь этот объем кода
+в сам язык если возможно, то нецелесообразно.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Чтобы разрешить проблему доступа к
+дополнительным возможностям языка, в программировании стало общепринятой
+практикой использовать так называемые <b><i>модули, пакеты </i></b>и<b><i>
+библиотеки</i></b>. Каждый модуль содержит коллекцию функций и классов,
+предназначенных для решения задач из определенной области. Так в модуле <b><i>math</i></b>
+языка Python содержатся математические функции, модуль <b><i>random</i></b>
+позволяет генерировать псевдослучайные числа, в модуле <b><i>datetime</i></b>
+содержатся классы для работы с датами и временем, модуль <b><i>sys </i></b>предоставляет
+доступ к системным переменным и т. д.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Количество модулей для языка Python огромно,
+что связано с популярностью языка. Часть модулей собрана в так называемую
+стандартную библиотеку. <b><i>Стандартная</i></b> она потому, что поставляется
+вместе с установочным пакетом. Однако существуют сторонние библиотеки. Они
+скачиваются и устанавливаются отдельно.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Для доступа к функционалу модуля, <u>его надо
+импортировать в программу</u>. После импорта интерпретатор &quot;знает&quot; о
+существовании дополнительных классов и функций и позволяет ими пользоваться.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В Python импорт осуществляется командой <b>import</b>.
+При этом существует несколько способов импорта. Рассмотрим работу с модулем на
+примере math. Итак,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; import math</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Ничего не произошло. Однако в глобальной
+области видимости появилось имя <i>math.</i> Если до импорта вы упомянули бы
+имя <i>math,</i> то возникла бы ошибка <i>NameError.</i> Теперь же</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; math</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&lt;module 'math' (built-in)&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>В программе завелся объект <i>math</i>,
+относящийся к классу <i>module.</i></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Чтобы увидеть перечень функций, входящих в
+этот модуль, воспользуемся встроенной в Python функцией <b><i>dir(),</i></b>
+передав ей в качестве аргумента имя модуля:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; dir(math)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>['__doc__', '__loader__', '__name__',
+'__package__', '__spec__', 'acos', 'acosh',</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'asin', 'asinh', 'atan', 'atan2', 'atanh',
+'ceil', 'copysign', 'cos', 'cosh',</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'degrees', 'e', 'erf', 'erfc', 'exp',
+'expm1', 'fabs', 'factorial', 'floor',</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'fmod', 'frexp', 'fsum', 'gamma', 'gcd',
+'hypot', 'inf', 'isclose', 'isfinite',</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'isinf', 'isnan', 'ldexp', 'lgamma', 'log',
+'log10', 'log1p', 'log2', 'modf',</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'nan', 'pi', 'pow', 'radians', 'sin', 'sinh',
+'sqrt', 'tan', 'tanh', 'trunc']</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Проигнорируем имена с двойными
+подчеркиваниями. Все остальное – имена функций и констант (переменных, которые
+не меняют своих значений), включенных в модуль <b><i>math.</i></b></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><u><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Чтобы вызвать функцию из
+модуля, надо впереди написать имя модуля, поставить точку, далее указать имя
+функции, после чего в скобках передать аргументы, если они требуются.</span></u><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> Например, чтобы вызвать функцию pow из math, надо написать так:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; math.pow(2, 2)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>4.0</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Обратите внимание, эта другая функция <i>pow(),</i>
+не та, что встроена в сам язык. &quot;Обычная&quot; функция <i>pow()</i>
+возвращает целое, если аргументы целые числа:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; pow(2, 2)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>4</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Для обращения к константе скобки не нужны:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; math.pi</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>3.141592653589793</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Если мы не знаем, что делает та
+или иная функция, то можем получить справочную информацию о ней с помощью
+встроенной в язык Python функции <b><i>help():</i></b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; help(math.gcd)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Help on built-in function gcd in module math:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>gcd(...)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    gcd(x, y) -&gt; int</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    greatest common divisor of x and y</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Для выхода из интерактивной
+справки надо нажать клавишу <b>q</b>. В данном случае сообщается, что функция
+возвращает целое число, и это <b><i>наибольший общий делитель</i></b> для
+чисел&nbsp;<span style='background:#E9E9E9'>x</span>&nbsp;и&nbsp;<span
+style='background:#E9E9E9'>y</span>. Описание модулей и их содержания также
+можно посмотреть в официальной документации на сайте <b><i>python.org</i></b>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Второй способ импорта – это когда
+импортируется не сам модуль, а только необходимые функции из него.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; from math import gcd, sqrt,
+hypot</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Перевести можно как &quot;из
+модуля math импортировать функции gcd, sqrt и hypot&quot;.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В таком случае при их вызове не надо перед
+именем функции указывать имя модуля:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; gcd(100, 150)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>50</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; sqrt(16)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>4.0</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; hypot(3, 4)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>5.0</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Чтобы импортировать сразу все функции из
+модуля:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; from math import *</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Смысл подобных импортов в сокращении имен,
+так как есть модули с длинными именами, а имена функций и классов в них еще
+длиннее. Если в программу импортируется всего пара сущностей, и они
+используются в ней часто, то имеет смысл переименовать их на более короткий
+вариант. Сравните:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; import calendar</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; calendar.weekheader(2)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'Mo Tu We Th Fr Sa Su'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>и</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; from calendar import weekheader
+as week</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&gt;&gt;&gt; week(3)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>'Mon Tue Wed Thu Fri Sat Sun'</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Во всех остальных случаях лучше
+оставлять идентификаторы содержимого модуля в пространстве имен самого модуля и
+получать доступ к ним через имя модуля, т. е. выполнять импорт командой&nbsp;<b><i><span
+style='background:#E9E9E9'>import имя_модуля</span></i></b>, а вызывать,
+например, функции через&nbsp;<b><i><span style='background:#E9E9E9'>имя_модуля.имя_функции()</span>.</i></b></span></p>
+
+<p class=MsoNormal style='margin-top:10.3pt;text-align:justify;text-indent:
+35.4pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:16.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:red'>! </span></b><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#292929'> В отличие от многих языков
+программирования, в Python нет функции <b><i>main(),</i></b> которая запускает
+всю программу. А что обозначает <b><i>__name__ == “__main__”?</i></b> Дело в
+том, что Python создает переменную <b><i>__name__,</i></b> которой
+присваивается имя модуля такое, что: если модуль запускается <u>напрямую,</u>
+то этой переменной будет присвоено <b><i>__main__</i></b>; если модуль будет
+запущен через импорт, то ему будет присвоено <u>само название модуля</u>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:28.35pt;
+line-height:115%;page-break-after:avoid;background:white;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#444444'>Пакеты в Python</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:28.35pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#444444'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:28.35pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Пакет в&nbsp;<i>Python</i>&nbsp;–
+это каталог, включающий в себя другие каталоги и модули, но при этом
+дополнительно содержащий файл&nbsp;<b><i>__init__.py.</i></b>&nbsp;Пакеты
+используются для формирования пространства имен, что позволяет&nbsp;работать с
+модулями через указание уровня вложенности (через точку).</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:28.35pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Для импортирования пакетов
+используется тот же синтаксис, что и для работы с модулями.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:28.35pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Рассмотрим следующую
+структуру пакета:</span></p>
+
+<div style='border:solid #EDEDED 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt;
+background:white;margin-left:35.4pt;margin-right:0in'>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none;padding:0in'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>fincalc</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none;padding:0in'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>|-- __init__.py</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none;padding:0in'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>|-- simper.py</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none;padding:0in'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>|-- compper.py</span></i></b></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Пакет&nbsp;<b><i>fincalc</i></b>&nbsp;содержит
+в себе модули для работы с простыми процентами (simper.py) и сложными
+процентами.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Для использования функции из
+модуля работы с простыми процентами, можно использовать один из следующих
+вариантов:</span></p>
+
+<div style='border:solid #EDEDED 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt;
+background:#F9F9F9;margin-left:35.4pt;margin-right:0in'>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:#F9F9F9;
+border:none;padding:0in'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>import fincalc.simper</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:#F9F9F9;
+border:none;padding:0in'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>fv = fincalc.simper.fv(pv, i, n)</span></i></b></p>
+
+</div>
+
+<div style='border:solid #EDEDED 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt;
+background:#F9F9F9;margin-left:35.45pt;margin-right:0in'>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;line-height:115%;
+background:#F9F9F9;border:none;padding:0in'><b><i><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>import
+fincalc.simper as sp</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:#F9F9F9;
+border:none;padding:0in'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>fv =sp.fv(pv, i, n)</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;line-height:115%;
+background:#F9F9F9;border:none;padding:0in'><b><i><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>from fincalc
+import simper</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:#F9F9F9;
+border:none;padding:0in'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>fv = simper.fv(pv, i, n)</span></i></b></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Файл<i>&nbsp;<b>__init__.py</b></i><b>&nbsp;</b>может
+быть пустым или может содержать переменную&nbsp;<i>__all__,&nbsp;</i>хранящую&nbsp;список
+модулей, который импортируется при загрузке через конструкцию <b><i>from
+имя_пакета import *</i></b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Например, для нашего случая
+содержимое&nbsp;<i>__init__.py</i>&nbsp;может быть вот таким:</span></p>
+
+<div style='border:solid #EDEDED 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt;
+background:#F9F9F9;margin-left:35.4pt;margin-right:0in'>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:#F9F9F9;
+border:none;padding:0in'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>__all__ = [&quot;simper&quot;,
+&quot;compper&quot;]</span></i></b></p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

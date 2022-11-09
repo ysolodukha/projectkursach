@@ -1,0 +1,44 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  Unit1 in 'Unit1.pas' {Form1},
+  Unit3 in 'Unit3.pas' {Form3},
+  Unit2 in 'Unit2.pas' {Education},
+  Unit4 in 'Unit4.pas' {Part1_1},
+  Unit5 in 'Unit5.pas' {Part1_2},
+  Unit6 in 'Unit6.pas' {Part1_3},
+  Unit7 in 'Unit7.pas' {Part1_4},
+  Unit8 in 'Unit8.pas' {Education2},
+  Unit9 in 'Unit9.pas' {Part2_1},
+  Unit10 in 'Unit10.pas' {Part2_2},
+  Unit11 in 'Unit11.pas' {Part2_3},
+  Unit12 in 'Unit12.pas' {Part2_4},
+  Unit13 in 'Unit13.pas' {Education3},
+  Unit14 in 'Unit14.pas' {Part3_1},
+  Unit15 in 'Unit15.pas' {Part3_2},
+  Unit16 in 'Unit16.pas' {Part3_3};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TEducation, Education);
+  Application.CreateForm(TPart1_1, Part1_1);
+  Application.CreateForm(TPart1_2, Part1_2);
+  Application.CreateForm(TPart1_3, Part1_3);
+  Application.CreateForm(TPart1_4, Part1_4);
+  Application.CreateForm(TEducation2, Education2);
+  Application.CreateForm(TPart2_1, Part2_1);
+  Application.CreateForm(TPart2_2, Part2_2);
+  Application.CreateForm(TPart2_3, Part2_3);
+  Application.CreateForm(TPart2_4, Part2_4);
+  Application.CreateForm(TEducation3, Education3);
+  Application.CreateForm(TPart3_1, Part3_1);
+  Application.CreateForm(TPart3_2, Part3_2);
+  Application.CreateForm(TPart3_3, Part3_3);
+  Application.Run;
+end.

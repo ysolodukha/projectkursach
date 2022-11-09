@@ -1,0 +1,1140 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Quattrocento Sans";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+span.msoIns
+	{mso-style-name:"";
+	text-decoration:underline;
+	color:teal;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:56.7pt 42.55pt 56.7pt 56.7pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+background:white;border:none'><b><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black;background:white'>Условные
+операторы </span></b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black;background:white'>позволяют в зависимости от
+значения логического выражения выполнить отдельный участок программы или,
+наоборот, не выполнять его</span><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>. Логические выражения
+возвращают только два значения <b><i>True</i></b> или <b><i>False</i></b>,
+которые ведут себя как целые числа 1 и 0, соответственно. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Например, <b>True + 2</b> 
+получим <b>3;   False + 2</b>  получим <b>2.</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Логическое значение можно
+сохранить в переменной: х = True.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Для определения логического
+значения можно использовать функцию bool().</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Значение <b>True </b>возвращает
+следующие объекты:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>а) любое число, не равное 0:
+bool(1), bool(-20), bool(20)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>б) не пустой объект:
+bool(“0”), bool(0, None), bool(“x”:5)</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+background:white;border:none'><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Следующие объекты
+интерпретируются как False:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>а) число, равное 0: bool(0),
+bool(0.0)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>б) пустой объект: bool(“”),
+bool([]), bool(())</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>в) значение None: bool
+(None)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+line-height:115%;background:white;border:none'><b><span style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Операторы
+сравнения:</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><b><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#4472C4'>== </span></b><b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>     - </span></b><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>равно</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>1==1,  1==5  получим: True, False</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><b><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#4472C4'>!=</span></b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    - не равно.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>1!=1,  1!=5  получим: False, True </span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><b><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#4472C4'>&lt;</span></b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    - меньше.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>1&lt;1,  1&lt;5  получим: False,
+True </span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><b><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#4472C4'>&gt;</span></b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    - больше.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>1&gt;0,  1&gt;5  получим: True,
+False</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><b><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#4472C4'>&lt; =</span></b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#4472C4'> </span><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>  - меньше или равно.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>1&lt;=1,  1&lt;=5  получим: True,
+True </span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><b><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#4472C4'>&gt;=</span></b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    - больше или равно.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>1&gt;=0,  1&gt;=5  получим: True,
+False</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><b><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#4472C4'>in</span></b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> – проверка на вхождение в последовательность</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>“строка” in ”строка для
+поиска”   получим: True</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Этот оператор можно также
+использовать для проверки существования ключа словаря:</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>“x” in (“x” : 1,  “y” : 2),    “z”
+in (“x” : 1,  “y” : 2)  получим: True, False</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><b><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#4472C4'>not in</span></b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> – проверка на вхождение в последовательность</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>“строка” not in ”строка для
+поиска”   получим: False</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'> 2 not in (1, 2, 3),    4 not in
+(1, 2, 3)  получим: False, True</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><b><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#4472C4'>is</span></b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> – проверяет, ссылаются ли две переменные <b><i>на один и тот же
+объект</i></b>, если ДА, то оператор возвращает значение True</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>x = y = [1, 2]</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>x is y    получим: True</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>x = [1, 2];  y = [1, 2]</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>x is y    получим: False</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:10.5pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>В целях повышения
+эффективности интерпретатор производит кэширование малых целых чисел и
+небольших строк. Это означает, что если ста переменным присвоено число 2, то в
+этих переменных скорее всего будет сохранена <u>ссылка на один и тот же объект</u>.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>x = 2, y = 2, z = 2</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>x is y, y is z    получим: True,
+True</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><b><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#4472C4'>is</span></b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#4472C4'>  <b>not</b></span><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'> – проверяет, ссылаются ли
+две переменные <b><i>на разные объекты</i></b>, если ДА, то оператор возвращает
+значение True</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>x = y = [1, 2]</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>x is not y    получим: False</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>x = [1, 2];  y = [1, 2]</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>x is not y    получим: True</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><b><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#4472C4'>not</span></b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#4472C4'> –</span><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'> инвертирует значение логического
+выражения</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>x = 1,  y = 1</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>x == y     получим: True</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>not (x == y)</span><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>     получим: False  (Скобки можно не ставить, так как оператор
+not имеет более низкий приоритет, чем оператор сравнения).</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>В логическом выражении можно
+указывать сразу несколько условий:</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>x = 10</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>1 &lt; x &lt; 20,     11 &lt; x
+&lt; 20   получим: True, False.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span style='font-size:10.5pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Простые логические выражения можно объединять
+в сложные при помощи операторов </span><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>and</span></b><span
+style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>, </span><b><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>or, </span></b><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222'>исключающее ИЛИ</span></b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:#222222'>. Знаки
+побитовых операций: <b>| - ИЛИ, &amp; - И, ^ - исключающее ИЛИ.</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif;color:#212529;background:white'>Побитовое</span></i></b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:#212529;background:white'>&nbsp;исключение-или уже встроено в Python в
+модуле&nbsp;</span><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black;background:whitesmoke'>operator</span></i></b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:#212529;background:white'>&nbsp;(который идентичен оператору&nbsp;</span><span
+style='font-size:10.5pt;line-height:115%;font-family:Consolas;color:#E83E8C;
+background:whitesmoke'>^</span><span style='font-size:12.0pt;line-height:115%;
+font-family:"Quattrocento Sans";color:#212529;background:white'>&nbsp;):</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>&gt;&gt;&gt; from <b>operator</b>
+import xor</span></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:0in;text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:12.0pt;line-height:115%;font-family:"Courier New";
+color:black'>&gt;&gt;&gt; xor(bool(2), bool(2))</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New";color:black'>False</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>ЗАДАЧА 1.</span></i></b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> </span></i><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222'>Вводятся два числа в двоичной
+системе счисления. Требуется выполнить над ними побитовые операции И, ИЛИ и
+исключающее ИЛИ. Вывести результат операций в двоичном представлении.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span style='font-size:10.5pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>РЕШЕНИЕ:</span></i></b><i><span
+style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> </span></i><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222'>Побитовые операции выполняются
+над разрядами числа. Так если имеем два числа 101 и 100, над которыми
+выполняется побитовая операция ИЛИ, то получим двоичное число 101:</span></i></p>
+
+<p class=MsoNormal style='margin-left:177.0pt;text-align:justify;line-height:
+115%;border:none'><b><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222'>101<br>
+<span class=msoIns><ins datetime="2022-06-17T23:50">100</ins></span><br>
+101</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222'>В языке программирования Python побитовые
+операции применяются к числам, представленными в десятичной системе счисления.
+Функция <b>int()</b> всегда преобразует переданную ей строку в десятичную
+систему счисления. При этом вторым аргументом можно указать, в какой системе
+счисления содержатся данные в этой строке (двоичной, восьмеричной,
+шестнадцатеричной). Функция <b>bin(),</b> наоборот, принимает десятичное число
+и возвращает строку, являющуюся представлением переданного числа в двоичном
+виде. Получим программу:</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span style='font-size:10.5pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>n1 =
+input(&quot;Первое число : &quot;)</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>n2 =
+input(&quot;Второе число: &quot;)</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>n1 = int(n1, 2)</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>n2 = int(n2, 2)</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>bit_or = n1 | n2</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>bit_and = n1
+&amp; n2</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>bit_xor = n1 ^
+n2</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>print(&quot; OR:
+%s&quot; % bin(bit_or))</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>print(&quot;AND:
+%s&quot; % bin(bit_and))</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>print(&quot;XOR:
+%s&quot; % bin(bit_xor))</span></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:35.4pt;border:none'><span style='font-size:12.0pt;
+font-family:"Courier New";color:black'>Получим следующий результат:</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>Первое: 10100</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>Второе: 111</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>OR: 0b10111</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>AND: 0b100</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>XOR: 0b10011</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+line-height:115%;border:none'><span style='font-size:10.5pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+line-height:115%;background:white;border:none'><b><span style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:red'>Оператор
+ветвления:</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.4pt;line-height:115%;background:white;border:none'><b><span
+style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Оператор ветвления if…else </span></b><span style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>позволяет в
+зависимости от логического выражения выполнить отдельный участок программы или,
+наоборот, не выполнить его. Оператор имеет следующий формат:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><b><span style='font-size:10.5pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>if &lt;логическое выражение&gt;:</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><b><span style='font-size:10.5pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    &lt;блок, выполняемый, если условие
+истинно&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><b><span style='font-size:10.5pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>[elif &lt;логическое выражение&gt;:</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><b><span style='font-size:10.5pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    &lt;блок, выполняемый, если условие
+истинно&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><b><span style='font-size:10.5pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>]</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><b><span style='font-size:10.5pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>[else:</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><b><span style='font-size:10.5pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    &lt;блок, выполняемый, если условие
+ложно&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><b><span style='font-size:10.5pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>]</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.4pt;line-height:115%;background:white;border:none'><span style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Блоки
+внутри составной инструкции выделяются одинаковым количеством пробелов (обычно
+четырьмя). Концом блока является инструкция перед которой расположено меньшее
+количество пробелов. </span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+text-indent:35.45pt;line-height:115%;background:white;border:none'><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'><img width=381 height=205 id=image2.png
+src="part1_3_files/image001.png"></span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+12.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+text-indent:35.45pt;line-height:115%;background:white;border:none'><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'><img width=261 height=210 id=image3.png
+src="part1_3_files/image002.png"></span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+12.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+text-indent:35.45pt;line-height:115%;background:white;border:none'><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'><img width=479 height=532 id=image1.png
+src="part1_3_files/image003.png"></span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span style='font-size:
+12.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+text-indent:35.45pt;line-height:115%;background:white;border:none'><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'><img width=443 height=625 id=image4.png
+src="part1_3_files/image004.png"></span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>ЗАДАЧА 2.</span></i></b><i><span style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'> Написать
+программу, которая проверяет, является ли введенное пользователем число четным.
+После проверки выводится соответствующее сообщение.</span></i></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>РЕШЕНИЕ:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;background:white;
+border:none'><b><i><span style='font-size:12.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#080808'>x = </span></i></b><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:navy'>int</span></i></b><b><i><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#080808'>(</span></i></b><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:navy'>input</span></i></b><b><i><span style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#080808'>(</span></i></b><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:teal'>&quot;введите число: &quot;</span></i></b><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#080808'>))<br>
+</span></i></b><b><i><span style='font-size:12.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#0033B3'>if </span></i></b><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#080808'>x % </span></i></b><b><i><span style='font-size:12.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:#1750EB'>2 </span></i></b><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#080808'>== </span></i></b><b><i><span style='font-size:12.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:#1750EB'>0</span></i></b><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#080808'>:<br>
+    </span></i></b><b><i><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:navy'>print </span></i></b><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#080808'>(x, </span></i></b><b><i><span style='font-size:12.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:teal'>' - число четное'</span></i></b><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#080808'>)<br>
+</span></i></b><b><i><span style='font-size:12.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#0033B3'>else</span></i></b><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#080808'>:<br>
+    </span></i></b><b><i><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:navy'>print </span></i></b><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#080808'>(x, </span></i></b><b><i><span style='font-size:12.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:teal'>' - число
+нечетное'</span></i></b><b><i><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#080808'>)</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:8.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Если блок состоит из одной инструкции, ее можно разместить в одной
+строке с заголовком (но лучше так не делать!). Например,</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#0033B3'>if </span><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#080808'>x % </span><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#1750EB'>2 </span><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#080808'>== </span><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#1750EB'>0</span><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#080808'>: </span><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:navy'>print </span><span style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#080808'>(x, </span><b><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:teal'>' - число четное'</span></b><span style='font-size:12.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:#080808'>)</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:10.5pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>          Оператор ветвления
+позволяет проверить сразу несколько условий.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>ЗАДАЧА 3.</span></i></b><i><span style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'> Написать
+программу, которая проверяет, какой операционной системой вы пользуетесь.</span></i></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><i><span
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>РЕШЕНИЕ:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;background:white;
+border:none'><b><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;&quot;&quot;какой операционной
+системой вы пользуетесь?<br>
+1 - Windows 10<br>
+2 - Windows 8.1<br>
+3 - Windows 8<br>
+4 - Windows 7<br>
+5 - Windows Vista<br>
+6 - Другая&quot;&quot;&quot;)<br>
+os = input(&quot;введите число, соответствующее ответу: &quot;)<br>
+if os == &quot;1&quot;:<br>
+    print(&quot;вы выбрали Windows 10&quot;)<br>
+elif os == &quot;2&quot;:<br>
+    print(&quot;вы выбрали Windows 8.1&quot;)<br>
+elif os == &quot;3&quot;:<br>
+    print(&quot;вы выбрали Windows 8&quot;)<br>
+elif os == &quot;4&quot;:<br>
+    print(&quot;вы выбрали Windows 7&quot;)<br>
+elif os == &quot;5&quot;:<br>
+    print(&quot;вы выбрали Windows Vista&quot;)<br>
+elif os == &quot;6&quot;:<br>
+    print(&quot;вы выбрали: Другая&quot;)<br>
+elif not os:<br>
+    print(&quot;вы не ввели число&quot;)<br>
+else:<br>
+    print(&quot;мы не смогли определить вашу ОС&quot;)</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;line-height:115%;background:white;
+border:none'><b><span style='font-size:10.5pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>          </span></b><span style='font-size:
+10.5pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>С помощью
+инструкции <b><i>elif</i></b> мы можем определить выбранное значение и вывести
+соответствующее сообщение.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span style='font-size:10.5pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>          Один условный
+оператор можно вложить в другой. Следите за отступами!</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;background:white;
+border:none'><b><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>print(&quot;&quot;&quot;какой операционной
+системой вы пользуетесь?<br>
+1 - Windows 10<br>
+2 - Windows 8.1<br>
+3 - Windows 8<br>
+4 - Windows 7<br>
+5 - Windows Vista<br>
+6 - Другая&quot;&quot;&quot;)<br>
+os = input(&quot;введите число, соответствующее ответу: &quot;)<br>
+if os != &quot;&quot;:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;background:white;
+border:none'><b><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    if os == &quot;1&quot;:<br>
+        print(&quot;вы выбрали Windows 10&quot;)<br>
+    elif os == &quot;2&quot;:<br>
+        print(&quot;вы выбрали Windows 8.1&quot;)<br>
+    elif os == &quot;3&quot;:<br>
+        print(&quot;вы выбрали Windows 8&quot;)<br>
+    elif os == &quot;4&quot;:<br>
+        print(&quot;вы выбрали Windows 7&quot;)<br>
+    elif os == &quot;5&quot;:<br>
+        print(&quot;вы выбрали Windows Vista&quot;)<br>
+    elif os == &quot;6&quot;:<br>
+        print(&quot;вы выбрали: Другая&quot;)<br>
+    else:<br>
+        print(&quot;мы не смогли определить вашу ОС&quot;)</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><b><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>else:</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.45pt;text-align:justify;line-height:115%;background:white;
+border:none'><b><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>    print(&quot;вы не ввели число&quot;)</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#080808'><br>
+</span><span style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Оператор ветвления </span><b><span style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>if…else</span></b><span
+style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> имеет еще один формат:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><b><span style='font-size:10.5pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&lt;переменная&gt; = &lt;если истина&gt; if
+&lt;условие&gt; else &lt;если ложь&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;background:white;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Например,
+</span><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:navy'>print</span><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:#080808'>(</span><b><span style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:teal'>&quot;Yes&quot; </span></b><span style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:#0033B3'>if </span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#1750EB'>11 </span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#080808'>% </span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#1750EB'>2 </span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#080808'>== </span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#1750EB'>0 </span><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#0033B3'>else </span><b><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:teal'>&quot;No&quot;</span></b><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#080808'>)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:35.4pt;text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><i><span style='font-size:12.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>ЗАДАЧА 4.</span></i></b><i><span
+style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> Найти корни квадратного уравнения.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><i><span style='font-size:12.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>РЕШЕНИЕ: </span></i></b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222'>Квадратное уравнение имеет вид <b>ax<sup>2</sup>&nbsp;+ bx + c =
+0</b></span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222'>При его решении сначала вычисляют
+дискриминант по формуле <b>D = b<sup>2</sup>&nbsp;- 4ac</b></span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222'>Если D &gt; 0, то квадратное уравнение
+имеет два корня; если D = 0, то 1 корень; и если D &lt; 0, то делают вывод, что
+корней нет.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222'>Таким образом, программа для нахождения
+корней квадратного уравнения может иметь три ветви условного оператора.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222'>Функция float() преобразует переданный ей
+аргумент в вещественное число.</span></i></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>import
+math</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>print(&quot;Введите
+коэффициенты для уравнения&quot;)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>print(&quot;ax^2
++ bx + c = 0:&quot;)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>a =
+float(input(&quot;a = &quot;))</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>b =
+float(input(&quot;b = &quot;))</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>c =
+float(input(&quot;c = &quot;))</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>discr = b
+** 2 - 4 * a * c</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>print(&quot;Дискриминант
+D = %.2f&quot; % discr)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>if discr
+&gt; 0:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>    x1 =
+(-b + math.sqrt(discr)) / (2 * a)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>    x2 =
+(-b - math.sqrt(discr)) / (2 * a)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>   
+print(&quot;x1 = %.2f \nx2 = %.2f&quot; % (x1, x2))</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>elif
+discr == 0:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>    x =
+-b / (2 * a)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>   
+print(&quot;x = %.2f&quot; % x)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>else:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>   
+print(&quot;Корней нет&quot;)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;border:none'><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Пример
+выполнения кода:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Введите коэффициенты для уравнения</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>ax^2 + bx + c = 0:</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>a = 3.2</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>b = -7.8</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>c = 1</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Дискриминант D = 48.04</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>x1 = 2.30 </span></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>x2 = 0.14</span></b></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222'>Обратим внимание, что для данной программы
+коэффициент&nbsp;<b>a</b>&nbsp;не должен быть равен нулю. Иначе в первой ветке
+условного оператора будет происходить попытка деления на 0. Если&nbsp;<b>a = 0</b>,
+то квадратное уравнение превращается в линейное, которое решается иным способом.
+Оно всегда имеет один корень.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>ЗАДАЧА 5.</span></i></b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'> </span></i><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#222222'>Определить
+по трем сторонам, существует ли такой треугольник?</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><i><span style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>РЕШЕНИЕ: </span></i></b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222'>У треугольника сумма любых двух сторон должна быть больше
+третьей. Иначе две стороны просто &quot;лягут&quot; на третью и треугольника не
+получится.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222'>Пользователь вводит длины трех сторон.
+Программа должна определять, может ли существовать треугольник при таких длинах.
+Это значит, необходимо сравнить суммы всех пар сторон с оставшейся третьей
+стороной. Чтобы треугольник существовал, сумма всегда должна быть больше
+отдельной стороны или, по крайней мере, не меньше, если учитывать так
+называемый вырожденный треугольник.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222'>Поскольку всего три стороны, то можно
+составить три варианта сложения двух сторон:&nbsp;</span></i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222'>a<i>&nbsp;+&nbsp;</i>b<i>,&nbsp;</i>b<i>&nbsp;+&nbsp;</i>c<i>,&nbsp;</i>a<i>&nbsp;+&nbsp;</i>c<i>.
+Первую сумму сравниваем с оставшейся стороной&nbsp;</i>c<i>, вторую - с&nbsp;</i>a<i>&nbsp;и
+третью - с&nbsp;</i>b<i>. Если хотя бы в одном случае сумма окажется не больше
+третьей стороны, то делается вывод, что треугольник не существует.</i></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>print(&quot;Стороны:&quot;)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>a = float(input(&quot;a = &quot;))</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>b = float(input(&quot;b = &quot;))</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>c = float(input(&quot;c = &quot;))</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>if a + b &gt; c and a + c &gt; b and b + c &gt; a:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    print(&quot;Треугольник существует&quot;)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>else:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>   
+print(&quot;Треугольник не существует&quot;)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;background:
+white;border:none'><span style='font-size:8.0pt;font-family:"Verdana",sans-serif;
+color:#222222;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:15.0pt;text-align:justify;text-indent:
+35.4pt;background:white;border:none'><span style='font-size:11.0pt;font-family:
+"Verdana",sans-serif;color:#222222;background:white'>Можно решить задачу
+сложнее. Если требуется также определить, какая из сторон больше суммы двух
+других, то решение может быть таким:</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>print(&quot;Длины сторон треугольника:&quot;)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>a = float(input(&quot;a = &quot;))</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>b = float(input(&quot;b = &quot;))</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>c = float(input(&quot;c = &quot;))</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>flag = ''</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>if a + b &gt; c:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    if a + c &gt; b:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>        if b + c &gt; a:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>            print(&quot;Треугольник есть&quot;)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>        else:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>            flag = 'a'</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    else:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>        flag = 'b'</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>else:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    flag = 'c'</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>if flag != '':</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    print(&quot;Треугольника нет&quot;)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><i><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    print(&quot;'%s' &gt; суммы других&quot; % flag)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Примерный результат выполнения программы:</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Длины сторон треугольника:</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>a = 4</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>b = 5</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>c = 10</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Треугольника нет</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;line-height:115%;border:none'><b><span
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>'c' &gt; суммы других</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:15.0pt;text-align:justify;text-indent:
+35.4pt;background:white;border:none'><span style='font-size:11.0pt;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:black'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

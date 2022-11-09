@@ -1,0 +1,1446 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:SFRM1000;}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+@font-face
+	{font-family:"\@MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:56.7pt 42.55pt 56.7pt 56.7pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><b><i><span lang=RU style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:#242021'>Циклом</span></i></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#242021'> называется фрагмент алгоритма или программы, который может
+повторяться несколько раз (в том числе и нуль раз). Каждая циклическая
+конструкция начинается <u>заголовком цикла</u> и заканчивается <u>конечным
+оператором</u>. Между ними располагаются операторы, называемые «<b><i>телом
+цикла</i></b>». Количество повторений выполнения команд (операторов),
+составляющих тело цикла, определяется условием окончания цикла. Условием
+окончания может быть достижение некоторого значения специальной переменной,
+называемой <b><i>параметром цикла</i></b> (переменной цикла), или выполнение
+(прекращение выполнения) некоторого условия.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:#242021'>Для
+организации циклов с параметром в языках программирования используется
+составной оператор <b>FOR</b> («для»), а в циклах с условием чаще всего
+используется составной оператор <b>WHILE</b> («пока»).В случае цикла с
+параметром количество повторений («оборотов») цикла известно заранее и задаётся
+специальным выражением в заголовке цикла, а в случае цикла с условием при
+каждом следующем повторении требуется проверять условие прекращения цикла.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><b><i><span lang=RU style='font-size:
+14.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:red'>!</span></i></b><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#242021'> Если при написании операторов в теле цикла допущена ошибка,
+условие прекращения цикла может не выполниться никогда и цикл окажется
+бесконечным («программа зациклится»).</span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:#242021'>Пример
+блок-схемы цикла с параметром (переменной) показан на рис. 2.9, а пример блок-схемы
+цикла с условием окончания — на рис. 2.10.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:#242021'>Для
+обозначения заголовка цикла с параметром используется специальный графический
+элемент — блок модификации, в котором указывается правило изменения параметра
+цикла. Для работы с одномерными массивами целесообразно использовать циклы с
+параметром, поскольку до начала цикла может быть определено количество
+повторений. В этом случае цикл с параметром требуется для ввода элементов
+массива, а для выполнения каких-либо действий с этими элементами и вывода
+результатов также могут потребоваться циклы.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:#242021'>В блок-схеме
+на рис. 2.10 действия повторяются, пока выполняется некоторое условие. Когда
+условие перестаёт выполняться, цикл завершается. Такие циклы целесообразно
+использовать в ситуации, когда данные вводятся (поступают из какого-то
+источника), пока не произойдёт некоторое событие. При этом всю обработку чаще
+всего приходится выполнять «на лету», не создавая массив, поскольку количество
+элементов заранее неизвестно.</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+text-indent:35.45pt;line-height:115%;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+text-indent:35.45pt;line-height:115%;border:none'><b><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Цикл </span></b><b><span lang=RU style='font-size:12.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>for</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>Циклы
+позволяют выполнить одни и те же инструкции многократно</span><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>. Цикл </span><b><span lang=RU style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>for</span></b><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> в Python <b><i><u>не является циклом со счетчиком</u></i><u>!</u></b>
+Цикл </span><b><span lang=RU style='font-size:12.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>for</span></b><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> <u>применяется для перебора элементов последовательности</u> и
+имеет такой формат:</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;background:white;border:none'><b><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>for &lt;текущий элемент&gt; in &lt;последовательность&gt;:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>   
+&lt;инструкции внутри цикла&gt;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>[else:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>    &lt;блок,
+выполняемый, если не использовался оператор break&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>]</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Здесь
+присутствуют следующие конструкции:</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Noto Sans Symbols";
+color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&lt;последовательность&gt; - </span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>объект, поддерживающий механизм итерации: строка, список, кортеж,
+диапазон, словарь и др.;</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Noto Sans Symbols";
+color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&lt;текущий элемент&gt; - </span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>на каждой итерации через эту переменную доступен очередной элемент
+последовательности или ключ словаря;</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Noto Sans Symbols";
+color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&lt;инструкции внутри цикла&gt; -
+</span></b><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>блок, который будет многократно выполняться;</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Noto Sans Symbols";
+color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>если внутри цикла не
+использовался оператор <b>break</b>, то после завершения выполнения цикла будет
+выполнен блок в инструкции <b>else</b>. Этот блок не является обязательным.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:115%;background:white;border:none'><b><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'><img width=507 height=482 id=image3.png
+src="part1_4_files/image001.png"></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>ЗАДАЧА 1.</span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> </span></i><i><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#222222'>Написать программу,
+выполняющую перебор букв в слове.</span></i></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>РЕШЕНИЕ:</span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> </span></i></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>for s in
+‘str’:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>    print
+(s, end = ‘ ‘)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>else:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>   
+print(‘\nЦикл выполнен’)</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:35.4pt;border:none'><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:black'>Получим следующий результат:</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>s t r</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Цикл
+выполнен</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>ЗАДАЧА 2.</span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> </span></i><i><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#222222'>Написать программу,
+выполняющую перебор списка и кортежа.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>РЕШЕНИЕ:</span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> </span></i></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>for x in
+[1, 2, 3]:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>    print
+(x)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>for y in
+(4, 5, 6):</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>    print
+(y)</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:35.4pt;border:none'><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:black'>Получим следующий результат:</span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt;line-height:115%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>1</span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt;line-height:115%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>2</span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt;line-height:115%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>3</span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt;line-height:115%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>4</span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt;line-height:115%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>5</span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt;line-height:115%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>6</span></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;border:none'><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;border:none'><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Цикл for
+позволяет также перебрать элементы словарей, хотя словари и не являются
+последовательностями.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>ЗАДАЧА 3.</span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> </span></i><i><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#222222'>Написать программу,
+выполняющую </span></i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>вывод элементов словаря</span><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222'>.</span></i></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>РЕШЕНИЕ:</span></i></b><i><span
+lang=RU style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>  мы просто указываем словарь в качестве параметра – на каждой
+итерации цикла будет возвращаться ключ, с помощью которого внутри цикла можно
+получить значение, соответствующее этому ключу:</span></i></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:115%;background:white;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>arr = {'x':1, 'y':2, 'z':3}</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>for key in arr:</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>    print(key, arr[key])</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:35.4pt;border:none'><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:black'>Получим следующий результат:</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;border:none'><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>x 1</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;border:none'><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>y 2</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;border:none'><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>z 3</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.4pt;line-height:115%;border:none'><span lang=RU style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.4pt;line-height:115%;border:none'><span lang=RU style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Обратите
+внимание на то, что элементы словаря могут быть выведены в произвольном
+порядке. Чтобы вывести элементы словаря в алфавитном порядке, следует
+отсортировать ключи с помощью функции sorted().</span></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:115%;background:white;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>arr = {'x':1, 'y':2, 'z':3}</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>for key in sorted(arr):</span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.4pt;line-height:115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>    print(key,
+arr[key])</span></i></b></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+line-height:115%;background:white;border:none'><span lang=RU style='font-size:
+10.5pt;line-height:115%;font-family:"Verdana",sans-serif;color:red'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+line-height:115%;background:white;border:none'><b><span lang=RU
+style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Функции range() и enumerate()</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>ЗАДАЧА 4</span></i></b><b><i><span lang=RU style='font-size:12.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>.</span></i></b><i><span
+lang=RU style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> Умножить каждый элемент списка на 2.</span></i></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>РЕШЕНИЕ:</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:115%;background:white;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>arr = [1, 2, 3]</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>for i in arr:</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>    i = i*2</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>print(arr)</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:35.4pt;border:none'><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:black'>Получим следующий результат:</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>          [1, 2,
+3]</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Список не изменился! Переменная </span><b><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>i </span></b><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>на каждой итерации цикла
+содержит лишь </span><b><i><span lang=RU style='font-size:14.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>копию</span></i></b><b><i><span
+lang=RU style='font-size:14.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:red'>!</span></i></b><b><i><span lang=RU style='font-size:14.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'> значения</span></i></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> текущего элемента списка. Поэтому изменить таким образом элементы
+списка нельзя. <u>Чтобы получить доступ к каждому элементу списка</u>, можно
+воспользоваться функцией </span><b><span lang=RU style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>range([&lt;начало&gt;,
+] &lt;конец&gt;[, &lt;шаг&gt;]) </span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Если параметр <b>&lt;начало&gt; </b>не указан, то по умолчанию
+берется значение 0. Параметр <b>&lt;конец&gt; </b>задает конечное значение и не
+входит в возвращаемые значения. Параметр <b>&lt;шаг&gt; </b>по умолчанию равен
+1. Функция возвращает <b><i>диапазон </i></b>– особый объект, поддерживающий
+итерационный протокол. С помощью диапазона внутри цикла for можно получить <b><i>значение
+текущего элемента</i></b>. Еще раз попробуем решить эту задачу с помощью
+диапазона.</span></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:115%;background:white;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>arr = [1, 2, 3]</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>for i in range (len(arr)):</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>    arr[i]  *= 2</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>print(arr)</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:35.4pt;border:none'><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:black'>Получим следующий результат:</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>          [2, 4,
+6]</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>С помощью функции <b>len()</b> мы получили количество элементов
+списка. Функция <b>range()</b> вернула значения от 0 до len(arr)-1. на каждой
+итерации цикла через переменную i доступен текущий элемент из диапазона
+индексов.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>ЗАДАЧА 5.</span></i></b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'> Вывести числа
+от 1 до 100.</span></i></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>РЕШЕНИЕ:</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>for i in range (1, 101):  print
+(i)</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;line-height:115%;background:white;
+border:none'><b><span lang=RU style='font-size:10.5pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>          </span></b><span
+lang=RU style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Можно не только увеличивать значение, но и уменьшать его.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.4pt;line-height:115%;
+background:white;border:none'><span lang=RU style='font-size:10.5pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Выведем все числа от 100 до
+1.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>for i in range (100, 0, -1): 
+print (i)</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.4pt;line-height:115%;
+background:white;border:none'><span lang=RU style='font-size:10.5pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Выведем все четные числа от
+1 до 100.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>for i in range (2, 101, 2): 
+print (i)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;background:white;
+border:none'><span lang=RU style='font-size:10.5pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>          </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Диапазон
+поддерживает два полезных метода:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:5.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><b><span lang=RU
+style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></b><b><span
+lang=RU style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>index(&lt;значение&gt;)</span></b><span lang=RU style='font-size:
+10.5pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'> –
+возвращает индекс элемента, имеющего указанное значение. Если значение не
+входит в диапазон, возбуждается исключение ValueError:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:56.7pt;line-height:
+115%;background:white;border:none'><b><i><span lang=RU style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>x = range(1,5)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:56.7pt;line-height:
+115%;background:white;border:none'><b><i><span lang=RU style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>print(x.index(1),
+x.index(4))</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:21.3pt;text-indent:35.4pt;border:none'><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Получим
+следующий результат:   (0,3)</span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><b><span lang=RU
+style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></b><b><span
+lang=RU style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>count(&lt;значение&gt;)</span></b><span lang=RU style='font-size:
+10.5pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'> –
+возвращает количество элементов с указанным значением, если элемент не входит в
+диапазон, возвращается значение 0:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:56.7pt;line-height:
+115%;background:white;border:none'><b><i><span lang=RU style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>x = range(1,5)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:56.7pt;line-height:
+115%;background:white;border:none'><b><i><span lang=RU style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>print(x.count
+(1), x.count (10))</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:35.4pt;border:none'><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:black'>Получим следующий результат:        (1,
+0)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Функция <b>enumerate(&lt;объект&gt;[,
+start = 0]) </b>на каждой итерации цикла <b>for</b> <u>возвращает кортеж из
+индекса и значения текущего элемента</u>. С помощью необязательного параметра <b>start</b>
+можно задать начальное значение индекса. </span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.4pt;line-height:115%;
+background:white;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>ЗАДАЧА 6.</span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> Умножить на 2 каждый элемент списка, который содержит четное
+число.</span></i></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:115%;background:white;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>РЕШЕНИЕ:</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:115%;background:white;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>arr = [1, 2, 3, 4, 5, 6]</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>for i, elem in </span></i></b><b><i><span
+lang=RU style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>enumerate</span></i></b><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'> (arr):</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>    if elem % 2 == 0:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>        arr[i]  *= 2</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>print(arr)</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:35.4pt;border:none'><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:black'>Получим следующий результат:</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>          [1, 4,
+3, 8, 5, 12]</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Функция <b>enumerate()</b>
+не создает список, а возвращает итератор. С помощью функции <b>next()</b> можно
+обойти всю последовательность. Когда перебор будет закончен, получим исключение
+<b>StopIteration.</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>arr = [1, 2]</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>obj = </span></i></b><b><i><span
+lang=RU style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>enumerate(arr,  start = 2)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>print(next(obj),
+next(obj))</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:35.4pt;border:none'><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:black'>Получим (2,1) (3,2)</span></p>
+
+<p class=MsoNormal align=center style='margin-top:14.0pt;margin-right:0in;
+margin-bottom:14.0pt;margin-left:35.4pt;text-align:center;border:none'><b><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>Цикл
+while</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:#363636;background:
+white'>Самое главное для цикла <b>while</b> – чтобы в его теле происходили
+изменения значений переменных, которые проверяются в его заголовке, и чтобы
+хоть когда-нибудь наступил случай, когда логическое выражение в заголовке
+возвращает <b>False</b>. <u>Иначе произойдет зацикливание</u></span><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>. Выполнение инструкций в цикле <b>while </b>происходит до тех
+пор, пока логическое выражение истинно. Формат цикла:</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;background:white;border:none'><b><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>while &lt;условие&gt;:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>   
+&lt;инструкции&gt;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>   
+&lt;приращение значений в переменной счетчике&gt;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>[else:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>    &lt;блок,
+выполняемый, если не использовался оператор break&gt;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>]</span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Последовательность
+работы цикла <b>while:</b></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Переменной-счетчику присваивается начальное значение.</span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Повторяется условие и если оно истинно, то выполняются инструкции
+внутри цикла, иначе выполнение цикла завершается.</span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Переменная-счетчик изменяется на величину, указанную в параметре <b>&lt;приращение&gt;.</b></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Переход к пункту 2.</span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Если внутри цикла не использовался оператор <b>break</b>, то после
+завершения выполнения цикла будет выполнен блок в инструкции <b>else</b>. Этот
+блок не является обязательным.</span></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:0in;text-align:justify;text-indent:35.4pt;line-height:115%;
+background:white;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#363636'>Рассмотрите блок-схему
+цикла while.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.4pt;
+line-height:115%;background:white;border:none'><b><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'><img width=503 height=530 id=image1.png
+src="part1_4_files/image002.png"></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-top:14.0pt;margin-right:0in;
+margin-bottom:14.0pt;margin-left:0in;text-align:center;text-indent:35.4pt;
+line-height:115%;background:white;border:none'><span lang=RU style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:#363636'><img
+width=400 height=269 id=image4.png src="part1_4_files/image003.png"
+alt="Блок-схема цикла while"></span></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:0in;text-align:justify;text-indent:35.4pt;line-height:115%;
+background:white;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>На ней ярко-голубыми
+прямоугольниками обозначена основная ветка программы, ромбом – заголовок цикла
+с логическим выражением, бирюзовым прямоугольником – тело цикла.</span></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:0in;text-align:justify;text-indent:35.4pt;line-height:115%;
+background:white;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>С циклом <b><i>while </i></b>возможны
+две исключительные ситуации:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;text-indent:-.5pt;
+line-height:115%;background:white;border:none'><span lang=RU style='font-family:
+"Verdana",sans-serif;color:black'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Если при первом заходе в цикл
+логическое выражение возвращает <b>False,</b> то <u>тело цикла не выполняется
+ни разу</u>. Эту ситуацию можно считать нормальной, так как при определенных
+условиях логика программы может предполагать отсутствие необходимости в
+выполнении выражений тела цикла.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;text-indent:-.5pt;
+line-height:115%;background:white;border:none'><span lang=RU style='font-family:
+"Verdana",sans-serif;color:black'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Если логическое выражение в
+заголовке <b>while</b> никогда не возвращает <b>False</b>, а всегда остается
+равным <b>True,</b> то <u>цикл никогда не завершится</u>, если только в его
+теле нет оператора принудительного выхода из цикла <b>break</b> или вызовов
+функций выхода из программы – <b>quit(), exit()</b>.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;line-height:115%;
+background:white;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>ЗАДАЧА 7.</span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> Вывести все числа от 1 до 100, используя цикл while.</span></i></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>РЕШЕНИЕ:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>i = 1                   </span></i></b><i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>#начальное значение</span></i></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>while i &lt; 101:    </span></i></b><i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># условие</span></i></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    print (i)          </span></i></b><i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># инструкции</span></i></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>    i +=1              </span></i></b><i><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>#
+приращение</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;background:
+white;border:none'><span lang=RU style='font-size:8.0pt;font-family:"Verdana",sans-serif;
+color:#222222;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:15.0pt;text-align:justify;text-indent:
+35.4pt;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>Чтобы вывести
+все числа от 100 до 1, необходимо задать начальное значение  <b>100</b>, а
+приращение <b>i -= 1.</b></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>i = 100               </span></i></b><i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>#начальное значение</span></i></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>while i:   </span></i></b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'># условие</span></i></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    print (i)          </span></i></b><i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># инструкции</span></i></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>    i -=1               </span></i></b><i><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>#
+приращение</span></i></p>
+
+<p class=MsoNormal style='margin-bottom:15.0pt;text-align:justify;text-indent:
+35.4pt;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>В этом случае
+условие не содержит операторов сравнения. Как только значение переменной
+счетчика будет равно 0, цикл остановится, т.к. в логическом контексте число 0
+эквивалентно значению False.</span></p>
+
+<p class=MsoNormal style='margin-bottom:15.0pt;text-align:justify;text-indent:
+35.4pt;background:white;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:red;background:white'>ВНИМАНИЕ!</span></i></b><i><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:#222222;
+background:white'> Если приращение не указать, цикл будет выполняться бесконечно,
+прервать с помощью комбинации клавиш &lt;Ctrl+C&gt; можно только цикл,
+выводящий данные.</span></i></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:115%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>С помощью цикла <b>while</b> можно перебирать и элементы различных
+структур, нужно помнить, что в этом случае цикл while работает медленнее цикла <b>for.</b></span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>ЗАДАЧА 8</span></i></b><b><i><span lang=RU style='font-size:12.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>.</span></i></b><i><span
+lang=RU style='font-size:10.5pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> Умножить каждый элемент списка на 2.</span></i></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><b><i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>РЕШЕНИЕ:</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:115%;background:white;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>arr = [1, 2, 3]</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:115%;background:white;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>i, count = 0, len(arr)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>while i &lt; count:</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>    arr[i] *= 2</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>    i +=1</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>print(arr)</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+14.0pt;margin-left:35.4pt;border:none'><span lang=RU style='font-size:11.0pt;
+font-family:"Verdana",sans-serif;color:black'>Получим следующий результат:</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:10.5pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>          [2, 4,
+6]</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+line-height:115%;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Оператор <i>continue</i>:
+переход на следующую итерацию цикла</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>          Оператор <b>continue</b>
+позволяет перейти к следующей итерации цикла до завершения выполнения всех
+инструкций внутри цикла.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>ЗАДАЧА 9.</span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> Вывести все числа от 1 до 100, кроме чисел от 5 до 10
+включительно.</span></i></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>РЕШЕНИЕ:</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>for i in range(1, 101):</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    if 4 &lt; i &lt;11:</span></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>        continue  </span></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    print (i)          </span></b></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+line-height:115%;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Оператор <i>break</i>:
+прерывание цикла</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>          Оператор <b><i>break</i></b>
+позволяет прервать выполнение цикла досрочно.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>ЗАДАЧА 10.</span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> Вывести все числа от 1 до 100.</span></i></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>РЕШЕНИЕ:</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:115%;background:white;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>i = 1</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>while True:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    if i &gt;100:</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>        break  </span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>#прерываем цикл</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>    print(i)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>    i +=1</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>   </span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>          Если убрать оператор <b>break</b>,
+цикл будет выполняться бесконечно.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>ЗАДАЧА 11.</span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> Найти сумму не определенного заранее количества чисел.</span></i></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>РЕШЕНИЕ:</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:115%;background:white;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>print(‘введите слово stop для
+получения результата’)</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:115%;background:white;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>summa = 0</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>while True:</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>    x = input(‘введите число: ‘)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    if x == ‘stop’:</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>        break  </span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>#прерываем цикл</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>    x = int(x)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>    summa = +=x    </span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>print(‘сумма чисел = ‘, summa)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>   </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>ЗАДАЧА 12.</span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> </span></i><span lang=RU style='font-size:13.5pt;line-height:
+115%;font-family:"Arial",sans-serif;color:#222222'>&nbsp;</span><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222'>Вывести число, обратное введенному по порядку составляющих его
+цифр. Например, введено 20754, надо вывести 45702.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>РЕШЕНИЕ:</span></i></b><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222'> Алгоритм:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:0in;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#222222'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222'>Найдем остаток от деления на 10
+исходного числа. Тем самым получим последнюю его цифру.</span></i></p>
+
+<p class=MsoNormal style='margin-left:0in;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#222222'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222'>Добавим эту цифру к новому
+числу.</span></i></p>
+
+<p class=MsoNormal style='margin-left:0in;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#222222'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222'>Разделим нацело на 10 исходное
+число. Тем самым избавимся от последней цифры в нем.</span></i></p>
+
+<p class=MsoNormal style='margin-left:0in;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#222222'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222'>Снова найдем остаток от деления
+на 10 того, что осталось от первого числа. Запомним эту цифру.</span></i></p>
+
+<p class=MsoNormal style='margin-left:0in;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#222222'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222'>Умножим на 10 второе число. Тем
+самым увеличим его разрядность до двух и сдвинем первую цифру в разряд
+десятков.</span></i></p>
+
+<p class=MsoNormal style='margin-left:0in;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#222222'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222'>Добавим к полученному второму
+числу запомненную ранее цифру из первого числа.</span></i></p>
+
+<p class=MsoNormal style='margin-left:0in;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#222222'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222'>Будем повторять действия п. 3-6
+пока исходное число не уменьшится до нуля, т. е. пока не избавимся от всех его
+разрядов.</span></i></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#222222'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>n1 = int(input(&quot;Введите целое число: &quot;))</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>n2 = 0</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>while n1 &gt; 0:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    # находим остаток - последнюю цифру</span></i></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    digit = n1 % 10</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    # делим нацело - удаляем последнюю цифру</span></i></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    n1 = n1 // 10</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    # увеличиваем разрядность второго числа</span></i></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    n2 = n2 * 10</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    # добавляем очередную цифру</span></i></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    n2 = n2 + digit  </span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>print('&quot;Обратное&quot; ему число:', n2)</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:115%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-indent:35.45pt;line-height:
+115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>ЗАДАЧА 13.</span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> </span></i><span lang=RU style='font-size:13.5pt;line-height:
+115%;font-family:"Arial",sans-serif;color:#222222'>&nbsp;</span><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222'>Определить, сколько в числе четных цифр, а сколько нечетных.
+Число вводится с клавиатуры.</span></i></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><b><i><span lang=RU style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>РЕШЕНИЕ:</span></i></b><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222'> </span></i></b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:#222222'>Если число
+делится без остатка на 2, его последняя цифра четная. Увеличиваем на 1 счетчик
+четных цифр&nbsp;</span></i><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>chet</span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222'>. Иначе последняя цифра числа нечетная, увеличиваем счетчик
+нечетных цифр&nbsp;</span></i><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>nechet</span></i></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222'>.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222'>В Python операцию нахождения
+остатка от деления выполняет знак %.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222'>Чтобы избавиться от младшего
+уже учтенного разряда, число следует разделить нацело на 10. Деление нацело
+обозначается двумя слэшами //.</span></i></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.45pt;margin-bottom:.0001pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>a = input()</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>a = int(a)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>chet = 0</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>nechet = 0</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>while a &gt; 0:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    if a % 2 == 0:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>        chet += 1</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    else:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>        nechet += 1</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    a = a // 10</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>print(&quot;chet: %d, nechet: %d&quot; % (chet, nechet))</span></i></b></p>
+
+<p class=MsoNormal align=center style='margin-left:35.4pt;text-align:center;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>ЗАДАЧА 14.</span></i></b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'> </span></i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222'>&nbsp;</span><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#242021'>Последовательно вводятся
+ненулевые числа. Определить сумму<br>
+положительных и сумму отрицательных чисел. Закончить ввод чисел при вводе<br>
+</span><span lang=RU style='font-family:SFRM1000;color:#242021'>0.</span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>РЕШЕНИЕ:</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><i><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#242021'># -*- coding: utf-8 -*-<br>
+SP=0<br>
+SN=0<br>
+c h i s l o = i n p u t ( ’Следующее</span></i><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"MS Gothic";color:#242021'>␣</span></i><i><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#242021'>число : </span></i><i><span lang=RU style='font-size:12.0pt;
+line-height:115%;font-family:"MS Gothic";color:#242021'>␣</span></i><i><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#242021'> ’ )<br>
+<b>while </b>c h i s l o != 0 :<br>
+<b>    i f </b>c h i s l o &gt; 0 :<br>
+        SP=SP+c h i s l o<br>
+<b>    e l s e </b>:<br>
+        SN=SN+c h i s l o<br>
+    c h i s l o = i n p u t ( ’Следующее</span></i><i><span lang=RU
+style='font-size:12.0pt;line-height:115%;font-family:"MS Gothic";color:#242021'>␣</span></i><i><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#242021'>число : </span></i><i><span lang=RU style='font-size:12.0pt;
+line-height:115%;font-family:"MS Gothic";color:#242021'>␣</span></i><i><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#242021'> ’ )<br>
+<b>p r i n t (</b>’Сумма</span></i><i><span lang=RU style='font-size:12.0pt;
+line-height:115%;font-family:"MS Gothic";color:#242021'>␣</span></i><i><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#242021'>положительных : ’ ,SP)</span></i></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><b><i><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#242021'>p r i n t (</span></i></b><i><span lang=RU style='font-size:
+12.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:#242021'>’Сумма</span></i><i><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"MS Gothic";
+color:#242021'>␣</span></i><i><span lang=RU style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#242021'>отрицательных : ’ ,SN)</span></i></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;line-height:115%;border:none'><span
+lang=RU style='font-size:12.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#242021'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-left:35.4pt;text-align:center;
+line-height:115%;border:none'><span lang=RU style='font-size:12.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#242021'><img width=406 height=478
+id=image5.png src="part1_4_files/image004.png"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:115%;
+border:none'><span lang=RU style='font-family:"Verdana",sans-serif;color:#242021'>Рис. 
+-  Блок-схема алгоритма обработки последовательности</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:115%;
+border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'><img width=441 height=485
+id=image2.png src="part1_4_files/image005.png"></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:115%;
+border:none'><span lang=RU style='font-family:"Verdana",sans-serif;color:#242021'>Рис.
+-  Блок-схема алгоритма вычисления среднего значения в массиве</span></p>
+
+</div>
+
+</body>
+
+</html>

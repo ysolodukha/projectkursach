@@ -1,0 +1,2094 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:56.7pt 42.55pt 56.7pt 56.7pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+background:white;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black;background:white'>Ключевая
+разница между программой, написанной с структурном стиле, и
+объектно-ориентированной программой: в структурном стиле на первый план выходит
+<u>логика, понимание последовательности выполнения действий для достижения
+поставленной цели</u>. у объектно-ориентированной – важнее представить
+программу как <u>систему взаимодействующих объектов</u>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Объектно-ориентированное
+программирование</span></b><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;(<b>ООП</b>) — это
+способ организации программы, позволяющей использовать один и тот же код
+многократно. В отличие от функций и модулей, ООП позволяет не только разделить
+программу на фрагменты, но и описать предметы реального мира в виде удобных <b><i>сущностей
+– объектов</i></b>, а также организовать связи между этими объектами.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Объектно-ориентированное
+программирование</span></b><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;(<b>ООП</b>) —
+парадигма программирования, в которой основными концепциями являются понятия <b><i>объектов</i></b>
+и <b><i>классов</i></b>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Основным
+«кирпичиком» ООП является <b>класс</b> – сложный тип данных, включающий набор
+переменных и функций для управления значениями, хранящимися в этих переменных. <i>переменные</i>
+называют <b><i>атрибутами</i></b> или <b><i>свойствами</i></b>, а функции <b><i>методами</i></b>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Класс</span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;— тип, описывающий устройство объектов.&nbsp; </span><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#333333;background:white'>Класс </span></i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#333333;background:white'>— это <u>шаблон</u>, в котором описаны все
+свойства будущего объекта и его методы.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:14.0pt;
+margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+background:white;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#333333;background:white'>Иначе, </span><b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#C00000;background:white'>класс</span></b><b><i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222;background:white'>&nbsp;– </span></i></b><i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222;background:white'>это способ описания<b> сущности, </b>определяющий
+<b>состояние </b>и<b> поведение, </b>зависящее от этого состояния, а также<b>
+правила для взаимодействия с данной сущностью </b>(контракт).</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>С точки зрения
+программирования класс можно рассматривать как набор данных (полей, атрибутов,
+членов класса) и функций для работы с ними (методов).</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>С точки зрения
+структуры программы, <u>класс является сложным типом данных</u>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>Класс является
+фабрикой объектов, т.е. <u>позволяет создать неограниченное количество
+экземпляров</u>, основанных на этом классе.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>Объект
+(экземпляр)&nbsp;</span></b><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#222222;background:white'>– это
+отдельный представитель класса, имеющий конкретное состояние и поведение, <u>полностью
+определяемое классом</u>. </span><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Объект</span></i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;— <span style='background:white'>это сущность, <i>экземпляр
+класса,</i>&nbsp;которой можно посылать сообщения и которая может на них
+реагировать, используя свои данные</span>. </span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:2.85pt;margin-bottom:
+0in;margin-left:0in;margin-bottom:.0001pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:#222222;background:white'>Класс
+описывается с помощью ключевого слова <b><i>class</i></b> по следующей схеме:</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:2.85pt;margin-bottom:
+0in;margin-left:0in;margin-bottom:.0001pt;text-align:justify;text-indent:35.45pt;
+line-height:150%;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:150%;font-family:"Verdana",sans-serif;color:#222222;background:
+white'>class &lt;Название класса&gt; </span></b><span lang=RU style='font-size:
+11.0pt;line-height:150%;font-family:"Arial",sans-serif;color:#222222;
+background:white'>[(&lt;Класс1&gt;[, …, &lt;Класс№&gt;])]</span><b><span
+lang=RU style='font-size:11.0pt;line-height:150%;font-family:"Verdana",sans-serif;
+color:#222222;background:white'>:</span></b></p>
+
+<p class=MsoNormal style='margin-right:2.85pt;text-align:justify;text-indent:
+35.45pt;line-height:150%;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:150%;font-family:"Verdana",sans-serif;color:#222222;background:
+white'>    [“”” Строка документирования “””]</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:150%;
+border:none'><b><span lang=RU style='font-size:11.0pt;line-height:150%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>   
+&lt;Описание атрибутов и методов&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222;background:white'>Инструкция создает новый
+объект и присваивает ссылку на него идентификатору, указанному после ключевого
+слова class. Это означает, что название класса должно полностью соответствовать
+правилам именования переменных. После названия класса в круглых скобках можно
+указать один или несколько базовых классов через запятую. Если же класс не
+наследует базовые классы, то круглые скобки можно не указывать. Следует
+заметить, что <u>все выражения внутри инструкции class выполняются при создании
+класса</u>, а не его экземпляра. В качестве примера создадим класс, внутри
+которого просто выводится сообщение.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>class MyClass:</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>    ''' Это
+строка документирования '''</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>    print
+('инструкции выполняются сразу')</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>input()</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.4pt;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222;background:white'>Этот пример содержит лишь
+определение класса и не создает экземпляр класса. Как только поток выполнения
+достигнет инструкции class, сообщение будет сразу выведено.</span></p>
+
+<p class=MsoNormal style='margin-right:8.2pt;text-align:justify;text-indent:
+35.45pt;line-height:120%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:120%;font-family:"Verdana",sans-serif;color:black'>Объект создается
+путем вызова класса по его имени. При этом после имени класса <u>обязательно ставятся
+скобки</u>:</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:black'>ИмяКласса()</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><img
+width=662 height=1 src="part3_1_files/image001.png"><span lang=RU
+style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-right:33.7pt;text-align:justify;text-indent:
+35.45pt;line-height:120%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:120%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<p class=MsoNormal style='margin-right:8.2pt;text-align:justify;text-indent:
+35.45pt;line-height:120%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:120%;font-family:"Verdana",sans-serif;color:black'>Поскольку в
+программном коде важно не потерять ссылку на только что созданный объект, то
+обычно его связывают с переменной. Поэтому создание объекта чаще всего выглядит
+так:</span></p>
+
+<p class=MsoNormal style='margin-right:105.0pt;text-align:justify;text-indent:
+35.45pt;line-height:170%;border:none'><b><i><span lang=RU style='font-size:
+11.0pt;line-height:170%;font-family:"Verdana",sans-serif;color:black'>имя_переменной
+= ИмяКласса()</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>В последствии к объекту
+обращаются через связанную с ним переменную. Пример &quot;пустого&quot; класса
+и двух созданных на его основе объектов:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=0 height=0></td>
+  <td width=662></td>
+ </tr>
+ <tr>
+  <td height=1></td>
+  <td align=left valign=top><img width=662 height=1
+  src="part3_1_files/image001.png"></td>
+ </tr>
+ <tr>
+  <td height=18></td>
+ </tr>
+ <tr>
+  <td height=1></td>
+  <td align=left valign=top><img width=662 height=1
+  src="part3_1_files/image001.png"></td>
+ </tr>
+</table>
+
+<span lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+class A:</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>...   pass</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>...</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+a = A()</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;border:none'><b><i><span
+lang=RU style='font-size:11.0pt;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+b = A()</span></i></b><span style='position:relative;z-index:251661312;
+left:-9px;top:0px;width:662px;height:1px'><img width=662 height=1
+src="part3_1_files/image002.png"></span><br clear=ALL>
+</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;line-height:115%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222;background:white'>          </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.4pt;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222;background:white'>Создание атрибута класса
+аналогично созданию обычной переменной. Метод внутри класса создается так же,
+как и обычная функция, - с помощью инструкции <b><i>def</i></b>.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.4pt;line-height:115%;
+border:none'><b><span lang=RU style='font-size:14.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:red;background:white'>!!!</span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222;background:white'> Методам класса в <u>первом параметре</u>, <u>который
+обязательно следует указывать явно</u>, автоматически передается ссылка на
+экземпляр класса. Общепринято этот параметр называть именем <b><i>self.</i></b></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.4pt;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222;background:white'>Доступ к атрибутам и
+методам класса внутри определяемого метода производится через переменную <i>self</i>
+с помощью точечной нотации – к атрибуту х из метода класса можно обратиться
+так: <b><i>self.x</i></b>.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;line-height:115%;border:none'><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222;background:white'>          Чтобы использовать атрибуты и методы
+класса, необходимо создать экземпляр класса согласно следующему синтаксису:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.4pt;line-height:115%;
+border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>&lt;Экземпляр
+класса&gt; = &lt;Название класса&gt;</span></b><span lang=RU style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:#222222;
+background:white'>([&lt;Параметры&gt;])</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222;background:white'>При обращении к методам
+класса используется такой формат:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.4pt;line-height:115%;
+border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>&lt;Экземпляр
+класса&gt;.&lt;Имя метода&gt;</span></b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:#222222;background:
+white'>([&lt;Параметры&gt;])</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.4pt;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222;background:white'>Обратите внимание на то,
+что при вызове метода не нужно передавать ссылку на экземпляр класса в качестве
+параметра, как это делается в определении метода внутри класса. Ссылку на
+экземпляр класса интерпретатор передает автоматически.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.4pt;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:#222222;background:white'>Обращение к атрибутам
+класса осуществляется аналогично:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.85pt;margin-bottom:
+6.0pt;margin-left:0in;text-align:justify;text-indent:35.4pt;line-height:115%;
+border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>&lt;Экземпляр
+класса&gt;.&lt;Имя атрибута&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-right:2.85pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:#222222;background:
+white'>Объект</span></i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'> имеет
+конкретные значения атрибутов и методы, работающие с этими значениями на основе
+правил, <u>заданных в классе</u>. </span></p>
+
+<p class=MsoNormal style='margin-right:2.85pt;text-align:justify;text-indent:
+35.4pt;line-height:120%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:120%;font-family:"Verdana",sans-serif;color:black'>Что такое <b>класс
+</b>или тип? Проведем аналогию с реальным миром. Если мы возьмем конкретный
+стол, то это <b>объект</b>, но не класс. А вот общее представление о столах, их
+назначении – это класс. Ему принадлежат все реальные объекты столов, какими бы
+они ни были. Класс столов дает общую характеристику всем столам в мире, он их
+обобщает. Тип Int – это класс целых чисел. Числа 5, 207 и т.д. – это конкретные
+объекты этого класса.</span></p>
+
+<p class=MsoNormal style='margin-right:2.85pt;text-align:justify;text-indent:
+35.4pt;line-height:120%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:120%;font-family:"Verdana",sans-serif;color:black'>В языке
+программирования Python объекты принято называть также <b>экземплярами</b>. Это
+связано с тем, что в нем все классы сами являются объектами класса <i>type.</i>
+Точно также как все модули являются объектами класса <i>module</i>.</span></p>
+
+<p class=MsoNormal style='margin-top:6.95pt;margin-right:15.45pt;margin-bottom:
+6.0pt;margin-left:5.7pt;text-align:justify;text-indent:29.7pt;line-height:120%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:120%;font-family:
+"Verdana",sans-serif;color:black'>Классы обычно помещают в <b>модули.</b>
+Каждый модуль может содержать несколько классов. В свою очередь модули могут
+объединяться в <b>пакеты</b>. Благодаря пакетам в Python организуются
+пространства имен.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>Интерфейс</span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222;background:white'>&nbsp;– это набор методов класса, доступных для
+использования другими классами.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>Очевидно, что <i>интерфейсом</i>
+класса будет являться набор всех его <b><i>публичных методов</i></b> в
+совокупности с набором <b><i>публичных атрибутов</i></b>. По сути, <i>интерфейс
+</i>чётко определяет все возможные действия над классом.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:#222222;background:white'>Пример
+интерфейса - приборная панель автомобиля, которая позволяет вызвать такие
+методы, как увеличение скорости, торможение, поворот, переключение передач,
+включение фар, и т.п. То есть все действия, которые может осуществить другой
+класс (например, – водитель) при взаимодействии с автомобилем.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Python
+соответствует принципам объектно-ориентированного программирования. <u>В Python
+всё является объектами</u> - и строки, и списки, и словари, и всё остальное.
+Программист может написать свой тип данных (класс), определить в нём свои
+методы. <u>ООП полезно при долгосрочной разработке программы несколькими
+людьми, так как упрощает понимание кода</u>.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;background:white;border:none'><span lang=RU style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>Пример
+определения собственного класса:</span></p>
+
+<div style='border:solid #AACC99 1.0pt;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; </span></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># Пример простейшего класса, который ничего не делает</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>... class</span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> <b>A</b>:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>... </span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    <b>pass</b></span></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Теперь мы можем создать несколько
+экземпляров этого класса:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<div style='border:solid #AACC99 1.0pt;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a =
+A()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; b =
+A()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+a.arg = 1  <i># у экземпляра a появился атрибут arg, равный 1</i></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+b.arg = 2  <i># а у экземпляра b - атрибут arg, равный 2</i></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+print(a.arg)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>1</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+print(b.arg)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>2</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; c =
+A()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+print(c.arg)  </span></b><i><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'># а у этого экземпляра нет
+arg получим сообщ. об ошибке</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Traceback (most
+recent call last):</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>  File
+&quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>AttributeError:
+'A' object has no attribute 'arg'</span></b></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Классу возможно
+задать собственные методы:</span></p>
+
+<div style='border:solid #AACC99 1.0pt;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+class</span></b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'> <b>A</b>:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>... </span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    <b>def</b> g(self): <i># self - обязательный аргумент,
+содержащий в себе #экземпляр класса, передающийся при вызове метода, поэтому
+этот аргумент #должен присутствовать во всех методах класса.</i></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>... </span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>            <b>return</b> 'hello world'</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>...</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a = A()</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; a.g()</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>'hello world'</span></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Пример:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black;background:#EEFFCC'>&gt;&gt;&gt;</span><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<div style='border:solid #AACC99 1.0pt;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+class</span></b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'> <b>B</b>:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>...     arg = 'Python' <i>#
+Все экземпляры этого класса будут иметь атрибут arg,</i></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>...                    <i>#
+равный &quot;Python&quot;</i></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>... </span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>                   <i># Но впоследствии мы его можем изменить</i></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>... </span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>    <b>def</b> g(self):</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>... </span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>        <b>return</b> self.arg</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>...</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; b =
+B()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+b.g()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>'Python'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+B.g(b)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>'Python'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+b.arg = 'spam'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+b.g()</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>'spam'</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:14.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:red;background:white'>!!!</span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222;background:white'> </span><u><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>Все
+атрибуты класса являются открытыми</span></u><span lang=RU style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black;
+background:white'> (<b><i>public</i></b>), т.е. доступными для
+непосредственного изменения как из самого класса, так и из других классов и из
+основного кода программы.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black;background:white'>Кроме того,
+атрибуты допускается создавать динамически после создания класса – можно
+создать как атрибут объекта класса, так и атрибут экземпляра класса. Например:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>class</span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> <b>A</b>:                           <i># определим пустой класс</i></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>    pass               </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>A.x = 50                         </span></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># создадим атрибут объекта класса</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>c1, c2 = A(),
+A()            </span></b><i><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'># создадим 2 экземпляра
+класса</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>c1.y = 10                        </span></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># создаем атрибут экземпляра класса</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>c2.y = 20                        </span></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># создаем атрибут экземпляра класса</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>print(с1.x,
+c1.y)            </span></b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'># выведет 50, 10</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>print(с2.x,
+c2.y)            </span></b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'># выведет 50, 20</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black;background:white'>В этом
+примере мы определяем пустой класс, разместив в нем оператор <i>pass</i>. Далее
+следует атрибут класса <b><i>х</i></b>. Этот атрибут доступен всем создаваемым
+экземплярам класса. Затем создаем два экземпляра класса и добавляем одноименные
+атрибуты: <i>y</i>. Значения этих атрибутов будут разными в каждом экземпляре
+класса.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:14.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:red;background:white'>!!!</span></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:#222222;background:white'> </span><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>Очень
+важно <u>понимать разницу</u> между <u>атрибутами объекта класса</u> и
+атрибутами <u>экземпляра класса</u>. <i>Атрибут объекта класса</i> доступен
+всем экземплярам класса, и после изменения атрибута значение изменится во всех
+экземплярах класса. <i>Атрибут экземпляра класса</i> может хранить уникальное
+значение для каждого экземпляра, и изменение его в одном экземпляре класса не
+затронет значения одноименного атрибута в других экземплярах. Например:</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none;padding:0in'><b><span lang=RU style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+<i>class</i></span></b><i><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'> <b>MyClass</b></span></i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>             <i>x
+= 10</i>   </span></b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>            <i># атрибут объекта
+класса</i></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>             def
+_init_(self):</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>                
+self.y = 20     </span></i></b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'># атрибут
+экземпляра класса</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black;background:white'>Теперь
+создадим два экземпляра этого класса</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; c1
+= MyClass()      </span></b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'># создаем
+экземпляр класса</span></i><b><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'> </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; c2 
+= MyClass()<i>     </i></span></b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'># создаем
+экземпляр класса</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Выведем значение атрибута<i>
+х</i>, а затем изменим значение и опять произведем вывод:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+print (c1.x, c2.x)   <i> </i></span></b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'># 10    10</span></i><b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+MyClass.x = 88<i>      </i></span></b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'># Изменяем
+атрибут объекта класса</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+print (c1.x, c2.x)   <i> </i></span></b><i><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'># 88    88</span></i><b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black;background:white'>Видим, что
+изменение атрибута объекта класса затронуло значение в двух экземплярах класса
+сразу. Теперь произведем аналогичную операцию с атрибутом y.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+print (c1.y, c2.y)   <i> # 20    20</i> </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+c1.y = 88<i>   # Изменяем атрибут экземпляра класса</i></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+print (c1.y, c2.y)   <i> # 88    20</i> </span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black;background:white'>Изменилось
+значение атрибута только в экземпляре с1.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black;background:white'>Следует
+также учитывать, что в одном классе могут существовать одновременно  атрибут
+объекта и атрибут экземпляра с одним именем. Изменение атрибута объекта класса
+мы производили так:</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; MyClass.x = 88<i>      </i></span></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># Изменяем атрибут объекта класса</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black;background:white'>Если после
+этой инструкции вставить инструкцию</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:35.45pt;line-height:115%;
+border:none;padding:0in'><b><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt; c1.х = 200<i>             </i></span></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># Изменяем атрибут экземпляра класса</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black;background:white'>то будет
+создан атрибут экземпляра класса, а не изменено значение атрибута объекта
+класса. Чтобы увидеть разницу выведем значения атрибутов:</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none;padding:0in'><b><span lang=RU style='font-size:
+11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'>&gt;&gt;&gt;
+print (c1.х, MyClass.x)     <i> </i></span></b><i><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'># 200    88</span></i><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'> </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;border:none;padding:0in'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black;background:white'>&nbsp;</span></p>
+
+</div>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:.5in;
+line-height:115%;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Взаимодействие
+объектов</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Каждый объект «закрыт» в том смысле, что его
+внутреннее устройство другим объектам неизвестно. Но объекты могут обмениваться
+данными с другими объектами, используя заранее согласованные каналы связи. Для
+решения задач на «верхнем уровне» достаточно определить что делает тот или иной
+объект, не заботясь о том, как он это делает. Таким образом, для преодоления
+сложности мы используем абстракцию, т.е. сознательно отбрасываем второстепенные
+детали.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Но важно, что
+объект сам работает со своими внутренними данными, не допуская к ним другие
+объекты. Таким образом, данные и методы объединены -  вместе они образуют
+объект. Объектный подход – это декомпозиция задачи на объекты.</span></p>
+
+<div align=center>
+
+<table class=14 border=1 cellspacing=0 cellpadding=0 width=527
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=527 valign=top style='width:395.25pt;border:solid #ED7D31 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:115%;
+  border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+  font-family:"Verdana",sans-serif;color:#0070C0'>Объект</span></b><span
+  lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'> </span><b><span lang=RU style='font-size:11.0pt;line-height:
+  115%;font-family:"Verdana",sans-serif;color:#0070C0'>– это данные плюс методы
+  их обработки.</span></b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Объектом</span></i></b><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> можно назвать то, что имеет четкие границы и обладает состоянием
+и поведением.</span></p>
+
+<div align=center>
+
+<table class=13 border=1 cellspacing=0 cellpadding=0 width=612
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=612 valign=top style='width:459.0pt;border:solid #ED7D31 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><b><span
+  lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:#0070C0'>Состояние объекта</span></b><span lang=RU style='font-size:
+  11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:black'> </span><b><span
+  lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:#0070C0'>– это набор его свойств и текущее значение этих свойств</span></b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:.5in;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Например, автомобиль имеет
+свойства «масса», «скорость», «цвет»; их значения в какой-то момент могут быть
+равны 1510 кг, 60 км/час, «синий».</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Поведение объекта «автомобиль»: автомобиль
+движется, если водитель нажимает на педаль газа, при столкновении с другими
+объектами он может повредить их или разрушиться сам.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Состояние объекта определяет его возможное
+поведение, например, лежачий человек не может прыгнуть, незаряженное ружье не
+выстрелит.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Если в решаемой задаче объекты – автомобили,
+их может быть много и, с  точки зрения задачи, их свойства общие. Поэтому нет
+смысла описывать отдельно каждый автомобиль: достаточно один раз определить
+общие черты автомобилей. Для этого в ООП используют термин <b><i>класс</i></b>.</span></p>
+
+<div align=center>
+
+<table class=12 border=1 cellspacing=0 cellpadding=0 width=640
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=640 valign=top style='width:480.3pt;border:solid #ED7D31 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+  6.0pt;margin-left:0in;text-align:justify;line-height:115%;border:none'><b><span
+  lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:#0070C0'>Класс – это описание множества объектов, имеющих общий набор
+  свойств и общее поведение.</span></b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'> Класс выполняет роль чертежа или шаблона –
+по нему можно построить  <u>сколько угодно одинаковых объектов</u>.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Используя объектный подход, сначала мы должны<b>
+построить объектную модель задачи -  </b>выделить<b> </b>объекты  и определить
+правила обмена данными между ними. После этого можно поручить разработку модели
+каждого объекта отдельному программисту.  Программисту нужно строго соблюдать
+соглашения о способе обмена данными – <b><i>интерфейсе</i></b> – «своего»
+объекта с другими.</span></p>
+
+<div align=center>
+
+<table class=11 border=1 cellspacing=0 cellpadding=0 width=603
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=603 valign=top style='width:451.95pt;border:solid #ED7D31 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><b><span
+  lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:#0070C0'>Программирование, основанное на моделировании задачи реального
+  мира как множества взаимодействующих объектов, называют ООП.</span></b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:.5in;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Для того, чтобы построить
+объектно-ориентированную модель, нужно:</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-indent:
+-.25in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Noto Sans Symbols";color:black'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>выделить взаимодействующие
+объекты, с помощью которых можно описать поведение моделируемой системы:</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-indent:
+-.25in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Noto Sans Symbols";color:black'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>определить их свойства,
+существенные в данной задаче:</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-indent:
+-.25in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Noto Sans Symbols";color:black'>−<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>описать поведение (возможные
+действия) объектов, т.е. команды, которые объекты могут выполнить.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Этап разработки модели, на котором решаются
+перечисленные задачи, называют объектно-ориентированным анализом (ООА).</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><b><span lang=RU style='font-size:12.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Применим
+объектно-ориентированный подход к разработке конкретной программы.</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Рассмотрим такую
+задачу:</span></b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'> <b><i>составить программу для
+моделирования управляющих схем, построенных на логических элементах</i></b>.
+Нам нужно «собрать» заданную схему и построить ее таблицу истинности. Как вы
+уже знаете, перед тем, как программировать, нужно выполнить
+объектно-ориентированный анализ. Все объекты, из которых состоит схема – это
+логические элементы, однако они могут быть разными («НЕ», «И», «ИЛИ» и другие).
+Попробуем выделить общие свойства и методы всех логических элементов.
+Ограничимся только элементами, у которых один или два входа. Тогда иерархия
+классов может выглядеть, например, так: </span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:.5in;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'><img width=404 height=184
+id=image19.png src="part3_1_files/image003.png"></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:.5in;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Среди всех элементов с двумя
+входами мы показали только элементы «И» и «ИЛИ», остальные вы можете добавить
+самостоятельно.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:0in;text-align:center;text-indent:.5in;
+line-height:115%;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Классы и объекты
+в программе</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>          Программа, использующая
+объектно-ориентированный подход, <u>начинается с описания классов объектов</u>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Класс – это новый тип данных, который вводит
+программист. Класс может объединять данные различных типов в единый блок. Класс
+содержит описания <b><i>методов</i></b> работы со своими данными. <b><i>Свойства</i></b>
+описывают <i>состояние </i>объектов данного класса, а методы – их <i>поведение</i>.
+</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:.5in;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Итак, для того, чтобы не
+описывать несколько раз одно и то же, классы в программе должны быть построены
+в виде иерархии. Теперь можно дать классическое определение
+объектно-ориентированного программирования: </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'> Класс <i>Б</i> является наследником класса <i>А</i>,
+если можно сказать, что <i>Б</i> – это разновидность <i>А</i>.  </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Объектно-ориентированное
+программирование</span></i></b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'> – <b>это такой
+подход к программированию, при котором программа представляет собой множество
+взаимодействующих объектов, каждый из которых является экземпляром определенного
+класса, а классы образуют иерархию наследования.</b> </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:.5in;
+line-height:115%;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Базовый класс</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Построим первый вариант описания класса <i>Логический
+элемент</i> <b><i>TLogElement</i></b>. Обозначим его входы как <b>In1</b> и <b>In2</b>,
+а выход назовем <b>Res</b> (от англ. result – результат). Здесь состояние
+логического элемента определяется тремя величинами (<i>In1, In2</i> и <i>Res</i>).
+С помощью такого базового класса можно моделировать не только статические
+элементы (как «НЕ», «И», «ИЛИ» и т.п.), но и элементы с памятью (например,
+триггеры).</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:.5in;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'><img width=141 height=128
+id=image25.png src="part3_1_files/image004.png"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Чтобы создать объект класса <b><i>TLogElement</i></b>,
+нужно вызвать специальную функцию без параметров, имя которой совпадает с
+именем класса:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>elem = TLogElement()</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:.5in;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Созданный объект <b><i>elem</i></b>
+относится к классу <i>TLogElement,</i> поэтому его называют <b><i>экземпляром </i></b>класса
+<i>TLogElement</i> или объектом класса <i>TLogElement.</i></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Свойства хранятся в переменных, принадлежащих
+объекту. Для сохранения значений входов и запоминания выхода введём три поля,
+принимающих логические значения.</span></p>
+
+<div align=center>
+
+<table class=10 border=1 cellspacing=0 cellpadding=0 width=451
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=451 valign=top style='width:338.55pt;border:solid #ED7D31 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+  6.0pt;margin-left:0in;text-align:justify;line-height:115%;border:none'><b><span
+  lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:#2E74B5'>Поле – это переменная, принадлежащая объекту.</span></b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=9 border=1 cellspacing=0 cellpadding=0 width=495 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=495 valign=top style='width:371.35pt;border:solid #ED7D31 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+  6.0pt;margin-left:0in;text-align:justify;line-height:115%;border:none'><b><span
+  lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:#2E74B5'>Поля и методы класса называются атрибутами класса.</span></b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В любой точке программы вы можете добавить
+поля объектам с помощью точечной записи, например:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>elem = TLogElement()</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>elem.in1 = True</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>elem.in2 = False</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>elem.rez = False</span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>При таком
+«ручном» заполнении полей у всех объектов класса <b><i>TLogElemen</i></b> может
+оказаться разный набор полей. Интерпретатор «ругаться» не будет, но при этом
+могут возникнуть серьезные ошибки при выполнении программы. Чтобы этого не
+произошло нужно соблюдать <u>один из главных принципов ООП</u>: <u>объект
+работает со своими данными только сам! Другие объекты </u>(в том числе и другие
+процедуры и функции)<u> могут обращаться к данным объекта ТОЛЬКО через его
+методы!</u></span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Внешне создание
+объекта, приведенное выше, выглядит как вызов функции без параметров.
+Действительно, здесь вызывается функция, которая создает объект. Она называется
+конструктором.</span></p>
+
+<div align=center>
+
+<table class=8 border=1 cellspacing=0 cellpadding=0 width=461 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=461 valign=top style='width:4.8in;border:solid #ED7D31 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+  6.0pt;margin-left:0in;text-align:justify;line-height:115%;border:none'><b><span
+  lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:#2E74B5'>Конструктор – это метод класса, который вызывается для
+  создания объекта этого класса.</span></b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:.5in;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Мы не определили конструктор
+в описании класса, поэтому интерпретатор добавил его автоматически. Такой
+конструктор называется <i>конструктор по умолчанию.</i></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Если мы хотим, чтобы у всех объектов класса
+был одинаковый набор полей, нам нужно создать свой конструктор.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Конструктор класса имеет специальное имя <b><i>__init__</i></b>
+(от англ. <i>initialization – инициализация</i>, начальные установки). По два
+символа подчеркивания в начале и конце говорят о том, что <u>конструктор – это
+функция, имеющая специальное значение в языке.</u></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Сейчас зададим поля в <b><i>конструкторе</i></b>:
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'><img width=249 height=98 id=image20.png
+src="part3_1_files/image005.png"></span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Сдвиг функции <i>__init__</i>
+вправо делает ее частью описания класса <b><i>TLogElement</i></b>. Получается,
+что это не просто функция, а метод класса <b><i>TLogElement</i></b>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Первый параметр конструктора, как и любого
+метода класса, - это <u>ссылка на сам объект</u>, который создается. Он всегда
+называется <b><i>self</i></b> (от англ. <i>self – «сам»</i>). С помощью этой
+ссылки мы обращаемся к полям объекта, например <i>self.x</i> означает «поле <i>x</i>
+текущего объекта». Если вместо этого написать просто <i>x</i>, транслятор будет
+считать, что речь идет о локальной или глобальной переменной, а не о поле
+объекта.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>В нашем
+конструкторе создаются три поля (атрибута).  Теперь любой объект класса
+обязательно будет иметь поля <i>in1, in2, res.</i></span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Названия полей <i>__in1</i>
+и __in2 начинаются с двух подчеркиваний, поэтому они будут <i>скрытыми</i>
+(доступны только внутри методов класса TLogElement). Имя поля <i>_res</i>
+начинается  с одного подчёркивания, то есть оно <i>не скрывается</i>.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Объекты в
+программе для обмена данными друг с другом используют <b><i>интерфейс</i></b>.</span></p>
+
+<div align=center>
+
+<table class=7 border=1 cellspacing=0 cellpadding=0 width=429 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=429 valign=top style='width:321.75pt;border:solid #ED7D31 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+  115%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+  font-family:"Verdana",sans-serif;color:#2E74B5'>Интерфейс – это открытые
+  свойства и методы.</span></b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>При этом все <u>внутренние данные и детали
+внутреннего устройства объекта должны быть скрыты от «внешнего мира»</u>. Такой
+подход позволяет:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.75in;text-align:justify;text-indent:-.25in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Noto Sans Symbols";color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>обезопасить внутренние данные
+(поля) объекта от изменений со стороны других объектов;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.75in;text-align:justify;text-indent:-.25in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Noto Sans Symbols";color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>проверять правильность данных,
+поступающих от других объектов, тем самым повышая надежность программы;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.75in;text-align:justify;text-indent:-.25in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Noto Sans Symbols";color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>переделывать внутреннюю структуру
+и код объекта любым способом, не меняя интерфейса; при этом никакой переделки
+других объектов не потребуется.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Это очень важно
+при разработке больших программ!</span></p>
+
+<table class=6 border=1 cellspacing=0 cellpadding=0 width=676 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=676 valign=top style='width:506.85pt;border:solid #ED7D31 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+  115%;border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+  font-family:"Verdana",sans-serif;color:#2E74B5'>Скрытие внутреннего
+  устройства объектов называется <i>инкапсуляцией</i> </span></b><span lang=RU
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:#2E74B5'>(помещением в капсулу).<b> <i>Инкапсуляцией</i> также называют
+  объединение в одном объекте данных и методов работы с ними.</b></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>По умолчанию в
+Python все атрибуты класса (поля и методы) <i>открытые</i>, общедоступные (<i>public</i>).
+Это значит, что к любому полю может обратиться (и изменить его!) любая функция
+и объект любого класса. Для повышения надежности программы лучше сделать все
+поля объектов <i>закрытыми</i>, чтобы их не могли изменить другие объекты
+программы. Имена тех атрибутов, которые нужно скрыть, должны начинаться с двух
+знаков подчеркивания. Например:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>self.__in1 = True</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>self.__in2 = False</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Сейчас эти два поля <i>закрытые</i>, или <i>частные
+(privat</i>). Никакой другой объект или программа их изменить не смогут.
+Обратиться к ним «извне» нельзя, нельзя даже узнать их значение, это могут
+сделать только методы самого объекта.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>self._res = False</span></i></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Поле <i>res</i>
+объявим с одним знаком подчеркивания, это обозначает, что оно <u>будет доступно
+«извне», но обращаться к таким полям напрямую программисту не рекомендуется!</u></span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Чтобы можно было
+работать со скрытым полем (читать или изменять), нужно добавить к классу два
+метода. Один из них будет возвращать текущее значение закрытого поля, а второй
+– присваивать полю новое значение.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Метод для чтения
+значения поля иногда называют «геттером» (get – «получать»), а метод записи
+нового значения – «сеттером» (set – «устанавливать»). Методам, устанавливающим
+новые значения полей <i>in1</i> и <i>in2</i>, дадим имена <b><i>setIn1</i></b> <b><i>setIn2.
+</i></b>При необходимости метод<b><i> getRes </i></b>может просто вернуть
+значение поля <i>res</i>.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Чтобы упростить
+запись при обращении к полям через методы, ввели понятие <b><i>свойства</i></b>
+(<i>property</i>). Внешне обращение к свойству выглядит также, как обращение к
+полю объекта. Но на самом деле при записи и чтении значения свойства вызываются
+методы объекта, определенные программистом.</span></p>
+
+<div align=center>
+
+<table class=5 border=1 cellspacing=0 cellpadding=0 width=527 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=527 valign=top style='width:395.25pt;border:solid #ED7D31 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
+  115%;border:none'><b><i><span lang=RU style='font-size:11.0pt;line-height:
+  115%;font-family:"Verdana",sans-serif;color:#2E74B5'>Свойство</span></i></b><b><span
+  lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:#2E74B5'> – это способ доступа к внутреннему состоянию объекта,
+  имитирующее обращение к его полю.</span></b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Для доступа к полям введём свойства <i>In1,
+In2</i> и <i>Res</i> (свойство только для чтения). Мы добавили два
+подчеркивания в начало названий методов <b><i>setIn1 </i></b>и <b><i>setIn2</i></b>.
+Следовательно, они стали частными, скрытыми от других объектов.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'><img width=454 height=254 id=image1.png
+src="part3_1_files/image006.png"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Итак, свойство (<b><i>property</i></b>) – это
+особая разновидность атрибута, который вычисляет свое значение при попытке
+обращения к нему.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Методы чтения для всех свойств записаны как «<b><i>лямбда-функции</i></b>»,
+они <u>выполняют прямой доступ к соответствующим полям</u>. Лямбда-функция
+принимает единственный параметр – объект, который называется <i>x</i>, и
+возвращает его поле __In1 (__In2, _res).</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Теперь с помощью свойств <i>In1</i> и<i> In2 </i>другие
+объекты могут изменять значения входов логических элементов, с помощью свойства
+<i>Res</i> читать значение выхода логического элемента.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Таким образом, объект взаимодействует с
+другими объектами только с помощью своих общедоступных свойств и методов
+(интерфейса). Это не позволяет другим объектам напрямую менять его данные,
+уменьшая вероятность ошибок. При изменении полей через методы объект может
+проверять правильность входных данных.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Вы, наверное, заметили, что оба метода записи
+после присваивания нового значения входу вызывают какой-то метод <b><i>calc</i></b>,
+которого нет в описании класса. В то же время видно, что этот метод принадлежит
+классу, потому что перед его именем добавлена ссылка <i>self.</i></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><b><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Метод <i>calc</i></span></b><i><span
+lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'> </span></i><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>должен пересчитать значение
+выхода логического элемента сразу после изменения его входа. Проблема в том,
+что мы не можем написать метод <i>calc</i>, пока неизвестно, какой именно
+логический элемент моделируется. С другой стороны, мы знаем, что такую
+процедуру имеет любой логический элемент. В такой ситуации можно написать <i>метод-«заглушку»
+</i>(который ничего не делает):</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'><img width=218 height=78 id=image6.png
+src="part3_1_files/image007.png"></span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Но это не совсем
+правильно, поскольку кто-то может создать такой элемент и пытаться его
+использовать, а он не работает! Поэтому не будем его определять вообще. Такой
+метод называется <i>абстрактным методом</i>. </span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=4 border=1 cellspacing=0 cellpadding=0 width=555 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=555 valign=top style='width:416.5pt;border:solid #ED7D31 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+  6.0pt;margin-left:0in;text-align:justify;line-height:115%;border:none'><b><i><span
+  lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>Абстрактный метод</span></i></b><b><span lang=RU
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'> – это метод класса, который используется, но не реализуется в
+  классе.</span></b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Более того, не существует логического
+элемента «вообще», как не существует «просто фрукта», не относящегося к
+какому-то виду. Такой класс в ООП называется <i>абстрактным.</i> Его
+отличительная черта – хотя бы один абстрактный (нереализованный) метод. </span></p>
+
+<div align=center>
+
+<table class=3 border=1 cellspacing=0 cellpadding=0 width=565 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=565 valign=top style='width:423.6pt;border:solid #ED7D31 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:
+  6.0pt;margin-left:0in;text-align:justify;line-height:115%;border:none'><b><i><span
+  lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'>Абстрактный класс</span></i></b><b><span lang=RU
+  style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:black'> – это класс, содержащий хотя бы один абстрактный метод.</span></b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Для надёжности
+нужно совсем запретить создание объектов класса <i>TLogElement</i>, потому что
+это бессмысленно. Для этого в конструкторе класса определим, есть ли у объекта
+метод <i>calc</i>, и если нет – будем искусственно создавать аварийную ситуацию
+– исключение3: </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'><img width=237 height=61 id=image15.png
+src="part3_1_files/image008.png"></span></p>
+
+<p class=MsoNormal style='margin-left:34.8pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'><img width=586
+height=82 id=image3.png src="part3_1_files/image009.png"></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:.5in;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Функция <b><i>hasattr </i></b>возвращает
+логическое значение True, если у переданного ему объекта (здесь – <i>self)</i>
+есть указанное поле или метод (<i>calc</i>). Ключевое слово <b><i>raise </i></b>означает
+«создать исключение», тип этого исключения – <b><i>NotImplementedError</i></b>
+(ошибка «не реализовано»), в скобках записана символьная строка, которую увидит
+пользователь в сообщении об ошибке.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:.5in;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>Итак, полученный класс <b>TLogElement
+– это абстрактный класс</b>. Его можно использовать <u>только для разработки
+классов-наследников</u>, создать в программе объект этого класса нельзя. Чтобы
+класс-наследник не был абстрактным, он <u>должен переопределить все абстрактные
+методы предка</u>, в данном случае – метод <b>calc</b>. Получается, что
+классы-наследники <u>могут по-разному реализовать один и тот же метод.</u>
+Такая возможность называется <b><i>полиморфизм</i></b>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=2 border=1 cellspacing=0 cellpadding=0 width=574 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=574 valign=top style='width:430.65pt;border:solid #ED7D31 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><b><i><span
+  lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:#2E74B5'>Полиморфизм </span></i></b><b><span lang=RU style='font-size:
+  11.0pt;line-height:115%;font-family:"Verdana",sans-serif;color:#2E74B5'> </span></b><span
+  lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:#2E74B5'>(от греч. πολυ — много, и μορφη — форма)<b> – это возможность
+  классов наследников по разному реализовать метод, описанный для класса
+  предка.</b></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Очевидно, что поле с именем <b>_res</b>,
+которое хранит значение выхода логического элемента, <u>должно быть доступно
+классам-наследникам</u>, которые будут изменять его в методе <i>calc</i>.
+Поэтому <u>делать его скрытым нельзя</u>. С другой стороны, часто используют
+соглашение о том, что <u>одно подчёркивание означает специальное поле, которое
+не должно изменяться другими объектами и функциями.</u></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:.5in;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:.5in;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:.5in;
+line-height:115%;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Классы-наследники</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:.5in;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Теперь займемся классами-наследниками от <i>TLogElement.</i>
+Поскольку у нас будет единственный элемент с одним входом («НЕ»), сделаем его
+наследником прямо от <i>TLogElement</i> (не будем вводить специальный класс
+«элемент с одним входом»).</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'><img width=353 height=95 id=image12.png
+src="part3_1_files/image010.png"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>После названия нового класса <b><i>TNot</i></b>
+в скобках указано название базового класса. Все объекты класса <i>TNot</i>
+обладают всеми свойствами и методами класса <i>TLogElement.</i>  В конструкторе
+класса-наследника <u>нужно обязательно вручную вызвать конструктор класса
+предка</u>. В отличие от других объектно-ориентированных языков, этот вызов
+автоматически не выполняется.  Новый класс определяет метод <i>calc</i>,
+который записывает в поле <i>_res</i> инверсию входного сигнала (результат
+применения логической операции not). Таким образом, <u>класс <i>TNot</i> уже не
+абстрактный</u>, в нём все нужные методы определены. Теперь можно создавать
+объект этого класса <i>TNot</i> и использовать его:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'><img width=153 height=57 id=image5.png
+src="part3_1_files/image011.png"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Все типы логических элементов, которые имеют
+два входа, будут наследниками класса</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'><img width=311 height=37 id=image14.png
+src="part3_1_files/image012.png"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>В нашем случае этот класс пустой, но если нам
+понадобится ввести какие-то свойства и методы, характерные для всех элементов с
+двумя входами, мы сможем это легко сделать в классе <i>TLog2In</i>. Класс <i>TLog2In</i>
+– это тоже абстрактный класс, потому что он не переопределил метод <i>calc</i>.
+Это сделают его наследники <i>TAnd</i> (элемент «И») и <i>TOr</i> (элемент
+«ИЛИ»), которые описывают конкретные логические элементы:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'><img width=390 height=188 id=image17.png
+src="part3_1_files/image013.png"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Теперь мы готовы к тому, чтобы создавать и
+использовать построенные логические элементы. Например, таблицу истинности для
+последовательного соединения элементов «И» и «НЕ» можно построить так:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+.5in;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'><img width=477
+height=181 id=image2.png src="part3_1_files/image014.png"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Сначала создаются два объекта – логические
+элементы «НЕ» (класс <i>TNot</i>) и «И» (класс <i>TAnd</i>). Далее в двойном
+цикле перебираются все возможные комбинации значений переменных A и B (каждая
+из них может быть равна 0 или 1). Они подаются на входы элемента «И», а его
+выход – на вход элемента «НЕ». Чтобы при выводе таблицы истинности вместо False
+и True выводились более компактные обозначения 0 и 1, значение выхода
+преобразуется к целому типу (int).</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:.5in;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:.5in;
+line-height:115%;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Модульность</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:.5in;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Как вы знаете, большие программы обычно
+разбивают на модули – внутренне связные, но слабо связанные между собой блоки.
+Такой подход используется как в классическом программировании, так и в ООП. В
+нашей программе с логическими элементами в отдельный модуль  (сохраним его в
+виде файла <b><i>logelement.py</i></b>) можно вынести всё, что относится к
+логическим элементам:</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'><img width=556 height=317 id=image4.png
+src="part3_1_files/image015.png"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'><img width=543 height=419 id=image18.png
+src="part3_1_files/image016.png"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Чтобы использовать такой модуль, нужно
+подключить его в основной программе с помощью ключевого слова <b><i>import:</i></b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'><img width=309 height=91 id=image7.png
+src="part3_1_files/image017.png"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Обратите внимание, что при создании объектов
+нужно указывать имя модуля, где определены классы <b><i>TNot</i></b> и <b><i>TAnd</i></b>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:.5in;
+line-height:115%;border:none'><b><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Сообщения между
+объектами</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Когда логические элементы объединяются в
+сложную схему, желательно, чтобы передача сигналов между ними при изменении
+входных данных <u>происходила автоматически</u>. Для этого можно немного
+расширить базовый класс <i>TLogElement</i>, чтобы элементы могли передавать
+друг другу сообщения об изменении своего выхода. Для простоты будем считать,
+что выход любого логического элемента может быть подключен к любому (но только
+одному!) входу другого логического элемента. Добавим к описанию класса два
+скрытых поля и один метод:</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in;text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'><img width=453 height=207 id=image13.png
+src="part3_1_files/image018.png"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Поле <b><i>__nextEl</i></b> хранит ссылку на <u>следующий
+логический элемент</u>, а поле <b><i>__nextIn</i></b> – <u>номер входа этого
+следующего элемента</u>, к которому подключен выход данного элемента. С помощью
+общедоступного метода <b><i>link</i></b> можно связать данный элемент со
+следующим. Нужно немного изменить методы <b><i>setIn1</i></b> и <b><i>setIn2</i></b>:
+при изменении входа они должны не только пересчитывать выход данного элемента,
+но и отправлять сигнал на вход следующего.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'><img width=425 height=121 id=image16.png
+src="part3_1_files/image019.png"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>        <img width=385 height=137
+id=image24.png src="part3_1_files/image020.png"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>Запись «<b><i>if __nextEl</i></b>» означает
+«если следующий элемент задан». Если он не был установлен, значение поля <b><i>__nextEl</i></b>
+будет равно None, и никаких дополнительных действий не выполняется. С учетом
+этих изменений вывод таблицы истинности функции «И-НЕ» можно записать так
+(операторы вывода заменены многоточиями): </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'><img width=284 height=199 id=image26.png
+src="part3_1_files/image021.png"></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;line-height:115%;
+border:none'><span lang=RU style='font-size:11.0pt;line-height:115%;font-family:
+"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Обратите
+внимание, что в самом начале мы установили связь элементов «И» и «НЕ» с помощью
+метода <b><i>link</i></b> (связали выход элемента «И» с первым входом элемента
+«НЕ»). Далее в теле цикла обращения к элементу «НЕ» нет, потому что элемент «И»
+автоматически сообщит ему об изменении своего выхода.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:35.45pt;
+line-height:115%;border:none'><span lang=RU style='font-size:11.0pt;line-height:
+115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Подведем итоги.
+Из предыдущих рассуждения ясно, что значительно проще не полностью описывать
+каждый объект «с нуля», а сравнивать его с уже известными объектами. При
+разработке объектно-ориентированных программ очень важно выполнить
+объектно-ориентированный анализ: выделить классы объектов, определить их
+свойства и методы. Чтобы не описывать несколько раз одинаковые свойства и
+методы, классы в программе должны быть построены в виде иерархии. Класс В
+является наследником класса Ф, если можно сказать, что В – это разновидность А.</span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-indent:
+35.45pt;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+color:black'>Теперь можно дать классическое определение ООП:</span></p>
+
+<table class=1 border=1 cellspacing=0 cellpadding=0 width=676 style='border-collapse:
+ collapse;border:none'>
+ <tr>
+  <td width=676 valign=top style='width:506.85pt;border:solid #ED7D31 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify;line-height:115%;border:none'><b><i><span
+  lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:#2E74B5'>Объектно-ориентированное программирование</span></i></b><b><span
+  lang=RU style='font-size:11.0pt;line-height:115%;font-family:"Verdana",sans-serif;
+  color:#2E74B5'> – это такой подход к программированию, при котором программа
+  представляет собой множество взаимодействующих объектов, каждый из которых
+  является экземпляром определенного класса, а классы образуют иерархию
+  наследования.</span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>В наших примерах
+метод <i>calc</i> для разных классов получал новый вариант реализации. Эта
+особенность – проявление <b><i>полиморфизма</i></b>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+115%;background:white;border:none'><span lang=RU style='font-size:11.0pt;
+line-height:115%;font-family:"Verdana",sans-serif;color:black'>Следует помнить:</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Noto Sans Symbols";
+color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>При объявлении класса-наследника
+после имени нового класса в скобках указывают имя базового класса.</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Noto Sans Symbols";
+color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>В конструкторе класса-наследника
+сначало нужно вызвать конструктор базового класса.</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Noto Sans Symbols";
+color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Чтобы класс не был абстрактным,
+все абстрактные методы базового класса должны быть определены.</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Noto Sans Symbols";
+color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Переопределение метода – это
+создание в классе-наследнике новой версии метода, определенного ранее для
+базового класса.</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-.25in;line-height:115%;background:white;border:none'><span lang=RU
+style='font-size:11.0pt;line-height:115%;font-family:"Noto Sans Symbols";
+color:black'>−<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=RU style='font-size:11.0pt;line-height:115%;
+font-family:"Verdana",sans-serif;color:black'>Ссылки на объекты разных классов
+можно хранить в одном массиве.Если, например, для каждого элемента массива
+вызвать метод calc, программа определит тип конкретного объекта и вызовет метод
+того класса, к которому этот объект принадлежит. Эта особенность – проявление
+полиморфизма.</span></p>
+
+</div>
+
+</body>
+
+</html>
